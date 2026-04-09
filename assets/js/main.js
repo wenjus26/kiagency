@@ -1,10 +1,64 @@
 /**
  * KANO IMPACT AGENCY - Main JavaScript
- * Menu mobile, navigation fluide, animations
+ * Dynamic Header/Footer, Menu mobile, navigation fluide, animations, preloader
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+    
+    // ── 1. Preloader & Dynamic Includes ─────────────────────────────────────
+    const preloader = document.getElementById('preloader');
+    
+    Promise.all([
+        fetch('header.html').then(res => res.ok ? res.text() : ''),
+        fetch('footer.html').then(res => res.ok ? res.text() : '')
+    ]).then(([headerHtml, footerHtml]) => {
+        // Insert Header
+        const headerPlaceholder = document.getElementById('header-placeholder');
+        if (headerPlaceholder && headerHtml) {
+            headerPlaceholder.outerHTML = headerHtml;
+        }
 
+        // Insert Footer
+        const footerPlaceholder = document.getElementById('footer-placeholder');
+        if (footerPlaceholder && footerHtml) {
+            footerPlaceholder.outerHTML = footerHtml;
+        }
+
+        // Handle Active Links dynamically
+        const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+        document.querySelectorAll('header .nav-link').forEach(link => {
+            const href = link.getAttribute('href');
+            // Remove active classes everywhere first
+            link.className = 'nav-link text-slate-600 font-medium hover:text-blue-600 transition-colors';
+            
+            // Apply active class if current path matches
+            if (href === currentPath || href === `index.html#services` && currentPath === 'index.html' || (currentPath === '' && href === 'index.html')) {
+                link.className = 'nav-link text-blue-700 font-bold border-b-2 border-blue-700 pb-1';
+            }
+        });
+
+        // Initialize features that depend on the newly injected DOM
+        initAppFeatures();
+
+        // Reveal content / Hide preloader
+        if (preloader) {
+            setTimeout(() => {
+                preloader.style.opacity = '0';
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                    // Re-trigger scroll event to animate cards correctly
+                    window.dispatchEvent(new Event('scroll'));
+                }, 500);
+            }, 600); // Wait bit to let users see the logo
+        }
+    }).catch(err => {
+        console.error("Erreur de chargement du header/footer", err);
+        if(preloader) preloader.style.display = 'none';
+    });
+
+});
+
+function initAppFeatures() {
     // ── Mobile Menu Toggle ────────────────────────────────────────────────────
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
 
@@ -39,10 +93,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     <a class="flex items-center gap-3 text-base font-medium text-slate-700 border-b border-gray-50 pb-3" href="formations.html">
                         <span class="material-symbols-outlined text-base">school</span> Formations
                     </a>
+                    <a class="flex items-center gap-3 text-base font-medium text-slate-700 border-b border-gray-50 pb-3" href="evenements.html">
+                        <span class="material-symbols-outlined text-base">event</span> Événements
+                    </a>
                     <a class="flex items-center gap-3 text-base font-medium text-slate-700 border-b border-gray-50 pb-3" href="contact.html">
                         <span class="material-symbols-outlined text-base">mail</span> Contact
                     </a>
-                    <a class="flex items-center justify-center gap-2 px-6 py-3 bg-primary text-white rounded-full font-bold text-center mt-2 hover:opacity-90 transition-opacity" href="index.html#contact">
+                    <a class="flex items-center justify-center gap-2 px-6 py-3 bg-primary text-white rounded-full font-bold text-center mt-2 hover:opacity-90 transition-opacity" href="contact.html">
                         <span class="material-symbols-outlined text-base">chat</span> Nous contacter
                     </a>
                     <p class="text-center text-xs text-slate-400 mt-2">Tél : +229 01 43 64 83 05</p>
@@ -58,11 +115,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ── Smooth Scrolling ──────────────────────────────────────────────────────
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    document.querySelectorAll('a[href*="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-            const targetElement = document.querySelector(targetId);
+            const hrefAttr = this.getAttribute('href');
+            // Allow default interaction if it navigates to another page
+            if (hrefAttr.includes('.html') && !window.location.pathname.includes(hrefAttr.split('#')[0])) {
+                return;
+            }
+
+            const targetId = hrefAttr.split('#')[1];
+            if (!targetId) return;
+            const targetElement = document.getElementById(targetId);
             if (targetElement) {
                 e.preventDefault();
                 window.scrollTo({
@@ -85,6 +148,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 header.classList.remove('shadow-md');
             }
         });
+        // Trigger once on init
+        window.dispatchEvent(new Event('scroll'));
     }
 
     // ── Intersection Observer: animate cards on scroll ────────────────────────
@@ -102,20 +167,20 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    document.querySelectorAll('article, .formation-card').forEach(el => {
+    document.querySelectorAll('article, .formation-card, .event-card').forEach(el => {
         el.classList.add('opacity-0', 'translate-y-8', 'transition-all', 'duration-500');
         observer.observe(el);
     });
 
     // ── Form submission feedback ──────────────────────────────────────────────
     const contactForm = document.querySelector('form');
-    if (contactForm) {
+    if (contactForm && !contactForm.id.includes("mailto")) {
         contactForm.addEventListener('submit', () => {
             const btn = contactForm.querySelector('button[type="submit"]');
             if (btn) {
                 btn.innerHTML = '<span class="material-symbols-outlined animate-spin">sync</span> Envoi en cours...';
-                btn.disabled = true;
+                // Note: we do not disable it instantly if it's external, otherwise it blocks sumbission
             }
         });
     }
-});
+}

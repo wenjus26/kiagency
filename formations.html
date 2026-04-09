@@ -36,30 +36,14 @@
     </script>
 </head>
 <body class="bg-surface font-body">
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-logo">KI AGENCY</div>
+        <div class="loader-line"></div>
+    </div>
 
-    <!-- TopAppBar -->
-    <header class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-xl shadow-sm border-b border-gray-100">
-        <nav class="flex justify-between items-center w-full px-6 py-3 max-w-7xl mx-auto">
-            <a href="index.html" class="flex items-center gap-3">
-                <img src="assets/img/logo.jpeg" alt="KANO IMPACT AGENCY Logo" class="h-10 w-auto rounded-lg shadow-sm">
-                <div class="flex flex-col leading-tight">
-                    <span class="text-sm font-black tracking-tighter text-blue-900 uppercase">KANO IMPACT</span>
-                    <span class="text-xs font-bold text-blue-600 uppercase tracking-wide">AGENCY</span>
-                </div>
-            </a>
-            <div class="hidden md:flex items-center space-x-6">
-                <a class="text-slate-600 font-medium hover:text-blue-600 transition-colors" href="index.html">Accueil</a>
-                <a class="text-slate-600 font-medium hover:text-blue-600 transition-colors" href="index.html#about">À Propos</a>
-                <a class="text-slate-600 font-medium hover:text-blue-600 transition-colors" href="index.html#services">Services</a>
-                <a class="text-blue-700 font-bold border-b-2 border-blue-700 pb-1" href="formations.html">Formations</a>
-                <a class="text-slate-600 font-medium hover:text-blue-600 transition-colors" href="contact.html">Contact</a>
-                <a class="px-5 py-2 bg-primary text-white rounded-full font-bold hover:opacity-90 transition-all text-sm shadow" href="index.html#contact">Nous contacter</a>
-            </div>
-            <button id="mobile-menu-btn" class="md:hidden text-on-surface p-2" aria-label="Ouvrir le menu">
-                <span class="material-symbols-outlined">menu</span>
-            </button>
-        </nav>
-    </header>
+
+    <div id="header-placeholder"></div>
 
     <main class="pt-24">
         <!-- Hero Section -->
@@ -321,60 +305,7 @@
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="w-full bg-slate-900 text-slate-400 py-16">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-                <div class="md:col-span-1">
-                    <div class="flex items-center gap-3 mb-5">
-                        <img src="assets/img/logo.jpeg" alt="KANO IMPACT AGENCY" class="h-10 w-auto rounded-lg">
-                        <div>
-                            <p class="text-sm font-black text-white leading-tight">KANO IMPACT</p>
-                            <p class="text-xs text-blue-400 font-bold">AGENCY</p>
-                        </div>
-                    </div>
-                    <p class="text-sm leading-relaxed mb-3">Projets, Orientation et Assistance pour un Développement Durable.</p>
-                    <p class="text-xs italic text-blue-300">Apprendre – Assimiler – Agir – Impacter</p>
-                </div>
-                <div>
-                    <h4 class="font-bold text-white mb-5">Formations</h4>
-                    <ul class="space-y-3 text-sm">
-                        <li><a class="hover:text-primary transition-colors" href="#">QGIS &amp; ArcGIS</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="#">KoboCollect</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="#">Gestion de Projets</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="#">Marketing Digital</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="#">Orientation Voyage</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold text-white mb-5">Légal</h4>
-                    <ul class="space-y-3 text-sm">
-                        <li><a class="hover:text-primary transition-colors" href="privacy.html">Politique de confidentialité</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="terms.html">Conditions d'utilisation</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="mentions-legales.html">Mentions Légales</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold text-white mb-5">Contact</h4>
-                    <ul class="space-y-3 text-sm">
-                        <li class="flex items-start gap-2">
-                            <span class="material-symbols-outlined text-base text-primary mt-0.5">location_on</span>
-                            <span>Abomey Calavi, Bénin</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="material-symbols-outlined text-base text-primary mt-0.5">phone</span>
-                            <a href="tel:+22901436483 05" class="hover:text-white transition-colors">+229 01 43 64 83 05</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
-                <p>© 2026 KANO IMPACT AGENCY. Tous droits réservés.</p>
-                <p class="text-center">Réalisé par <a href="https://rejustewenoumi.pythonanywhere.com" class="hover:text-primary transition-colors font-bold text-blue-400">RW</a></p>
-                <p>RCCM : RB/ABC/26 A 137322 | IFU : 0202113524983</p>
-            </div>
-        </div>
-    </footer>
+    <div id="footer-placeholder"></div>
 
     <script src="assets/js/main.js"></script>
     <script>

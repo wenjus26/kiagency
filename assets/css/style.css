@@ -1,13 +1,31 @@
-/* KI AGENCY - Common Styles */
+/* ============================================================
+   KANO IMPACT AGENCY — Global Stylesheet
+   Responsive Design System
+   ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@700;800;900&family=Inter:wght@400;500;600&display=swap');
 
+/* ── CSS Variables ─────────────────────────────────────────── */
 :root {
     --primary: #0040a8;
     --primary-container: #2b59c3;
     --secondary: #516070;
+    --accent: #00a86b;
     --surface: #f9f9fb;
     --on-surface: #1a1c1e;
+    --nav-height: 68px;
+}
+
+/* ── Reset & Base ──────────────────────────────────────────── */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -15,42 +33,44 @@ body {
     background-color: var(--surface);
     color: var(--on-surface);
     overflow-x: hidden;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ── Typography ────────────────────────────────────────────── */
 .font-headline {
     font-family: 'Public Sans', sans-serif;
 }
 
+/* Responsive headings */
+h1 { font-size: clamp(2rem, 5vw, 4.5rem); }
+h2 { font-size: clamp(1.5rem, 3.5vw, 2.5rem); }
+h3 { font-size: clamp(1.1rem, 2.5vw, 1.4rem); }
+
+/* ── Material Icons ────────────────────────────────────────── */
 .material-symbols-outlined {
     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    vertical-align: middle;
+    line-height: 1;
 }
 
+/* ── Utilities ─────────────────────────────────────────────── */
 .glass-header {
     backdrop-filter: blur(24px);
-    background: rgba(255, 255, 255, 0.8);
+    -webkit-backdrop-filter: blur(24px);
+    background: rgba(255, 255, 255, 0.9);
 }
 
-.no-scrollbar::-webkit-scrollbar {
-    display: none;
-}
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
-/* Custom animations */
-@keyframes fadeInSlideUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.animate-fade-in {
-    animation: fadeInSlideUp 0.8s ease-out forwards;
-}
-
-/* Academic Gradient */
+/* ── Academic Gradient ─────────────────────────────────────── */
 .academic-gradient {
     background: linear-gradient(135deg, #0040a8 0%, #2b59c3 100%);
 }
@@ -59,18 +79,212 @@ body {
     box-shadow: 0 20px 40px rgba(0, 24, 74, 0.06);
 }
 
-/* Form Styles */
-input:focus, select:focus, textarea:focus {
-    outline: none;
-    box-shadow: 0 0 0 2px rgba(0, 64, 168, 0.2);
-}
-
-/* Mobile Menu Transitions */
-.mobile-menu-overlay {
-    opacity: 0;
-    animation: fadeIn 0.3s forwards;
+/* ── Animations ────────────────────────────────────────────── */
+@keyframes fadeInSlideUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeIn {
-    to { opacity: 1; }
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.5; }
+}
+
+.animate-fade-in  { animation: fadeInSlideUp 0.8s ease-out forwards; }
+.animate-fade-in-delay { animation: fadeInSlideUp 0.8s ease-out 0.2s both; }
+.animate-pulse    { animation: pulse 2s ease-in-out infinite; }
+
+/* ── Forms ─────────────────────────────────────────────────── */
+input, select, textarea {
+    width: 100%;
+    border-radius: 0.75rem;
+    border: 1.5px solid #e5e7eb;
+    padding: 0.75rem 1rem;
+    font-family: inherit;
+    font-size: 0.95rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    background: #fff;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(0, 64, 168, 0.12);
+}
+
+/* ── Navigation ────────────────────────────────────────────── */
+header {
+    height: var(--nav-height);
+    display: flex;
+    align-items: center;
+}
+
+/* ── Mobile Menu ───────────────────────────────────────────── */
+.mobile-menu-overlay {
+    animation: fadeIn 0.25s ease-out forwards;
+}
+
+/* ── Responsive: Event Cards ───────────────────────────────── */
+.event-card .flex {
+    flex-direction: column;
+}
+
+@media (min-width: 640px) {
+    .event-card .flex {
+        flex-direction: row;
+    }
+}
+
+/* ── Responsive: Tables → Cards (narrow screens) ──────────── */
+@media (max-width: 480px) {
+    /* Hero text */
+    .hero-title { font-size: 2rem !important; }
+
+    /* Reduce horizontal padding on very small screens */
+    section, main > * {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    /* Stack footer bottom bar */
+    footer .border-t.flex {
+        flex-direction: column !important;
+        text-align: center;
+        gap: 0.5rem !important;
+    }
+
+    /* Stack event cards date block */
+    [data-category] > div,
+    .event-card > div {
+        flex-direction: column !important;
+    }
+
+    /* Nav logo text */
+    .logo-text-agency { display: none; }
+
+    /* Reduce card padding */
+    .event-card .p-7 { padding: 1.25rem !important; }
+}
+
+/* ── Responsive: Medium (tablet) ──────────────────────────── */
+@media (max-width: 768px) {
+    /* Footer grid: stack columns */
+    footer .grid {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+
+    /* Hero CTA buttons: stack */
+    .hero-cta-group {
+        flex-direction: column !important;
+        gap: 0.75rem !important;
+    }
+
+    /* Services bento: 1 column */
+    .bento-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Section vertical padding reduce */
+    .py-24 { padding-top: 3.5rem !important; padding-bottom: 3.5rem !important; }
+    .py-20 { padding-top: 3rem !important;   padding-bottom: 3rem !important; }
+    .py-16 { padding-top: 2.5rem !important; padding-bottom: 2.5rem !important; }
+
+    /* Contact page: stack columns */
+    .contact-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* CTA section padding */
+    .p-12, .md\:p-16 {
+        padding: 2rem !important;
+    }
+}
+
+/* ── Footer bottom bar: always centered on mobile ────────── */
+@media (max-width: 767px) {
+    .footer-bottom {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 0.4rem !important;
+    }
+}
+
+/* ── Responsive: cards grid ───────────────────────────────── */
+@media (max-width: 639px) {
+    .events-mini-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* ── Smooth transitions ────────────────────────────────────── */
+a, button {
+    transition-property: color, background-color, border-color, opacity, transform, box-shadow;
+    transition-duration: 200ms;
+    transition-timing-function: ease;
+}
+
+/* ── Hover card lift ───────────────────────────────────────── */
+.card-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 24, 74, 0.12);
+}
+
+/* ── Preloader ─────────────────────────────────────────────── */
+#preloader {
+    position: fixed;
+    inset: 0;
+    background: var(--surface);
+    z-index: 99999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s ease;
+}
+.loader-logo {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: pulse 1.5s infinite;
+}
+.loader-line {
+    width: 150px;
+    height: 4px;
+    background: #e5e7eb;
+    margin-top: 1.5rem;
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+}
+.loader-line::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; height: 100%; width: 50px;
+    background: var(--accent);
+    border-radius: 2px;
+    animation: loadingLine 1.5s infinite ease-in-out;
+}
+@keyframes loadingLine {
+    0% { left: -50px; }
+    50% { left: 150px; }
+    100% { left: -50px; }
+}
+
+/* ── Print ─────────────────────────────────────────────────── */
+@media print {
+    #header-placeholder, #footer-placeholder, header, footer, .mobile-menu-overlay, #preloader { display: none !important; }
+    body { background: white; color: black; }
 }
