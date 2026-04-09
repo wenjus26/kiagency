@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html class="light" lang="fr">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Mentions Légales - KI AGENCY</title>
+    
+    <!-- CSS Dependencies -->
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="assets/css/style.css" rel="stylesheet"/>
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0040a8",
+                        "secondary": "#516070",
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface">
+    <!-- TopAppBar -->
+    <header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl shadow-sm">
+        <nav class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="assets/img/logo.jpeg" alt="KI AGENCY Logo" class="h-10 w-auto rounded-lg shadow-sm">
+                <span class="text-xl font-bold tracking-tighter text-blue-800 uppercase">KI AGENCY</span>
+            </a>
+            <a class="px-6 py-2 bg-primary text-white rounded-full font-bold hover:opacity-90 transition-all text-sm" href="index.html">Retour au site</a>
+        </nav>
+    </header>
+
+    <main class="pt-32 pb-24 px-8 max-w-4xl mx-auto">
+        <h1 class="text-4xl font-black text-on-surface mb-8 tracking-tight">Mentions Légales</h1>
+        
+        <div class="prose prose-slate max-w-none space-y-8 text-secondary leading-relaxed">
+            <section>
+                <h2 class="text-2xl font-bold text-on-surface mb-4">Éditeur du site</h2>
+                <p>
+                    Le site KI AGENCY est édité par :<br/>
+                    <strong>KI AGENCY S.A.R.L</strong><br/>
+                    Représentée par Parfait KANLISSOU<br/>
+                    Siège social : [Votre Adresse à remplir]<br/>
+                    Email : contact@kiagency.com
+                </p>
+            </section>
+            
+            <section>
+                <h2 class="text-2xl font-bold text-on-surface mb-4">Hébergement</h2>
+                <p>
+                    Ce site est hébergé par :<br/>
+                    <strong>Netlify, Inc.</strong><br/>
+                    44 Montgomery Street, Suite 300<br/>
+                    San Francisco, California 94104
+                </p>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold text-on-surface mb-4">Crédits</h2>
+                <p>Design et Développement : KI AGENCY Team.</p>
+            </section>
+        </div>
+    </main>
+
+    <footer class="bg-slate-900 py-12 px-8 text-center text-xs text-slate-400">
+        <p>© 2026 KI AGENCY. Tous droits r�serv�s. R�alis� par <a href="https://rejustewenoumi.pythonanywhere.com" class="hover:text-primary transition-colors">RW</a>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

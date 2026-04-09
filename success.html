@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html class="light" lang="fr">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Message Envoyé - KI AGENCY</title>
+    
+    <!-- CSS Dependencies -->
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="assets/css/style.css" rel="stylesheet"/>
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0040a8",
+                        "primary-container": "#2b59c3",
+                        "secondary": "#516070",
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface flex flex-col min-h-screen">
+    <main class="flex-1 flex flex-col items-center justify-center p-8 text-center">
+        <div class="w-24 h-24 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-8 animate-pulse">
+            <span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+        </div>
+        
+        <h1 class="text-4xl font-black text-on-surface mb-2 tracking-tight">Merci beaucoup !</h1>
+        <p class="text-xl text-primary font-bold mb-6">Votre message a été envoyé avec succès.</p>
+        <p class="text-lg text-secondary mb-12 max-w-md mx-auto">
+            Notre équipe a bien reçu votre demande. Nous vous répondrons par email sous un délai maximum de 24 heures.
+        </p>
+        
+        <a href="index.html" class="px-10 py-4 bg-primary text-white rounded-full font-bold shadow-lg shadow-primary/20 hover:scale-105 transition-transform">
+            Retour à l'accueil
+        </a>
+    </main>
+
+    <footer class="p-8 text-center text-xs text-slate-400">
+        © 2026 KI AGENCY. Tous droits r�serv�s. R�alis� par <a href="https://rejustewenoumi.pythonanywhere.com" class="hover:text-primary transition-colors">RW</a>
+    </footer>
+</body>
+</html>

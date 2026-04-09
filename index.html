@@ -1,0 +1,337 @@
+﻿<!DOCTYPE html>
+<html class="light" lang="fr">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>KI AGENCY - Excellence Académique & Formations Professionnelles</title>
+    <meta name="description" content="KI AGENCY se spécialise dans le renforcement de capacités, la formation continue et l'accompagnement de projets innovants."/>
+    
+    <!-- CSS Dependencies -->
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="assets/css/style.css" rel="stylesheet"/>
+    
+    <!-- Tailwind CDN with Config -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0040a8",
+                        "primary-container": "#2b59c3",
+                        "secondary": "#516070",
+                        "surface": "#f9f9fb",
+                        "on-surface": "#1a1c1e",
+                        "on-primary": "#ffffff",
+                    },
+                    fontFamily: {
+                        "headline": ["Public Sans", "sans-serif"],
+                        "body": ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface">
+    <!-- TopAppBar -->
+    <header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm">
+        <nav class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="assets/img/logo.jpeg" alt="KI AGENCY Logo" class="h-10 w-auto rounded-lg shadow-sm">
+                <span class="text-xl font-bold tracking-tighter text-blue-800 uppercase">KI AGENCY</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a class="text-blue-700 font-bold border-b-2 border-blue-700 pb-1" href="index.html">Accueil</a>
+                <a class="text-slate-600 font-medium hover:text-blue-600 transition-colors" href="#about">À Propos</a>
+                <a class="text-slate-600 font-medium hover:text-blue-600 transition-colors" href="formations.html">Formations</a>
+                <a class="text-slate-600 font-medium hover:text-blue-600 transition-colors" href="dashboard.html">Tableau de bord</a>
+                <a class="px-6 py-2 bg-primary text-white rounded-full font-bold hover:opacity-90 transition-all" href="#contact">Contact Us</a>
+            </div>
+            <!-- Mobile Menu Toggle -->
+            <button class="md:hidden text-on-surface p-2">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </nav>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative min-h-[80vh] flex items-center overflow-hidden bg-surface">
+            <div class="max-w-7xl mx-auto px-8 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="z-10 animate-fade-in">
+                    <span class="text-xs uppercase tracking-[0.2em] text-secondary font-bold mb-4 block">Excellence Académique</span>
+                    <h1 class="text-5xl lg:text-7xl font-headline font-black text-on-surface leading-[1.1] mb-6 tracking-tight">
+                        Propulsez votre carrière avec <span class="text-primary">l'excellence</span> académique.
+                    </h1>
+                    <p class="text-xl text-secondary mb-10 max-w-lg leading-relaxed">
+                        Formation - Assistance - Projet - Développement. Le partenaire stratégique de votre réussite professionnelle et académique.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a class="px-8 py-4 bg-gradient-to-br from-primary to-primary-container text-white rounded-full font-bold shadow-lg shadow-primary/20 hover:scale-105 transition-transform" href="formations.html">
+                            Découvrir nos formations
+                        </a>
+                        <a class="px-8 py-4 bg-gray-100 text-primary rounded-full font-bold hover:bg-gray-200 transition-colors" href="#about">
+                            En savoir plus
+                        </a>
+                    </div>
+                </div>
+                <div class="relative hidden lg:block">
+                    <div class="absolute -top-20 -right-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+                    <div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-700">
+                        <img alt="Professional collaboration" class="w-full h-[600px] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWeEzs1hg5SAOjFfULVM4dRe0tHLYgN6I8WFiAHmQl4pWOmsJNne1xcs5ln8WAmwnA0ypGQGlrnF1VJIYs6ofVvpC1yxOu_VkPiooKY-cqwMm1UtVLuG_btib8QI6_oaIGsHEPaTQwkU64pWtNKa2DQ8wOmQfhFYfe2SpC46n70H8dc4aNTrBSsIlrbpMgDwS8GGS0W2QnQ25QDy-0fJKUkWPKii2KiyeOCjurF1iOOygG-Q-Hm0xzjdpiCASuF8NG8RFKsJx7mtM"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
+                    </div>
+                    <!-- Floating Badge -->
+                    <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl z-20 flex items-center gap-4">
+                        <div class="w-12 h-12 bg-blue-100 flex items-center justify-center rounded-full text-blue-700">
+                            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">verified</span>
+                        </div>
+                        <div>
+                            <p class="text-[10px] text-secondary font-bold uppercase tracking-tighter">Certifié par</p>
+                            <p class="text-lg font-headline font-black text-primary">KI AGENCY</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="py-24 bg-gray-50" id="about">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
+                    <div class="md:col-span-1">
+                        <h2 class="text-4xl font-headline font-bold text-on-surface mb-6">Bâtir l'avenir par les compétences.</h2>
+                        <p class="text-secondary leading-relaxed">
+                            KI AGENCY se spécialise dans le renforcement de capacités, la formation continue et l'accompagnement de projets innovants pour les professionnels et les institutions.
+                        </p>
+                    </div>
+                    <div class="md:col-span-2 grid grid-cols-1 sm:grid-cols-3 gap-6">
+                        <article class="bg-white p-8 rounded-2xl shadow-sm border-b-4 border-primary hover:shadow-md transition-shadow">
+                            <span class="material-symbols-outlined text-primary text-4xl mb-4">lightbulb</span>
+                            <h3 class="font-headline font-bold text-xl mb-2">Formation</h3>
+                            <p class="text-sm text-secondary">Programmes sur mesure adaptés aux exigences du marché actuel.</p>
+                        </article>
+                        <article class="bg-white p-8 rounded-2xl shadow-sm border-b-4 border-primary hover:shadow-md transition-shadow">
+                            <span class="material-symbols-outlined text-primary text-4xl mb-4">military_tech</span>
+                            <h3 class="font-headline font-bold text-xl mb-2">Compétence</h3>
+                            <p class="text-sm text-secondary">Expertise technique et pédagogique de haut niveau.</p>
+                        </article>
+                        <article class="bg-white p-8 rounded-2xl shadow-sm border-b-4 border-primary hover:shadow-md transition-shadow">
+                            <span class="material-symbols-outlined text-primary text-4xl mb-4">star</span>
+                            <h3 class="font-headline font-bold text-xl mb-2">Excellence</h3>
+                            <p class="text-sm text-secondary">Engagement total pour des résultats tangibles et durables.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="py-24 bg-white" id="services">
+            <div class="max-w-7xl mx-auto px-8 text-center mb-16">
+                <h2 class="text-4xl font-headline font-black mb-4">Nos Piliers d'Intervention</h2>
+                <div class="h-1.5 w-24 bg-primary mx-auto rounded-full"></div>
+            </div>
+            <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="group bg-surface rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 border border-gray-100">
+                    <div class="h-48 overflow-hidden">
+                        <img alt="Formations Professionnelles" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzYDUB5K3QT9hS17_jYjLqbdt8TxIxvnbmGIEkrk99PGDtnX26rgKkrnbsRf5GlcpGrvGme0TNkp_SlyTkVDvMFDh9tTwOtYcPK1cMIxbbTLciY9ZTyHBOUO4fpkYOWAq0xE_m3C4N9FV3npW55USnwTH6XBFayPT4UnTFEsP6JTbfBTf-NnP3eqv6GzFgXeEibwnIcepVP23LA3er59Gxz0KqVun9ivmG8gUt3Lg5RlXQrT2GAZfiUUDYWK41dghvIPAsNeEnP08"/>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-headline font-bold mb-4">Formations Professionnelles</h3>
+                        <p class="text-secondary mb-6 line-clamp-2">Ateliers pratiques et immersifs pour maîtriser les outils et méthodologies de demain.</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center gap-2 text-sm text-secondary">
+                                <span class="material-symbols-outlined text-primary text-sm">check_circle</span> Leadership et Management
+                            </li>
+                            <li class="flex items-center gap-2 text-sm text-secondary">
+                                <span class="material-symbols-outlined text-primary text-sm">check_circle</span> Marketing Digital
+                            </li>
+                        </ul>
+                        <a href="formations.html" class="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all">
+                            Voir le catalogue <span class="material-symbols-outlined">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="group bg-surface rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 border border-gray-100">
+                    <div class="h-48 overflow-hidden">
+                        <img alt="Assistance Académique" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmfPm8CUge9t4CaVKzmG7yaUI8WjQSiyMe2e_s5Net6FV4oixFimQtqaqFZv3Aak6IcwRIMOSTHb5_yL7kcopRyWGF_6B8yo7xxLyfVMSdEj8qecmPj48mRzw-VwW8U5Wn0FXd_POdkvj-mNxkD-pDWwfiUzWvB_P6Vty_NQDX4MZBJuzeI7KdNTx2ZyPiMhlW0ziAgDT_PFClH_q-hEIwuaUSDPBMML8smVNeMYpmXCUWGeIMVXjD7b7dlM0ffmLU6fFhc6tdR70"/>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-headline font-bold mb-4">Assistance Académique</h3>
+                        <p class="text-secondary mb-6 line-clamp-2">Soutien personnalisé pour étudiants et chercheurs dans leurs travaux scientifiques.</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center gap-2 text-sm text-secondary">
+                                <span class="material-symbols-outlined text-primary text-sm">check_circle</span> Méthodologie de recherche
+                            </li>
+                            <li class="flex items-center gap-2 text-sm text-secondary">
+                                <span class="material-symbols-outlined text-primary text-sm">check_circle</span> Rédaction scientifique
+                            </li>
+                        </ul>
+                        <a href="#contact" class="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all">
+                            Demander de l'aide <span class="material-symbols-outlined">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="group bg-surface rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 border border-gray-100">
+                    <div class="h-48 overflow-hidden">
+                        <img alt="Gestion de Projet" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKr0rudpMwJmE94fNtuys_0J0Nlp4qT1EE089w2ndZpRDZIxW-a_GFIq-jZuF1fUvegK68dDo4s9McvmsIqK7DtB2dKTh60NT68V3gtN9ctZ179reRtgfsRIszg43Pq7R-zl_hwT1uyzUv4otKd22zhoBm41xA2dsxVq81LGIjOTsVcmGUIo8ZxK-0bQsduTpNMxWGXFcjA4e_KFiW_9jhNEAAIA-pUBt1oBPxWokrU6LGBlVMZeHSgU2SHBul6e15yFDUyrUkx2A"/>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-headline font-bold mb-4">Gestion de Projet</h3>
+                        <p class="text-secondary mb-6 line-clamp-2">Consulting stratégique et accompagnement à l'innovation pour vos projets d'entreprise.</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center gap-2 text-sm text-secondary">
+                                <span class="material-symbols-outlined text-primary text-sm">check_circle</span> Incubation d'idées
+                            </li>
+                            <li class="flex items-center gap-2 text-sm text-secondary">
+                                <span class="material-symbols-outlined text-primary text-sm">check_circle</span> Suivi-évaluation
+                            </li>
+                        </ul>
+                        <a href="#contact" class="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all">
+                            Démarrer un projet <span class="material-symbols-outlined">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Proof -->
+        <section class="py-20 academic-gradient text-white">
+            <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <div class="text-6xl font-headline font-black mb-4">Plus de 121</div>
+                    <p class="text-xl opacity-90 mb-8 tracking-wide uppercase font-bold">membres actifs nous font confiance</p>
+                    <div class="flex -space-x-4 mb-10">
+                        <img alt="User 1" class="w-12 h-12 rounded-full border-4 border-primary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCB8WTY61bNU78TiVNTwuFvzM6St3-CNKximrnRbqXSi2d_6kxLYSt3AE_iQCBWphtIPVP7NhOELIfGcT88QFxPcmKBP-w0Ag5E8El6RzWs5poYHDWvmeG_TCckl0sKUHNmEcwnE9-aAH1mM4YF_4SYSXxtes7Sn4mo7owJeNPzjnvkHZY2PnzKmRmwwz68dgsBJHt373js7OaGmV8UPNlJUl6fd4AJ08zUw7gf8wqDm1L9brkb5vNRyTn2iw0etttkQAWNwpnwKKM"/>
+                        <img alt="User 2" class="w-12 h-12 rounded-full border-4 border-primary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHJBXNHxs71L6YilyFppLBmiIGsAUlEugY0qzYgXuGFy_QL1XxiOVwtKRMntMbJr3I5nhWi2zantYhgFjzXSDqw_6mv1pxQlpJdWAN6SwnwT9KSOJVCH0x5lDtXRJmYZXEl3E6BltX1Kd0PKZ0ui-HCbGMiOVF_-RW9VpPx-RIahT-ErivFLzFtl-o22JWqUgBuXfJMjlCCN3h0wIpVQDhh0qF0PQ2BksDwLdlkwcQTPhleQLxG16xvJzo3iojvK3qyK5oC9Gr87c"/>
+                        <img alt="User 3" class="w-12 h-12 rounded-full border-4 border-primary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADisxq2RnjXrymF3EZNpMfnzGOhl1_Gy7270QOzMKboIfyOu1aFPwSxEeQ4piAsmw6kDGKoPPsdetBrfPQ851gF0lBa_AqWO6MG-j2peGSnijjbsDVgaeD_3skvvZ9FPeuqHqO8bg6h1V3UEmfW5nYvf22LbPCjqf8Y35ZMbGEH1Yg8Oip4wQJVqs9Fk4CxF8p_npIHmd09TPvCutfoYLUxodS8PLKSlmqQ_LkOPU-MCZ1cHzXikmq_Hrr1gIJQP-TP3SH4RvnQo4"/>
+                        <div class="w-12 h-12 rounded-full border-4 border-primary/20 bg-blue-100 flex items-center justify-center text-primary font-bold text-xs uppercase">+100</div>
+                    </div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md p-10 rounded-3xl border border-white/20">
+                    <span class="material-symbols-outlined text-4xl mb-6 opacity-40">format_quote</span>
+                    <p class="text-xl italic mb-6 leading-relaxed">
+                        "KI AGENCY a transformé ma façon d'aborder ma recherche doctorale. Leur expertise en méthodologie est inégalée et l'accompagnement est d'une rare qualité."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="font-bold">Jean-Marc T.</div>
+                        <div class="text-sm opacity-60">Chercheur en Économie</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="py-24 bg-gray-50" id="contact">
+            <div class="max-w-4xl mx-auto px-8">
+                <div class="bg-white rounded-[2rem] shadow-xl p-8 md:p-12 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full"></div>
+                    <div class="text-center mb-12">
+                        <h2 class="text-4xl font-headline font-bold text-on-surface mb-2">Contactez-nous</h2>
+                        <p class="text-secondary">Une question ? Un projet ? Notre équipe vous répond sous 24h.</p>
+                    </div>
+                    
+                    <!-- Formspree Integration -->
+                    <form action="https://formspree.io/f/mqakeevz" method="POST" class="space-y-6">
+                        <input type="hidden" name="_next" value="https://tonsite.com/success.html">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-1">
+                                <label class="text-xs font-bold uppercase text-secondary">Nom complet</label>
+                                <input name="name" required class="w-full bg-gray-50 border-none border-b-2 border-transparent focus:border-primary focus:ring-0 transition-all p-4 rounded-lg" placeholder="Votre nom" type="text"/>
+                            </div>
+                            <div class="space-y-1">
+                                <label class="text-xs font-bold uppercase text-secondary">Email</label>
+                                <input name="email" required class="w-full bg-gray-50 border-none border-b-2 border-transparent focus:border-primary focus:ring-0 transition-all p-4 rounded-lg" placeholder="votre@email.com" type="email"/>
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <label class="text-xs font-bold uppercase text-secondary">Sujet / Service</label>
+                            <select name="service" required class="w-full bg-gray-50 border-none border-b-2 border-transparent focus:border-primary focus:ring-0 transition-all p-4 rounded-lg">
+                                <option value="Formation">Formation Professionnelle</option>
+                                <option value="Assistance">Assistance Académique</option>
+                                <option value="Projet">Gestion de Projet</option>
+                                <option value="Autre">Autre</option>
+                            </select>
+                        </div>
+                        <div class="space-y-1">
+                            <label class="text-xs font-bold uppercase text-secondary">Message</label>
+                            <textarea name="message" required class="w-full bg-gray-50 border-none border-b-2 border-transparent focus:border-primary focus:ring-0 transition-all p-4 rounded-lg" placeholder="Comment pouvons-nous vous aider ?" rows="4"></textarea>
+                        </div>
+                        
+                        <!-- Honeypot to prevent spam -->
+                        <input type="text" name="_gotcha" style="display:none" />
+                        
+                        <button class="w-full py-4 bg-primary text-white font-bold rounded-full hover:bg-primary-container shadow-lg shadow-primary/20 transition-all flex items-center justify-center gap-2" type="submit">
+                            Envoyer ma demande <span class="material-symbols-outlined">send</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full bg-slate-900 text-slate-400 py-16 dark">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="md:col-span-1">
+                    <div class="flex items-center gap-3 mb-6">
+                        <img src="assets/img/logo.jpeg" alt="KI AGENCY" class="h-8 w-auto rounded">
+                        <span class="text-lg font-black text-white">KI AGENCY</span>
+                    </div>
+                    <p class="text-sm leading-relaxed">
+                        Centre de Développement des Compétences Académiques & Professionnelles. Precision in Academic Excellence.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-6">Services</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a class="hover:text-primary transition-colors" href="formations.html">Formations</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="formations.html">Assistance Académique</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="formations.html">Gestion de Projet</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-6">Société</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a class="hover:text-primary transition-colors" href="#about">À Propos</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="terms.html">Conditions d'utilisation</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="privacy.html">Politique de confidentialité</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="mentions-legales.html">Mentions Légales</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-6">Contact</h4>
+                    <p class="text-sm mb-4">Parfait KANLISSOU<br/>Direction Générale</p>
+                    <div class="flex gap-4">
+                        <a href="mailto:contact@kiagency.com" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-white hover:bg-primary transition-all">
+                            <span class="material-symbols-outlined text-sm">mail</span>
+                        </a>
+                        <a href="tel:+22900000000" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-white hover:bg-primary transition-all">
+                            <span class="material-symbols-outlined text-sm">phone</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-slate-800 text-center text-xs">
+                <p>© 2026 KI AGENCY. Tous droits r�serv�s. R�alis� par <a href="https://rejustewenoumi.pythonanywhere.com" class="hover:text-primary transition-colors">RW</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FAB -->
+    <a class="fixed bottom-8 right-8 w-16 h-16 bg-primary text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform z-40 group" href="#contact">
+        <span class="material-symbols-outlined text-2xl group-hover:rotate-12 transition-transform">chat</span>
+    </a>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

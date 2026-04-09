@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700;800;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-high": "#e8e8ea",
+                    "on-error": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "tertiary": "#0042a1",
+                    "on-secondary-container": "#576677",
+                    "surface-container": "#edeef0",
+                    "secondary-fixed-dim": "#b8c8db",
+                    "secondary-container": "#d4e4f8",
+                    "surface-container-low": "#f3f3f6",
+                    "surface-container-highest": "#e2e2e5",
+                    "tertiary-container": "#275bbf",
+                    "on-secondary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-on-surface": "#f0f0f3",
+                    "on-secondary-fixed-variant": "#394858",
+                    "secondary-fixed": "#d4e4f8",
+                    "tertiary-fixed": "#dae2ff",
+                    "surface-tint": "#2958c2",
+                    "surface-dim": "#d9dadc",
+                    "on-primary-container": "#d0daff",
+                    "primary-fixed-dim": "#b3c5ff",
+                    "outline-variant": "#c3c6d5",
+                    "on-primary": "#ffffff",
+                    "on-primary-fixed-variant": "#003fa5",
+                    "surface-bright": "#f9f9fb",
+                    "on-background": "#1a1c1e",
+                    "tertiary-fixed-dim": "#b1c5ff",
+                    "on-tertiary-fixed": "#001946",
+                    "secondary": "#516070",
+                    "outline": "#747684",
+                    "on-tertiary-container": "#cfdaff",
+                    "on-primary-fixed": "#00184a",
+                    "on-error-container": "#93000a",
+                    "surface-variant": "#e2e2e5",
+                    "on-tertiary-fixed-variant": "#00419e",
+                    "surface": "#f9f9fb",
+                    "error-container": "#ffdad6",
+                    "error": "#ba1a1a",
+                    "primary": "#0040a8",
+                    "primary-container": "#2b59c3",
+                    "inverse-surface": "#2f3133",
+                    "primary-fixed": "#dbe1ff",
+                    "on-secondary-fixed": "#0d1d2b",
+                    "background": "#f9f9fb",
+                    "inverse-primary": "#b3c5ff",
+                    "on-surface-variant": "#434653",
+                    "on-surface": "#1a1c1e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Public Sans"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Public Sans', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen">
+<!-- Navigation Drawer (JSON Authority) -->
+<aside class="h-full w-72 fixed left-0 top-0 z-40 bg-white dark:bg-slate-950 border-r border-slate-100 dark:border-slate-800/50 shadow-2xl shadow-blue-900/5 dark:shadow-none flex flex-col py-8">
+<div class="px-8 mb-12">
+<span class="text-xl font-black tracking-tighter text-blue-900 dark:text-blue-100">KI AGENCY</span>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-400 rounded-r-full py-3 px-6 font-semibold translate-x-1 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-sans text-sm tracking-normal">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 py-3 px-6 transition-all hover:bg-slate-50 dark:hover:bg-slate-900" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-sans text-sm tracking-normal">My Courses</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 py-3 px-6 transition-all hover:bg-slate-50 dark:hover:bg-slate-900" href="#">
+<span class="material-symbols-outlined" data-icon="library_books">library_books</span>
+<span class="font-sans text-sm tracking-normal">Resource Library</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 py-3 px-6 transition-all hover:bg-slate-50 dark:hover:bg-slate-900" href="#">
+<span class="material-symbols-outlined" data-icon="verified">verified</span>
+<span class="font-sans text-sm tracking-normal">Certifications</span>
+</a>
+</nav>
+<div class="mt-auto px-8 border-t border-slate-50 pt-8">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-high overflow-hidden">
+<img alt="Student Portrait" class="w-full h-full object-cover" data-alt="Close-up professional portrait of a man in his 40s with a warm confident expression, blurred library background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnjqFYmf27AHJ7uPRjW03jDOT3ojQIvZKdkTeJMmnRuphxuGBr8bwkol3a5_GOSKXuiKdKSBHrXOfLnZdp5yRyo8lusgOcK5z1I8bDQctQAEONdVJekSxHVOXLuavWIxjZimD3kwOa73W7tsCCIQLgy4Ox-OIW9qvADkm7k9g0K0PCZEKkZll_yEgY_rR76QDzN35jREOSQsAjd9GSyXwys10J05h9bt8kBAagnS6TB-HdOIFNfwqgZvrq7e0gWUS7CSh2lmsOa_w"/>
+</div>
+<div class="flex flex-col">
+<span class="font-bold text-sm text-blue-900 dark:text-blue-100">Academic Member</span>
+<span class="text-[10px] text-slate-500">Student ID: KI-2024-089</span>
+</div>
+</div>
+<div class="bg-blue-50 dark:bg-blue-900/20 px-3 py-1 rounded-full text-center">
+<span class="text-[10px] font-bold uppercase tracking-widest text-blue-700 dark:text-blue-400">Premium Access</span>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-72 p-12 min-h-screen">
+<!-- Welcome Header -->
+<header class="max-w-6xl mx-auto mb-16">
+<div class="flex justify-between items-end">
+<div>
+<span class="label-md font-bold uppercase tracking-[0.2em] text-secondary text-xs mb-4 block">Espace Personnel</span>
+<h1 class="text-5xl font-extrabold text-on-surface tracking-tight mb-2">Bienvenue, Jean-Marc T.</h1>
+<p class="text-lg text-secondary/80 max-w-2xl">Poursuivez votre excellence académique. Vos progrès reflètent votre engagement envers la maîtrise professionnelle.</p>
+</div>
+<div class="flex gap-4">
+<button class="bg-surface-container-lowest shadow-[0_20px_40px_rgba(0,24,74,0.06)] p-3 rounded-full hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="bg-surface-container-lowest shadow-[0_20px_40px_rgba(0,24,74,0.06)] p-3 rounded-full hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Bento Grid Layout -->
+<div class="max-w-6xl mx-auto grid grid-cols-12 gap-8">
+<!-- Mes Formations Section (Large) -->
+<section class="col-span-12 lg:col-span-8 space-y-6">
+<div class="flex items-center justify-between mb-2">
+<h2 class="text-2xl font-bold tracking-tight">Mes Formations en cours</h2>
+<a class="text-primary text-sm font-semibold hover:underline" href="#">Voir tout le catalogue</a>
+</div>
+<!-- Course Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-8 transition-all hover:shadow-[0_20px_40px_rgba(0,24,74,0.04)] group">
+<div class="flex gap-6">
+<div class="w-32 h-32 rounded-lg bg-surface-container overflow-hidden shrink-0">
+<img alt="Leadership" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="Minimalist office setting with a focused professional team discussing strategy, soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCh5ctYEW5LQ9qoI0L626peGdNRggfcPHlfyytDCfkDed4pGlCQFcWaPFAslUxDlZxV4qFWOok31JUCYhpAcJdCwnugTOvqKv9pZeexqlhdIvCKozdAO7TJ0b1Q1cApSIb8j4KmoSlYN_xpQoPc4TYlzvdWY7wCIVKeH7nXVynX2kL8Rdmj-pAOxyihHrIYB5QwKPm3t0MerfMgxh4Qb9I3Gq0PHp6aCRcZKfjl1loPbcljTA_UcI8lwac-rFr22AyPxO-JLHhH2zw"/>
+</div>
+<div class="flex-1 py-1 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start">
+<span class="text-[10px] font-bold uppercase tracking-widest text-secondary mb-1 block">Management Stratégique</span>
+<span class="text-xs font-semibold text-primary bg-primary-fixed px-2 py-0.5 rounded-full">En cours</span>
+</div>
+<h3 class="text-xl font-bold text-on-surface mt-1">Leadership et Management</h3>
+</div>
+<div class="mt-4">
+<div class="flex justify-between items-center mb-2">
+<span class="text-xs text-secondary font-medium">Progression du cursus</span>
+<span class="text-xs font-bold text-primary">68%</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-primary-container w-[68%]" style="width: 68%;"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Course Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-8 transition-all hover:shadow-[0_20px_40px_rgba(0,24,74,0.04)]">
+<div class="flex gap-6">
+<div class="w-32 h-32 rounded-lg bg-surface-container overflow-hidden shrink-0">
+<img alt="Marketing" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="Digital marketing workspace with clean aesthetic, laptop showing analytical data, coffee cup, bright airy feel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrKFxIMEd9lyD45tBA7wsjhYthKdLEKqBmCv05ciVs7prbyhSjTIHHj5zud8E7dmuVE-h31JdJsO9IY3_QfI6SvgSfA8YXFtz5l_bxt0t6XIxXl_u4YcX50Lz85Oe7QjJQsYDc9LXntQH1d-9isrDcU7drzjhi7Q_pQu7vuEuVzSAOYkzj5G7NNtFJ8erx7CEJmGttq4xv_KOB0tgOqFVSmoDkdGiUoXaFCPLRQWA30xiByo5yz1PiDSrR2_knQUtILgwnikgmW8w"/>
+</div>
+<div class="flex-1 py-1 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start">
+<span class="text-[10px] font-bold uppercase tracking-widest text-secondary mb-1 block">Digital Performance</span>
+<span class="text-xs font-semibold text-primary bg-primary-fixed px-2 py-0.5 rounded-full">En cours</span>
+</div>
+<h3 class="text-xl font-bold text-on-surface mt-1">Marketing Digital</h3>
+</div>
+<div class="mt-4">
+<div class="flex justify-between items-center mb-2">
+<span class="text-xs text-secondary font-medium">Progression du cursus</span>
+<span class="text-xs font-bold text-primary">42%</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-primary-container w-[42%]" style="width: 42%;"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Sidebar Info Sections -->
+<div class="col-span-12 lg:col-span-4 space-y-8">
+<!-- Certifications Section -->
+<section>
+<h2 class="text-lg font-bold tracking-tight mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+                        Certifications Obtenues
+                    </h2>
+<div class="bg-surface-container-low rounded-xl p-6 space-y-4">
+<div class="flex items-center gap-4 bg-white p-3 rounded-lg">
+<div class="w-10 h-10 flex items-center justify-center bg-secondary-container rounded-lg">
+<span class="material-symbols-outlined text-primary" data-icon="terminal">terminal</span>
+</div>
+<div>
+<h4 class="text-sm font-bold">Data Strategy Pro</h4>
+<p class="text-[10px] text-secondary">Délivré en Janvier 2024</p>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-white p-3 rounded-lg">
+<div class="w-10 h-10 flex items-center justify-center bg-secondary-container rounded-lg">
+<span class="material-symbols-outlined text-primary" data-icon="account_balance">account_balance</span>
+</div>
+<div>
+<h4 class="text-sm font-bold">Finance pour Managers</h4>
+<p class="text-[10px] text-secondary">Délivré en Nov 2023</p>
+</div>
+</div>
+<button class="w-full py-2 text-xs font-bold text-primary uppercase tracking-widest hover:bg-white transition-all rounded-lg mt-2">Accéder au coffre-fort</button>
+</div>
+</section>
+<!-- Prochaines Sessions (Calendar View inspired) -->
+<section>
+<h2 class="text-lg font-bold tracking-tight mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="calendar_month">calendar_month</span>
+                        Prochaines Sessions
+                    </h2>
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_20px_40px_rgba(0,24,74,0.04)] overflow-hidden">
+<div class="bg-primary px-6 py-3">
+<span class="text-white text-xs font-bold uppercase tracking-widest">Mars 2024</span>
+</div>
+<div class="p-6 space-y-6">
+<div class="flex gap-4">
+<div class="flex flex-col items-center shrink-0 w-12 py-1 bg-surface-container-high rounded-lg">
+<span class="text-[10px] font-bold text-secondary uppercase">Mar</span>
+<span class="text-xl font-bold text-on-surface">12</span>
+</div>
+<div class="flex flex-col justify-center">
+<h4 class="text-sm font-bold">Atelier : IA Générative</h4>
+<p class="text-[10px] text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="schedule">schedule</span>
+                                        14:00 - 16:30 (En ligne)
+                                    </p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex flex-col items-center shrink-0 w-12 py-1 bg-surface-container-high rounded-lg">
+<span class="text-[10px] font-bold text-secondary uppercase">Mar</span>
+<span class="text-xl font-bold text-on-surface">15</span>
+</div>
+<div class="flex flex-col justify-center">
+<h4 class="text-sm font-bold">Examen : Marketing</h4>
+<p class="text-[10px] text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="location_on">location_on</span>
+                                        Campus KI - Salle 304
+                                    </p>
+</div>
+</div>
+<div class="flex gap-4 opacity-50">
+<div class="flex flex-col items-center shrink-0 w-12 py-1 bg-surface-container-high rounded-lg">
+<span class="text-[10px] font-bold text-secondary uppercase">Mar</span>
+<span class="text-xl font-bold text-on-surface">22</span>
+</div>
+<div class="flex flex-col justify-center">
+<h4 class="text-sm font-bold">Conférence Alumni</h4>
+<p class="text-[10px] text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="schedule">schedule</span>
+                                        18:00 - 20:00 (Amphithéâtre)
+                                    </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick Action FAB logic context -->
+<div class="mt-8">
+<button class="w-full bg-gradient-to-br from-primary to-primary-container text-white py-4 px-6 rounded-full font-bold shadow-[0_20px_40px_rgba(0,24,74,0.15)] flex items-center justify-center gap-3 hover:scale-[1.02] transition-transform">
+<span class="material-symbols-outlined" data-icon="add" data-weight="fill" style="font-variation-settings: 'FILL' 1;">add</span>
+                        Nouvelle Inscription
+                    </button>
+</div>
+</div>
+</div>
+<!-- Progress Timeline (Academic Specific) -->
+<section class="max-w-6xl mx-auto mt-20">
+<h2 class="text-2xl font-bold tracking-tight mb-12">Mon Parcours Académique</h2>
+<div class="relative flex items-center justify-between px-8">
+<!-- Line -->
+<div class="absolute h-[2px] bg-outline-variant/20 left-12 right-12 top-1/2 -translate-y-1/2 -z-10"></div>
+<!-- Steps -->
+<div class="flex flex-col items-center gap-4 group">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white ring-8 ring-primary/10">
+<span class="material-symbols-outlined text-sm" data-icon="check">check</span>
+</div>
+<div class="text-center">
+<p class="text-xs font-bold uppercase tracking-widest text-on-surface">Admissibilité</p>
+<p class="text-[10px] text-secondary">Validé Sep 2023</p>
+</div>
+</div>
+<div class="flex flex-col items-center gap-4 group">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white ring-8 ring-primary/10">
+<span class="material-symbols-outlined text-sm" data-icon="check">check</span>
+</div>
+<div class="text-center">
+<p class="text-xs font-bold uppercase tracking-widest text-on-surface">Tronc Commun</p>
+<p class="text-[10px] text-secondary">Validé Jan 2024</p>
+</div>
+</div>
+<div class="flex flex-col items-center gap-4 group">
+<div class="w-8 h-8 rounded-full bg-white border-2 border-primary flex items-center justify-center text-primary">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+</div>
+<div class="text-center">
+<p class="text-xs font-bold uppercase tracking-widest text-primary">Spécialisation</p>
+<p class="text-[10px] text-secondary">En cours (T2 2024)</p>
+</div>
+</div>
+<div class="flex flex-col items-center gap-4 group opacity-40">
+<div class="w-8 h-8 rounded-full bg-white border-2 border-outline-variant flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-sm" data-icon="lock">lock</span>
+</div>
+<div class="text-center">
+<p class="text-xs font-bold uppercase tracking-widest text-secondary">Mémoire</p>
+<p class="text-[10px] text-secondary">Prévu Sep 2024</p>
+</div>
+</div>
+<div class="flex flex-col items-center gap-4 group opacity-40">
+<div class="w-8 h-8 rounded-full bg-white border-2 border-outline-variant flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-sm" data-icon="school">school</span>
+</div>
+<div class="text-center">
+<p class="text-xs font-bold uppercase tracking-widest text-secondary">Diplomation</p>
+<p class="text-[10px] text-secondary">Prévu Nov 2024</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer (JSON Authority) -->
+<footer class="w-full mt-20 bg-slate-50 dark:bg-slate-950 no-border bg-slate-100 dark:bg-slate-900 flat no-shadows">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 py-16 max-w-7xl mx-auto">
+<div class="col-span-1 md:col-span-1">
+<span class="text-lg font-black text-blue-900 dark:text-blue-100">KI AGENCY</span>
+<p class="mt-4 text-sm text-slate-500 dark:text-slate-400">Precision in Academic Excellence. Empowering the leaders of tomorrow.</p>
+</div>
+<div>
+<h4 class="font-sans font-semibold text-slate-900 dark:text-white mb-6 uppercase text-xs tracking-widest">Ressources</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 hover:underline transition-all text-sm" href="#">Programs</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 hover:underline transition-all text-sm" href="#">Research</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 hover:underline transition-all text-sm" href="#">Admissions</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-sans font-semibold text-slate-900 dark:text-white mb-6 uppercase text-xs tracking-widest">Support</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 hover:underline transition-all text-sm" href="#">Help Center</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 hover:underline transition-all text-sm" href="#">Student Guide</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 hover:underline transition-all text-sm" href="#">Contact Portal</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-sans font-semibold text-slate-900 dark:text-white mb-6 uppercase text-xs tracking-widest">Legal</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 hover:underline transition-all text-sm" href="#">Privacy Policy</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 hover:underline transition-all text-sm" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-slate-200/50 dark:border-slate-800/50 py-8 px-8 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-sans text-sm text-slate-500">© 2024 KI AGENCY. All rights reserved. Precision in Academic Excellence.</p>
+<div class="flex gap-6">
+<a class="text-slate-400 hover:text-blue-600" href="#"><span class="material-symbols-outlined" data-icon="language">language</span></a>
+<a class="text-slate-400 hover:text-blue-600" href="#"><span class="material-symbols-outlined" data-icon="share">share</span></a>
+</div>
+</div>
+</footer>
+</main>
+</body></html>

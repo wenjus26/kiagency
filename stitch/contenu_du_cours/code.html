@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Leadership et Management - Module 1 | KI AGENCY</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700;800;900&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#e8e8ea",
+                        "on-error": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "tertiary": "#0042a1",
+                        "on-secondary-container": "#576677",
+                        "surface-container": "#edeef0",
+                        "secondary-fixed-dim": "#b8c8db",
+                        "secondary-container": "#d4e4f8",
+                        "surface-container-low": "#f3f3f6",
+                        "surface-container-highest": "#e2e2e5",
+                        "tertiary-container": "#275bbf",
+                        "on-secondary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-on-surface": "#f0f0f3",
+                        "on-secondary-fixed-variant": "#394858",
+                        "secondary-fixed": "#d4e4f8",
+                        "tertiary-fixed": "#dae2ff",
+                        "surface-tint": "#2958c2",
+                        "surface-dim": "#d9dadc",
+                        "on-primary-container": "#d0daff",
+                        "primary-fixed-dim": "#b3c5ff",
+                        "outline-variant": "#c3c6d5",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed-variant": "#003fa5",
+                        "surface-bright": "#f9f9fb",
+                        "on-background": "#1a1c1e",
+                        "tertiary-fixed-dim": "#b1c5ff",
+                        "on-tertiary-fixed": "#001946",
+                        "secondary": "#516070",
+                        "outline": "#747684",
+                        "on-tertiary-container": "#cfdaff",
+                        "on-primary-fixed": "#00184a",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#e2e2e5",
+                        "on-tertiary-fixed-variant": "#00419e",
+                        "surface": "#f9f9fb",
+                        "error-container": "#ffdad6",
+                        "error": "#ba1a1a",
+                        "primary": "#0040a8",
+                        "primary-container": "#2b59c3",
+                        "inverse-surface": "#2f3133",
+                        "primary-fixed": "#dbe1ff",
+                        "on-secondary-fixed": "#0d1d2b",
+                        "background": "#f9f9fb",
+                        "inverse-primary": "#b3c5ff",
+                        "on-surface-variant": "#434653",
+                        "on-surface": "#1a1c1e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Public Sans"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .glass-header { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(20px); }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .active-nav-bg { background: linear-gradient(135deg, #0040a8 0%, #2b59c3 100%); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopAppBar Shell -->
+<header class="fixed top-0 w-full z-50 glass-header shadow-sm bg-white/80">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-[1600px] mx-auto">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="school">school</span>
+<h1 class="text-xl font-black tracking-tighter text-blue-900 font-headline uppercase">KI AGENCY</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-blue-700 font-bold border-b-2 border-blue-700 pb-1 font-label text-xs tracking-widest uppercase" href="#">My Courses</a>
+<a class="text-slate-600 font-medium hover:text-blue-600 transition-colors font-label text-xs tracking-widest uppercase" href="#">Dashboard</a>
+<a class="text-slate-600 font-medium hover:text-blue-600 transition-colors font-label text-xs tracking-widest uppercase" href="#">Resources</a>
+</nav>
+<button class="bg-primary text-white px-6 py-2 rounded-full font-label text-xs font-bold tracking-widest uppercase hover:opacity-90 transition-all">
+                Contact Us
+            </button>
+</div>
+</header>
+<!-- Sidebar / NavigationDrawer Shell -->
+<aside class="h-full w-80 fixed left-0 top-0 z-40 bg-white border-r border-slate-100 hidden lg:flex flex-col pt-24 pb-8 overflow-y-auto no-scrollbar">
+<div class="px-8 mb-8 flex flex-col items-start">
+<div class="w-12 h-12 rounded-full bg-surface-container-high mb-4 overflow-hidden border border-outline-variant/20">
+<img alt="Student Portrait" class="w-full h-full object-cover" data-alt="Close-up professional portrait of a focused executive in business attire with soft natural lighting and neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGqBg0VhfqFXYsEJCWKLFGC0nb8hexQ2TgvMcZV_lvEydBg22Zew7N7-VMRk7puYga7i30AB35Zh_wid_1jOoz383dGIDRCtqmok4r_u8mAay72glx09XJqtvYwGtgQkAENuhdcaA2L8I4adA0bFLdyG0XTYEWxXoqZTYcMdFlBQ8jnYAhH2fz89VdVNSdMX0LSLfKd39mlUGd1nsCKOX9PjU_bwfpliQdoH4-o8trFzmveIdB7k1AesW_8mYhQ_56JapWtkeAUFQ"/>
+</div>
+<p class="text-sm font-bold text-on-surface font-headline uppercase tracking-tighter">Academic Member</p>
+<p class="text-xs text-secondary mb-1">Student ID: KI-2024-089</p>
+<span class="text-[10px] bg-blue-50 text-blue-700 px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">Premium Access</span>
+</div>
+<nav class="flex-1 space-y-1">
+<div class="px-6 py-2 mb-2">
+<p class="text-[10px] font-black text-secondary/50 uppercase tracking-[0.2em] px-2">Navigation</p>
+</div>
+<a class="flex items-center gap-3 text-slate-500 hover:text-blue-600 py-3 px-8 transition-all hover:bg-slate-50 font-medium text-sm" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="dashboard">dashboard</span>
+                Dashboard
+            </a>
+<a class="flex items-center gap-3 bg-blue-50 text-blue-700 rounded-r-full py-3 px-8 font-semibold text-sm border-l-4 border-blue-700 translate-x-1 duration-200" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="menu_book">menu_book</span>
+                My Courses
+            </a>
+<a class="flex items-center gap-3 text-slate-500 hover:text-blue-600 py-3 px-8 transition-all hover:bg-slate-50 font-medium text-sm" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="library_books">library_books</span>
+                Resource Library
+            </a>
+<a class="flex items-center gap-3 text-slate-500 hover:text-blue-600 py-3 px-8 transition-all hover:bg-slate-50 font-medium text-sm" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="verified">verified</span>
+                Certifications
+            </a>
+<div class="px-6 py-4 mt-8 border-t border-slate-50">
+<p class="text-[10px] font-black text-secondary/50 uppercase tracking-[0.2em] px-2 mb-4">Module Progress</p>
+<div class="space-y-4 px-2">
+<div class="flex items-center gap-3 opacity-60">
+<span class="material-symbols-outlined text-green-600 text-lg" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-xs font-medium">Introduction</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-5 h-5 rounded-full border-2 border-blue-700 flex items-center justify-center">
+<div class="w-2 h-2 bg-blue-700 rounded-full"></div>
+</div>
+<span class="text-xs font-bold text-blue-800">Module 1: Fondamentaux</span>
+</div>
+<div class="flex items-center gap-3 opacity-40">
+<div class="w-5 h-5 rounded-full border-2 border-slate-300"></div>
+<span class="text-xs font-medium">Module 2: Communication</span>
+</div>
+<div class="flex items-center gap-3 opacity-40">
+<div class="w-5 h-5 rounded-full border-2 border-slate-300"></div>
+<span class="text-xs font-medium">Module 3: Stratégie</span>
+</div>
+</div>
+</div>
+</nav>
+</aside>
+<!-- Main Content Canvas -->
+<main class="lg:ml-80 pt-28 pb-20 px-6 md:px-12 max-w-[1400px]">
+<!-- Breadcrumb & Header -->
+<header class="mb-10">
+<nav class="flex items-center gap-2 text-xs font-medium text-secondary mb-4 font-label uppercase tracking-widest">
+<span class="hover:text-primary cursor-pointer">Leadership et Management</span>
+<span class="material-symbols-outlined text-[14px]" data-icon="chevron_right">chevron_right</span>
+<span class="text-primary font-bold">Module 1: Fondamentaux</span>
+</nav>
+<h2 class="text-4xl md:text-5xl font-black font-headline text-on-surface tracking-tighter leading-none mb-4">Les Fondamentaux du Management Moderne</h2>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-1.5 text-xs text-secondary font-medium">
+<span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span>
+<span>45 minutes</span>
+</div>
+<div class="flex items-center gap-1.5 text-xs text-secondary font-medium">
+<span class="material-symbols-outlined text-sm" data-icon="person">person</span>
+<span>Dr. Elena Kovacs</span>
+</div>
+</div>
+</header>
+<!-- Content Layout: Asymmetric Bento Grid -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-8 items-start">
+<!-- Primary Content: Video & Transcript -->
+<div class="xl:col-span-8 space-y-8">
+<!-- Video Player Section -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-2xl shadow-blue-900/5 relative group">
+<div class="aspect-video bg-slate-900 relative">
+<img alt="Module Cover" class="w-full h-full object-cover opacity-60" data-alt="Wide cinematic shot of a modern boardroom with soft morning light streaming through large windows, minimalist professional atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzfeCO9eNC9H2ZISidbMDXemM_zeofkX11nUXd-8CGEwYJ408r4DfeP_xusx4FyHX0G3htoxV-q-rWTNiFjpfru--7Gy8wK-FCdetRT7bMa7rsE838Xfmdp9qJ55IDt77OFDnA8YE83FEpsc82Cfgfyc7YD4nrFPHiaXsZ30gmc8FsMXNNJEn0x_agXVQ1bKVNHb5A4TMiWqwYAIaUr0gzd5xnuXd0k8U0jdNxRNmYku6kMN4Sd4uHK8MXnmBqmafCM9z8EuGLWOk"/>
+<!-- Custom Player UI -->
+<div class="absolute inset-0 flex items-center justify-center">
+<button class="w-20 h-20 bg-primary/90 text-white rounded-full flex items-center justify-center hover:scale-105 transition-transform duration-300 shadow-xl">
+<span class="material-symbols-outlined text-4xl" data-icon="play_arrow" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+<div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-slate-950/80 to-transparent">
+<div class="flex items-center gap-4 text-white">
+<span class="text-xs font-mono">12:45 / 45:00</span>
+<div class="h-1 flex-1 bg-white/20 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-1/4"></div>
+</div>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors" data-icon="settings">settings</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors" data-icon="fullscreen">fullscreen</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Transcript Area -->
+<div class="bg-surface-container-low p-8 rounded-xl border border-outline-variant/10">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-lg font-bold font-headline uppercase tracking-tighter">Transcription de la leçon</h3>
+<div class="flex gap-2">
+<button class="text-xs font-bold text-primary flex items-center gap-1 hover:underline">
+<span class="material-symbols-outlined text-sm" data-icon="search">search</span> Rechercher
+                            </button>
+<button class="text-xs font-bold text-secondary flex items-center gap-1 hover:underline ml-4">
+<span class="material-symbols-outlined text-sm" data-icon="download">download</span> TXT
+                            </button>
+</div>
+</div>
+<div class="space-y-4 max-h-64 overflow-y-auto pr-4 no-scrollbar">
+<p class="text-sm leading-relaxed text-secondary italic border-l-2 border-primary/20 pl-4 mb-6">"Le management n'est pas seulement une question de contrôle, mais de création d'un environnement où l'excellence peut s'épanouir naturellement."</p>
+<p class="text-sm leading-relaxed text-on-surface/80">
+<strong>[00:00]</strong> Bienvenue dans ce premier module consacré aux fondamentaux. Aujourd'hui, nous allons déconstruire le mythe du manager autoritaire pour explorer le concept de "Servant Leadership".
+                        </p>
+<p class="text-sm leading-relaxed text-on-surface/80">
+<strong>[05:12]</strong> La première étape cruciale consiste à identifier les leviers de motivation intrinsèque de vos collaborateurs. Comme nous l'avons vu dans les lectures préparatoires, le modèle de Pink (Autonomie, Maîtrise, But) reste le pilier central.
+                        </p>
+<p class="text-sm leading-relaxed text-on-surface/80">
+<strong>[10:45]</strong> Analysons maintenant l'asymétrie informationnelle au sein des équipes hybrides...
+                        </p>
+</div>
+</div>
+</div>
+<!-- Sidebar Content: Resources & Quiz -->
+<div class="xl:col-span-4 space-y-8">
+<!-- Resources Section -->
+<div class="bg-white p-8 rounded-xl shadow-sm border border-slate-50">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary" data-icon="folder_open">folder_open</span>
+<h3 class="text-lg font-bold font-headline uppercase tracking-tighter">Ressources à télécharger</h3>
+</div>
+<div class="space-y-4">
+<div class="group flex items-center justify-between p-4 rounded-lg bg-surface-container-low hover:bg-primary/5 transition-all cursor-pointer">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-white flex items-center justify-center text-red-600 shadow-sm">
+<span class="material-symbols-outlined" data-icon="picture_as_pdf">picture_as_pdf</span>
+</div>
+<div>
+<p class="text-xs font-bold text-on-surface">Guide du Manager.pdf</p>
+<p class="text-[10px] text-secondary">2.4 MB • PDF Document</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary group-hover:text-primary transition-colors" data-icon="download">download</span>
+</div>
+<div class="group flex items-center justify-between p-4 rounded-lg bg-surface-container-low hover:bg-primary/5 transition-all cursor-pointer">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-white flex items-center justify-center text-blue-600 shadow-sm">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+</div>
+<div>
+<p class="text-xs font-bold text-on-surface">Template Feedback 360.docx</p>
+<p class="text-[10px] text-secondary">156 KB • Word Template</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary group-hover:text-primary transition-colors" data-icon="download">download</span>
+</div>
+<div class="group flex items-center justify-between p-4 rounded-lg bg-surface-container-low hover:bg-primary/5 transition-all cursor-pointer">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-white flex items-center justify-center text-amber-600 shadow-sm">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+</div>
+<div>
+<p class="text-xs font-bold text-on-surface">Matrice de Compétences.xlsx</p>
+<p class="text-[10px] text-secondary">1.2 MB • Excel Sheet</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary group-hover:text-primary transition-colors" data-icon="download">download</span>
+</div>
+</div>
+</div>
+<!-- Quiz CTA Section -->
+<div class="bg-blue-900 p-8 rounded-xl text-white overflow-hidden relative">
+<div class="relative z-10">
+<h3 class="text-xl font-black font-headline uppercase tracking-tighter mb-2 leading-none">Évaluation Finale</h3>
+<p class="text-sm text-blue-200 mb-6">Validez vos acquis pour débloquer le certificat de réussite du module 1.</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-2 text-xs font-medium">
+<span class="material-symbols-outlined text-[16px] text-blue-400" data-icon="bolt">bolt</span>
+                                15 Questions à choix multiples
+                            </li>
+<li class="flex items-center gap-2 text-xs font-medium">
+<span class="material-symbols-outlined text-[16px] text-blue-400" data-icon="flag">flag</span>
+                                Score minimum requis: 80%
+                            </li>
+</ul>
+<button class="w-full py-4 bg-white text-blue-900 rounded-full font-bold font-label text-xs tracking-widest uppercase hover:bg-blue-50 transition-colors shadow-lg">
+                            Quiz de fin de module
+                        </button>
+</div>
+<!-- Decorative background element -->
+<span class="material-symbols-outlined absolute -bottom-8 -right-8 text-[180px] text-white/5 rotate-12" data-icon="fact_check" style="font-variation-settings: 'FILL' 1;">fact_check</span>
+</div>
+<!-- Support Card -->
+<div class="bg-surface-container-high/40 p-6 rounded-xl border border-slate-100 flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="support_agent">support_agent</span>
+</div>
+<div>
+<p class="text-xs font-bold uppercase tracking-widest">Besoin d'aide ?</p>
+<p class="text-xs text-secondary underline cursor-pointer hover:text-primary transition-colors">Contactez votre tuteur académique</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Shell -->
+<footer class="w-full mt-20 bg-slate-100 py-16">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 max-w-7xl mx-auto">
+<div class="col-span-1 md:col-span-1">
+<h2 class="text-lg font-black text-blue-900 font-headline uppercase mb-6">KI AGENCY</h2>
+<p class="text-sm text-slate-500 leading-relaxed italic">"Precision in Academic Excellence. L'excellence n'est pas un acte, mais une habitude."</p>
+</div>
+<div>
+<h4 class="font-sans font-semibold text-slate-900 mb-6 uppercase text-xs tracking-widest">Programs</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-500 hover:text-blue-600 text-sm transition-all" href="#">Executive Leadership</a></li>
+<li><a class="text-slate-500 hover:text-blue-600 text-sm transition-all" href="#">Strategic Management</a></li>
+<li><a class="text-slate-500 hover:text-blue-600 text-sm transition-all" href="#">Digital Transformation</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-sans font-semibold text-slate-900 mb-6 uppercase text-xs tracking-widest">Support</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-500 hover:text-blue-600 text-sm transition-all" href="#">Research Library</a></li>
+<li><a class="text-slate-500 hover:text-blue-600 text-sm transition-all" href="#">Student Portal</a></li>
+<li><a class="text-slate-500 hover:text-blue-600 text-sm transition-all" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+<h4 class="font-sans font-semibold text-slate-900 mb-2 uppercase text-xs tracking-widest">Membership</h4>
+<p class="text-xs text-slate-500 mb-4">You are currently logged in with Premium Access. Your next billing date is Oct 12, 2024.</p>
+<button class="w-full py-2 border-2 border-blue-900 text-blue-900 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-blue-50 transition-all">Manage Subscription</button>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 mt-16 pt-8 border-t border-slate-200">
+<p class="text-[10px] text-slate-400 text-center uppercase tracking-[0.3em]">© 2024 KI AGENCY. All rights reserved. Precision in Academic Excellence.</p>
+</div>
+</footer>
+<!-- Mobile Navigation Shell (Bottom Bar) -->
+<nav class="fixed bottom-0 left-0 w-full bg-white md:hidden z-50 flex justify-around items-center py-4 px-2 shadow-[0_-10px_30px_rgba(0,0,0,0.05)]">
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="text-[10px] font-bold uppercase">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-blue-700">
+<span class="material-symbols-outlined" data-icon="menu_book" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+<span class="text-[10px] font-bold uppercase">Course</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined" data-icon="library_books">library_books</span>
+<span class="text-[10px] font-bold uppercase">Files</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+<span class="text-[10px] font-bold uppercase">Profile</span>
+</button>
+</nav>
+</body></html>

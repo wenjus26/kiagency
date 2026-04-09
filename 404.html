@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html class="light" lang="fr">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>404 - Page Non Trouvée | KI AGENCY</title>
+    
+    <!-- CSS Dependencies -->
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="assets/css/style.css" rel="stylesheet"/>
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0040a8",
+                        "primary-container": "#2b59c3",
+                        "secondary": "#516070",
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface flex flex-col min-h-screen">
+    <main class="flex-1 flex flex-col items-center justify-center p-8 text-center">
+        <div class="relative mb-8">
+            <span class="text-[12rem] font-black text-blue-50 opacity-50">404</span>
+            <div class="absolute inset-0 flex items-center justify-center">
+                <span class="material-symbols-outlined text-[6rem] text-primary animate-bounce">search_off</span>
+            </div>
+        </div>
+        
+        <h1 class="text-4xl font-black text-on-surface mb-4 tracking-tight">Oups ! La page est introuvable.</h1>
+        <p class="text-lg text-secondary mb-12 max-w-md mx-auto">
+            Il semble que le chemin que vous cherchez n'existe plus ou a été déplacé.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="index.html" class="px-10 py-4 bg-primary text-white rounded-full font-bold shadow-lg shadow-primary/20 hover:scale-105 transition-transform">
+                Retour à l'accueil
+            </a>
+            <a href="contact.html" class="px-10 py-4 bg-white text-primary border border-blue-100 rounded-full font-bold hover:bg-blue-50 transition-colors">
+                Contactez-nous
+            </a>
+        </div>
+    </main>
+
+    <footer class="p-8 text-center text-xs text-slate-400">
+        © 2026 KI AGENCY. Tous droits r�serv�s. R�alis� par <a href="https://rejustewenoumi.pythonanywhere.com" class="hover:text-primary transition-colors">RW</a>
+    </footer>
+</body>
+</html>

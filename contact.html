@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html class="light" lang="fr">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Contactez-nous - KI AGENCY</title>
+    
+    <!-- CSS Dependencies -->
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="assets/css/style.css" rel="stylesheet"/>
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0040a8",
+                        "primary-container": "#2b59c3",
+                        "secondary": "#516070",
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface">
+    <!-- TopAppBar -->
+    <header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl shadow-sm">
+        <nav class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="assets/img/logo.jpeg" alt="KI AGENCY Logo" class="h-10 w-auto rounded-lg shadow-sm">
+                <span class="text-xl font-bold tracking-tighter text-blue-800 uppercase">KI AGENCY</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a class="text-slate-600 font-medium hover:text-blue-600 transition-colors" href="index.html">Accueil</a>
+                <a class="text-slate-600 font-medium hover:text-blue-600 transition-colors" href="formations.html">Formations</a>
+                <a class="text-blue-700 font-bold border-b-2 border-blue-700 pb-1" href="contact.html">Contact</a>
+            </div>
+            <button class="md:hidden text-on-surface p-2">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </nav>
+    </header>
+
+    <main class="pt-32 pb-24 px-8">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div>
+                <h1 class="text-5xl font-black text-on-surface mb-8 tracking-tight">Parlons de votre <span class="text-primary">avenir</span>.</h1>
+                <p class="text-xl text-secondary mb-12 leading-relaxed">
+                    Que vous soyez un étudiant en quête d'excellence ou un professionnel souhaitant monter en compétences, notre équipe est là pour vous guider.
+                </p>
+                
+                <div class="space-y-8">
+                    <div class="flex items-center gap-6">
+                        <div class="w-14 h-14 bg-blue-50 text-primary rounded-full flex items-center justify-center shrink-0">
+                            <span class="material-symbols-outlined">mail</span>
+                        </div>
+                        <div>
+                            <p class="text-xs font-bold text-secondary uppercase tracking-widest">Email</p>
+                            <p class="text-lg font-bold">contact@kiagency.com</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-6">
+                        <div class="w-14 h-14 bg-blue-50 text-primary rounded-full flex items-center justify-center shrink-0">
+                            <span class="material-symbols-outlined">phone</span>
+                        </div>
+                        <div>
+                            <p class="text-xs font-bold text-secondary uppercase tracking-widest">Téléphone</p>
+                            <p class="text-lg font-bold">+229 00 00 00 00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-3xl shadow-xl p-8 md:p-12 border border-blue-50">
+                <form action="https://formspree.io/f/mqakeevz" method="POST" class="space-y-6">
+                    <input type="hidden" name="_next" value="https://tonsite.com/success.html">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-1">
+                            <label class="text-xs font-bold uppercase text-secondary">Nom complet</label>
+                            <input name="name" required class="w-full bg-gray-50 border-none border-b-2 border-transparent focus:border-primary focus:ring-0 transition-all p-4 rounded-lg" placeholder="Votre nom" type="text"/>
+                        </div>
+                        <div class="space-y-1">
+                            <label class="text-xs font-bold uppercase text-secondary">Email</label>
+                            <input name="email" required class="w-full bg-gray-50 border-none border-b-2 border-transparent focus:border-primary focus:ring-0 transition-all p-4 rounded-lg" placeholder="votre@email.com" type="email"/>
+                        </div>
+                    </div>
+                    <div class="space-y-1">
+                        <label class="text-xs font-bold uppercase text-secondary">Service</label>
+                        <select name="service" class="w-full bg-gray-50 border-none border-b-2 border-transparent focus:border-primary focus:ring-0 transition-all p-4 rounded-lg">
+                            <option>Formation</option>
+                            <option>Assistance Académique</option>
+                            <option>Gestion de Projet</option>
+                        </select>
+                    </div>
+                    <div class="space-y-1">
+                        <label class="text-xs font-bold uppercase text-secondary">Message</label>
+                        <textarea name="message" required class="w-full bg-gray-50 border-none border-b-2 border-transparent focus:border-primary focus:ring-0 transition-all p-4 rounded-lg" placeholder="Votre message..." rows="4"></textarea>
+                    </div>
+                    <button class="w-full py-4 bg-primary text-white font-bold rounded-full hover:bg-primary-container transition-all flex items-center justify-center gap-2" type="submit">
+                        Envoyer <span class="material-symbols-outlined">send</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="w-full bg-slate-900 text-slate-400 py-16 dark">
+        <div class="max-w-7xl mx-auto px-8 text-center text-xs">
+            <p>© 2026 KI AGENCY. Tous droits r�serv�s. R�alis� par <a href="https://rejustewenoumi.pythonanywhere.com" class="hover:text-primary transition-colors">RW</a>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

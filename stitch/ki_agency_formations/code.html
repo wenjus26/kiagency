@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700;800;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary": "#ffffff",
+                    "tertiary-container": "#275bbf",
+                    "on-primary": "#ffffff",
+                    "surface-container": "#edeef0",
+                    "on-secondary": "#ffffff",
+                    "surface-container-high": "#e8e8ea",
+                    "on-tertiary-container": "#cfdaff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed": "#001946",
+                    "tertiary": "#0042a1",
+                    "primary": "#0040a8",
+                    "outline-variant": "#c3c6d5",
+                    "on-primary-fixed-variant": "#003fa5",
+                    "surface-container-highest": "#e2e2e5",
+                    "on-secondary-fixed-variant": "#394858",
+                    "tertiary-fixed": "#dae2ff",
+                    "primary-fixed-dim": "#b3c5ff",
+                    "secondary-fixed": "#d4e4f8",
+                    "secondary": "#516070",
+                    "primary-container": "#2b59c3",
+                    "on-background": "#1a1c1e",
+                    "surface-dim": "#d9dadc",
+                    "surface-bright": "#f9f9fb",
+                    "on-surface": "#1a1c1e",
+                    "on-secondary-fixed": "#0d1d2b",
+                    "on-error": "#ffffff",
+                    "on-primary-fixed": "#00184a",
+                    "on-tertiary-fixed-variant": "#00419e",
+                    "error-container": "#ffdad6",
+                    "inverse-on-surface": "#f0f0f3",
+                    "surface-container-low": "#f3f3f6",
+                    "surface": "#f9f9fb",
+                    "inverse-surface": "#2f3133",
+                    "secondary-fixed-dim": "#b8c8db",
+                    "primary-fixed": "#dbe1ff",
+                    "secondary-container": "#d4e4f8",
+                    "error": "#ba1a1a",
+                    "tertiary-fixed-dim": "#b1c5ff",
+                    "surface-variant": "#e2e2e5",
+                    "on-primary-container": "#d0daff",
+                    "on-surface-variant": "#434653",
+                    "outline": "#747684",
+                    "inverse-primary": "#b3c5ff",
+                    "surface-tint": "#2958c2",
+                    "on-secondary-container": "#576677",
+                    "on-error-container": "#93000a",
+                    "background": "#f9f9fb"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Public Sans"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #f9f9fb; color: #1a1c1e; }
+        h1, h2, h3, h4 { font-family: 'Public Sans', sans-serif; }
+        .glass-nav { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(24px); }
+        .academic-gradient { background: linear-gradient(135deg, #0040a8 0%, #2b59c3 100%); }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .shadow-academic { box-shadow: 0 20px 40px rgba(0, 24, 74, 0.06); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+<nav class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-blue-700 dark:text-blue-400" data-icon="school">school</span>
+<span class="text-xl font-bold tracking-tighter text-blue-800 dark:text-blue-200">KI AGENCY</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-600 dark:hover:text-blue-300 transition-colors" href="#">Programs</a>
+<a class="text-blue-700 dark:text-blue-400 font-bold border-b-2 border-blue-700 dark:border-blue-400 pb-1" href="#">Formations</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-600 dark:hover:text-blue-300 transition-colors" href="#">Research</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-600 dark:hover:text-blue-300 transition-colors" href="#">Admissions</a>
+</div>
+<button class="bg-primary text-white px-6 py-2 rounded-full font-sans font-bold tracking-tight hover:bg-primary-container transition-all active:opacity-80">
+                Contact Us
+            </button>
+</nav>
+</header>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative px-8 pt-20 pb-32 overflow-hidden">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
+<div class="md:w-1/2 z-10">
+<span class="inline-block font-sans uppercase tracking-widest text-xs text-secondary mb-4">EXCELLENCE ACADÉMIQUE</span>
+<h1 class="text-6xl font-black tracking-tight text-on-surface leading-none mb-6">
+                        Nos Formations <br/><span class="text-primary">Professionnelles</span>
+</h1>
+<p class="text-lg text-secondary max-w-lg mb-10 leading-relaxed">
+                        Propulsez votre carrière grâce à nos programmes certifiants conçus par des experts du secteur. Une pédagogie d'élite pour une expertise concrète.
+                    </p>
+<div class="flex gap-4">
+<button class="academic-gradient text-white px-8 py-4 rounded-full font-bold shadow-academic transition-transform hover:scale-105">
+                            Explorer les cours
+                        </button>
+<button class="bg-surface-container-high text-on-surface px-8 py-4 rounded-full font-bold hover:bg-surface-container-highest transition-colors">
+                            Brochure PDF
+                        </button>
+</div>
+</div>
+<div class="md:w-1/2 relative">
+<div class="absolute -top-12 -left-12 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+<img alt="Formations Professionnelles" class="relative z-10 w-full h-[500px] object-cover rounded-xl shadow-2xl" data-alt="Professional woman leading a collaborative corporate workshop in a bright modern office with glass walls" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfGz4WVWRTD2H7sPKQFDXmRoLCR8q5qvOgXGxntbkovVCMT1MkP4elG39mCYv1FZlqqjD1dIjdQ2CDnWt0862uiKjJpoC4_2VzPUyW63lvvytzy-iqR7q8GwmgU2qkGZBUnw1EJrz9ZB_DSGt5fv31v_6hNEYN-wKwu-j0EGGj5V0hTUiE-wi01Uq9EUTXN3Yp9gv_bBQ5ceiTtl-82PzqLVZ4gYXdrdW64JPYrN-cnPSCxPGLeIpQrOexVSnN3e4NK5TzrtG0seI"/>
+<div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-academic z-20">
+<div class="flex items-center gap-4">
+<div class="p-3 bg-primary-container/10 rounded-full">
+<span class="material-symbols-outlined text-primary" data-icon="workspace_premium">workspace_premium</span>
+</div>
+<div>
+<p class="text-sm font-bold">Certification KI</p>
+<p class="text-xs text-secondary">Reconnue par l'industrie</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Filter/Category Section -->
+<section class="bg-surface-container-low py-12 px-8">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-8">
+<div class="flex items-center gap-6 overflow-x-auto pb-4 md:pb-0 scrollbar-hide">
+<button class="whitespace-nowrap bg-primary text-white px-6 py-2 rounded-full font-semibold">Toutes les formations</button>
+<button class="whitespace-nowrap bg-white text-secondary px-6 py-2 rounded-full font-semibold hover:bg-primary/5 transition-colors">Management</button>
+<button class="whitespace-nowrap bg-white text-secondary px-6 py-2 rounded-full font-semibold hover:bg-primary/5 transition-colors">Digital Marketing</button>
+<button class="whitespace-nowrap bg-white text-secondary px-6 py-2 rounded-full font-semibold hover:bg-primary/5 transition-colors">Soft Skills</button>
+<button class="whitespace-nowrap bg-white text-secondary px-6 py-2 rounded-full font-semibold hover:bg-primary/5 transition-colors">Tech &amp; AI</button>
+</div>
+<div class="relative">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-secondary" data-icon="search">search</span>
+<input class="pl-12 pr-6 py-3 bg-white rounded-full border-none ring-1 ring-outline-variant/20 focus:ring-primary w-full md:w-80 transition-all" placeholder="Rechercher un programme..." type="text"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Course Cards Bento Grid -->
+<section class="py-24 px-8 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-academic hover:-translate-y-2 transition-all duration-300">
+<div class="relative h-56 overflow-hidden">
+<img alt="Leadership" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Modern minimalist boardroom with people collaborating effectively on a project" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsH715ElRt2bVXVSraF6Chpdm4O9B4vJKyt4uOfVz6w-I58KUzX52WmRBovdkoMW82LV77Pk1M2YxnzCG4FrE_eOyloMROmpUyjAvTiGzhkJX33sd4pvcypbEafa9pT7Ed3lNY0U0JtnBK6TZ54FZkeveNWHY5q1PZDUJ1gc7hjDX1EksITLM_gQ5Eo6tldBBWidOtSBEbqXlGpekpFuEsLp53xFF8T1dpZUGm5HCXpAoMwnj6smNRDZgW1w7_0o6z1M-_HHEkLiE"/>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase text-primary">Management</div>
+</div>
+<div class="p-8">
+<div class="flex items-center gap-4 text-xs text-secondary mb-3">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span> 40 Heures</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="trending_up">trending_up</span> Expert</span>
+</div>
+<h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Leadership et Management</h3>
+<p class="text-sm text-secondary mb-6 line-clamp-3">Développez une posture de leader inspirant et maîtrisez les outils de pilotage stratégique pour transformer vos équipes.</p>
+<button class="w-full flex items-center justify-between text-on-surface font-bold border-t border-outline-variant/20 pt-4 hover:text-primary transition-colors">
+                            En savoir plus
+                            <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-academic hover:-translate-y-2 transition-all duration-300">
+<div class="relative h-56 overflow-hidden">
+<img alt="Marketing" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="High-tech data visualization on multiple screens in a dark professional studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWPTP2cC1pW8wA3jGQDMbOMhUEFmaApE_wAxwa-WR_dAEnhFgXy2N_8yd4jFOMRjcyiGxYobwkbzi5U_jW2qCaGoCULeqGh9tMvF-Vf4bE_eUMOjJdDWEdA7n_86uQNwNP_7VNnDz0po_8habHRoL2z0nR9qWHE-Jf5I8P-LqBwslP3u5paNAV0MAU2U0MVyKlbcW8aEI86X_z8XjxwlBI6GdayjXi20BE3ESeC758CHvua9jrpgud34_ObZtHGrYGKVZeRo6jONY"/>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase text-primary">Digital Marketing</div>
+</div>
+<div class="p-8">
+<div class="flex items-center gap-4 text-xs text-secondary mb-3">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span> 32 Heures</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="bar_chart">bar_chart</span> Intermédiaire</span>
+</div>
+<h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Marketing Digital Stratégique</h3>
+<p class="text-sm text-secondary mb-6 line-clamp-3">Maîtrisez l'acquisition, la data et les leviers de croissance digitaux pour dominer votre marché dans l'ère numérique.</p>
+<button class="w-full flex items-center justify-between text-on-surface font-bold border-t border-outline-variant/20 pt-4 hover:text-primary transition-colors">
+                            En savoir plus
+                            <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-academic hover:-translate-y-2 transition-all duration-300">
+<div class="relative h-56 overflow-hidden">
+<img alt="Soft Skills" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Group of diverse professionals engaged in a thoughtful discussion around a table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9942A5DY67KTy0D1-UqjJTTgrHDAgCdfwtjkhqVhLEzeBNFO1wA33pY9lgY4Rte3TUlmD_3cSKkoWH1qqkllohp9UpDmj2HjG7K5ptOrgYLldlR7q2CY4fLtcNFvb9vVSnWHOfp1DS0CUr0_gdyng0mm4P-B3W63OlgczZx_USCk8qxU-W6S1Re37CXxRBoFvzb60Y5yFfXuSD-xHlbP-hFYIpxS_h3ZOXbsVbtTXd2mvJeAB7Y8yk_O2bhEp6tGRamt79zJxJIY"/>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase text-primary">Soft Skills</div>
+</div>
+<div class="p-8">
+<div class="flex items-center gap-4 text-xs text-secondary mb-3">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span> 16 Heures</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="school">school</span> Tous niveaux</span>
+</div>
+<h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Intelligence Emotionnelle</h3>
+<p class="text-sm text-secondary mb-6 line-clamp-3">Optimisez vos relations interpersonnelles et votre communication pour devenir un collaborateur indispensable.</p>
+<button class="w-full flex items-center justify-between text-on-surface font-bold border-t border-outline-variant/20 pt-4 hover:text-primary transition-colors">
+                            En savoir plus
+                            <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Certification Process -->
+<section class="bg-white py-24 px-8 border-y border-outline-variant/10">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold mb-4">Le Sceau de l'Excellence</h2>
+<p class="text-secondary max-w-2xl mx-auto">Chaque formation aboutit à une certification KI AGENCY, un standard de qualité reconnu par les plus grandes entreprises.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="text-center">
+<div class="w-16 h-16 academic-gradient rounded-full flex items-center justify-center mx-auto mb-6 text-white shadow-academic">
+<span class="material-symbols-outlined" data-icon="edit_note">edit_note</span>
+</div>
+<h4 class="font-bold mb-2">Pédagogie Active</h4>
+<p class="text-xs text-secondary">Apprentissage par la pratique sur des cas réels d'entreprise.</p>
+</div>
+<div class="text-center">
+<div class="w-16 h-16 bg-surface-container-high rounded-full flex items-center justify-center mx-auto mb-6 text-primary">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+</div>
+<h4 class="font-bold mb-2">Mentorat d'Élite</h4>
+<p class="text-xs text-secondary">Accès direct à des experts et consultants de haut vol.</p>
+</div>
+<div class="text-center">
+<div class="w-16 h-16 bg-surface-container-high rounded-full flex items-center justify-center mx-auto mb-6 text-primary">
+<span class="material-symbols-outlined" data-icon="quiz">quiz</span>
+</div>
+<h4 class="font-bold mb-2">Examen Rigoureux</h4>
+<p class="text-xs text-secondary">Validation des acquis par des jurys professionnels.</p>
+</div>
+<div class="text-center">
+<div class="w-16 h-16 bg-surface-container-high rounded-full flex items-center justify-center mx-auto mb-6 text-primary">
+<span class="material-symbols-outlined" data-icon="badge">badge</span>
+</div>
+<h4 class="font-bold mb-2">Crédibilité</h4>
+<p class="text-xs text-secondary">Un certificat qui ouvre les portes des plus grandes agences.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Coming Soon Workshops -->
+<section class="py-24 px-8 bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="flex items-end justify-between mb-12">
+<div>
+<span class="text-xs font-bold text-primary tracking-widest uppercase mb-2 block">Bientôt disponible</span>
+<h2 class="text-4xl font-bold">Ateliers Intensifs</h2>
+</div>
+<div class="hidden md:block">
+<button class="text-primary font-bold flex items-center gap-2 hover:underline">
+                            Être alerté <span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-white/50 border border-white p-8 rounded-xl flex items-center gap-6 relative overflow-hidden group">
+<div class="absolute right-0 top-0 opacity-5 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[120px]" data-icon="psychology">psychology</span>
+</div>
+<div class="w-24 h-24 bg-surface-container-high rounded-xl flex flex-col items-center justify-center flex-shrink-0">
+<span class="text-2xl font-black text-primary">OCT</span>
+<span class="text-xs font-bold text-secondary">2024</span>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-1">IA Générative pour le Business</h4>
+<p class="text-sm text-secondary mb-4">Atelier de 2 jours sur l'automatisation par l'IA.</p>
+<span class="inline-block px-3 py-1 bg-surface-container-highest rounded-full text-[10px] font-bold">INSCRIPTIONS BIENTÔT</span>
+</div>
+</div>
+<div class="bg-white/50 border border-white p-8 rounded-xl flex items-center gap-6 relative overflow-hidden group">
+<div class="absolute right-0 top-0 opacity-5 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[120px]" data-icon="public">public</span>
+</div>
+<div class="w-24 h-24 bg-surface-container-high rounded-xl flex flex-col items-center justify-center flex-shrink-0">
+<span class="text-2xl font-black text-primary">NOV</span>
+<span class="text-xs font-bold text-secondary">2024</span>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-1">Stratégie RSE Avancée</h4>
+<p class="text-sm text-secondary mb-4">Intégrer l'impact durable au cœur de la stratégie.</p>
+<span class="inline-block px-3 py-1 bg-surface-container-highest rounded-full text-[10px] font-bold">INSCRIPTIONS BIENTÔT</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="py-24 px-8">
+<div class="max-w-5xl mx-auto academic-gradient rounded-3xl p-16 text-center text-white shadow-2xl relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-full opacity-10" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"></div>
+<h2 class="text-4xl md:text-5xl font-black mb-6 relative z-10">Prêt à transformer votre avenir ?</h2>
+<p class="text-lg text-primary-fixed-dim mb-10 max-w-xl mx-auto relative z-10">Nos conseillers pédagogiques sont à votre écoute pour définir votre parcours personnalisé.</p>
+<div class="flex flex-col md:flex-row items-center justify-center gap-4 relative z-10">
+<button class="bg-white text-primary px-10 py-4 rounded-full font-bold text-lg hover:shadow-lg transition-all">
+                        S'inscrire à une formation
+                    </button>
+<button class="bg-transparent border border-white/30 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition-all">
+                        Parler à un expert
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-20 bg-slate-50 dark:bg-slate-950">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 py-16 max-w-7xl mx-auto">
+<div class="col-span-1 md:col-span-1">
+<span class="text-lg font-black text-blue-900 dark:text-blue-100 block mb-6">KI AGENCY</span>
+<p class="text-slate-500 text-sm leading-relaxed">Precision in Academic Excellence. L'agence de référence pour la formation continue des cadres et dirigeants.</p>
+</div>
+<div>
+<h4 class="font-sans font-semibold text-slate-900 dark:text-white mb-6">Exploration</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 hover:underline transition-all text-sm" href="#">Programs</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 hover:underline transition-all text-sm" href="#">Research</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 hover:underline transition-all text-sm" href="#">Admissions</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-sans font-semibold text-slate-900 dark:text-white mb-6">Légal</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 hover:underline transition-all text-sm" href="#">Privacy Policy</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 hover:underline transition-all text-sm" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-sans font-semibold text-slate-900 dark:text-white mb-6">Suivez-nous</h4>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-700 dark:text-slate-300 hover:bg-blue-600 hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-base" data-icon="share">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-700 dark:text-slate-300 hover:bg-blue-600 hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-base" data-icon="language">language</span>
+</a>
+</div>
+</div>
+</div>
+<div class="px-8 py-8 border-t border-slate-200 dark:border-slate-800 max-w-7xl mx-auto text-center">
+<p class="text-slate-500 text-sm">© 2024 KI AGENCY. All rights reserved. Precision in Academic Excellence.</p>
+</div>
+</footer>
+</body></html>

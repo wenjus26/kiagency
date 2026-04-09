@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@700;800;900&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-container": "#d4e4f8",
+                        "on-secondary-container": "#576677",
+                        "inverse-surface": "#2f3133",
+                        "tertiary": "#0042a1",
+                        "secondary-fixed-dim": "#b8c8db",
+                        "error-container": "#ffdad6",
+                        "surface": "#f9f9fb",
+                        "surface-dim": "#d9dadc",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed": "#00184a",
+                        "primary-fixed": "#dbe1ff",
+                        "inverse-primary": "#b3c5ff",
+                        "surface-container-high": "#e8e8ea",
+                        "surface-tint": "#2958c2",
+                        "tertiary-fixed-dim": "#b1c5ff",
+                        "primary-fixed-dim": "#b3c5ff",
+                        "on-surface-variant": "#434653",
+                        "surface-container-low": "#f3f3f6",
+                        "on-primary-container": "#d0daff",
+                        "on-secondary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "tertiary-container": "#275bbf",
+                        "background": "#f9f9fb",
+                        "on-tertiary": "#ffffff",
+                        "outline-variant": "#c3c6d5",
+                        "secondary-fixed": "#d4e4f8",
+                        "on-surface": "#1a1c1e",
+                        "surface-bright": "#f9f9fb",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#dae2ff",
+                        "surface-container-highest": "#e2e2e5",
+                        "outline": "#747684",
+                        "on-secondary-fixed": "#0d1d2b",
+                        "primary": "#0040a8",
+                        "on-secondary-fixed-variant": "#394858",
+                        "surface-variant": "#e2e2e5",
+                        "on-tertiary-fixed-variant": "#00419e",
+                        "surface-container": "#edeef0",
+                        "inverse-on-surface": "#f0f0f3",
+                        "secondary": "#516070",
+                        "primary-container": "#2b59c3",
+                        "on-tertiary-fixed": "#001946",
+                        "on-tertiary-container": "#cfdaff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed-variant": "#003fa5",
+                        "on-background": "#1a1c1e",
+                        "error": "#ba1a1a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Public Sans", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #f9f9fb; color: #1a1c1e; overflow-x: hidden; }
+        .font-headline { font-family: 'Public Sans', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-header { backdrop-filter: blur(24px); }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+<nav class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-blue-700 dark:text-blue-400" data-icon="school">school</span>
+<span class="text-xl font-bold tracking-tighter text-blue-800 dark:text-blue-200">KI AGENCY</span>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-blue-700 dark:text-blue-400 font-bold border-b-2 border-blue-700 dark:border-blue-400 pb-1" href="#">Accueil</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-600 dark:hover:text-blue-300 transition-colors" href="#about">À Propos</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-600 dark:hover:text-blue-300 transition-colors" href="#services">Services</a>
+<a class="px-6 py-2 bg-primary text-white rounded-full font-bold hover:opacity-90 transition-all" href="#contact">Contact Us</a>
+</div>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[795px] flex items-center overflow-hidden bg-surface">
+<div class="max-w-7xl mx-auto px-8 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="z-10">
+<span class="label-md uppercase tracking-[0.2em] text-secondary font-bold mb-4 block">Excellence Académique</span>
+<h1 class="text-5xl lg:text-7xl font-headline font-black text-on-surface leading-[1.1] mb-6 tracking-tight">
+                        Propulsez votre carrière avec <span class="text-primary">l'excellence</span> académique.
+                    </h1>
+<p class="text-xl text-secondary mb-10 max-w-lg leading-relaxed">
+                        Formation - Assistance - Projet - Développement. Le partenaire stratégique de votre réussite professionnelle et académique.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<a class="px-8 py-4 bg-gradient-to-br from-primary to-primary-container text-white rounded-full font-bold shadow-lg shadow-primary/20 hover:scale-105 transition-transform" href="#formations">
+                            Découvrir nos formations
+                        </a>
+<a class="px-8 py-4 bg-surface-container-low text-primary rounded-full font-bold hover:bg-surface-container-high transition-colors" href="#about">
+                            En savoir plus
+                        </a>
+</div>
+</div>
+<div class="relative hidden lg:block">
+<div class="absolute -top-20 -right-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+<div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-700">
+<img alt="Professional collaboration" class="w-full h-[600px] object-cover" data-alt="Modern bright office space with diverse professionals collaborating around a large wooden table with laptops and documents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWeEzs1hg5SAOjFfULVM4dRe0tHLYgN6I8WFiAHmQl4pWOmsJNne1xcs5ln8WAmwnA0ypGQGlrnF1VJIYs6ofVvpC1yxOu_VkPiooKY-cqwMm1UtVLuG_btib8QI6_oaIGsHEPaTQwkU64pWtNKa2DQ8wOmQfhFYfe2SpC46n70H8dc4aNTrBSsIlrbpMgDwS8GGS0W2QnQ25QDy-0fJKUkWPKii2KiyeOCjurF1iOOygG-Q-Hm0xzjdpiCASuF8NG8RFKsJx7mtM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
+</div>
+<!-- Floating Badge -->
+<div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl z-20 flex items-center gap-4">
+<div class="w-12 h-12 bg-primary-container flex items-center justify-center rounded-full text-white">
+<span class="material-symbols-outlined" data-weight="fill">verified</span>
+</div>
+<div>
+<p class="text-xs text-secondary font-bold uppercase tracking-tighter">Certifié par</p>
+<p class="text-lg font-headline font-black text-primary">KI AGENCY</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-24 bg-surface-container-low" id="about">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="md:col-span-1">
+<h2 class="text-4xl font-headline font-bold text-on-surface mb-6">Bâtir l'avenir par les compétences.</h2>
+<p class="text-secondary leading-relaxed">
+                            KI AGENCY se spécialise dans le renforcement de capacités, la formation continue et l'accompagnement de projets innovants pour les professionnels et les institutions.
+                        </p>
+</div>
+<div class="md:col-span-2 grid grid-cols-1 sm:grid-cols-3 gap-6">
+<div class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm border-b-4 border-primary">
+<span class="material-symbols-outlined text-primary text-4xl mb-4" data-icon="lightbulb">lightbulb</span>
+<h3 class="font-headline font-bold text-xl mb-2">Formation</h3>
+<p class="text-sm text-secondary">Programmes sur mesure adaptés aux exigences du marché actuel.</p>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm border-b-4 border-primary">
+<span class="material-symbols-outlined text-primary text-4xl mb-4" data-icon="military_tech">military_tech</span>
+<h3 class="font-headline font-bold text-xl mb-2">Compétence</h3>
+<p class="text-sm text-secondary">Expertise technique et pédagogique de haut niveau.</p>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm border-b-4 border-primary">
+<span class="material-symbols-outlined text-primary text-4xl mb-4" data-icon="star">star</span>
+<h3 class="font-headline font-bold text-xl mb-2">Excellence</h3>
+<p class="text-sm text-secondary">Engagement total pour des résultats tangibles et durables.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-24 bg-surface" id="services">
+<div class="max-w-7xl mx-auto px-8 text-center mb-16">
+<h2 class="text-4xl font-headline font-black mb-4">Nos Piliers d'Intervention</h2>
+<div class="h-1.5 w-24 bg-primary mx-auto rounded-full"></div>
+</div>
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500">
+<div class="h-48 overflow-hidden">
+<img alt="Professional Training" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Close-up of professionals in a training workshop using tablets and taking notes in a bright modern classroom" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzYDUB5K3QT9hS17_jYjLqbdt8TxIxvnbmGIEkrk99PGDtnX26rgKkrnbsRf5GlcpGrvGme0TNkp_SlyTkVDvMFDh9tTwOtYcPK1cMIxbbTLciY9ZTyHBOUO4fpkYOWAq0xE_m3C4N9FV3npW55USnwTH6XBFayPT4UnTFEsP6JTbfBTf-NnP3eqv6GzFgXeEibwnIcepVP23LA3er59Gxz0KqVun9ivmG8gUt3Lg5RlXQrT2GAZfiUUDYWK41dghvIPAsNeEnP08"/>
+</div>
+<div class="p-8">
+<h3 class="text-2xl font-headline font-bold mb-4">Formations Professionnelles</h3>
+<p class="text-secondary mb-6">Ateliers pratiques et immersifs pour maîtriser les outils et méthodologies de demain.</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-2 text-sm text-secondary">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="check_circle">check_circle</span>
+                                Leadership et Management
+                            </li>
+<li class="flex items-center gap-2 text-sm text-secondary">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="check_circle">check_circle</span>
+                                Marketing Digital
+                            </li>
+</ul>
+<button class="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all">
+                            Voir le catalogue <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500">
+<div class="h-48 overflow-hidden">
+<img alt="Academic Assistance" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Minimalist study workspace with a clean desk, open book, laptop, and a cup of coffee under soft window light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmfPm8CUge9t4CaVKzmG7yaUI8WjQSiyMe2e_s5Net6FV4oixFimQtqaqFZv3Aak6IcwRIMOSTHb5_yL7kcopRyWGF_6B8yo7xxLyfVMSdEj8qecmPj48mRzw-VwW8U5Wn0FXd_POdkvj-mNxkD-pDWwfiUzWvB_P6Vty_NQDX4MZBJuzeI7KdNTx2ZyPiMhlW0ziAgDT_PFClH_q-hEIwuaUSDPBMML8smVNeMYpmXCUWGeIMVXjD7b7dlM0ffmLU6fFhc6tdR70"/>
+</div>
+<div class="p-8">
+<h3 class="text-2xl font-headline font-bold mb-4">Assistance Académique</h3>
+<p class="text-secondary mb-6">Soutien personnalisé pour étudiants et chercheurs dans leurs travaux scientifiques.</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-2 text-sm text-secondary">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="check_circle">check_circle</span>
+                                Méthodologie de recherche
+                            </li>
+<li class="flex items-center gap-2 text-sm text-secondary">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="check_circle">check_circle</span>
+                                Rédaction scientifique
+                            </li>
+</ul>
+<button class="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all">
+                            Demander de l'aide <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500">
+<div class="h-48 overflow-hidden">
+<img alt="Project Management" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Macro view of a business dashboard on a computer screen showing growth charts and financial analytics" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKr0rudpMwJmE94fNtuys_0J0Nlp4qT1EE089w2ndZpRDZIxW-a_GFIq-jZuF1fUvegK68dDo4s9McvmsIqK7DtB2dKTh60NT68V3gtN9ctZ179reRtgfsRIszg43Pq7R-zl_hwT1uyzUv4otKd22zhoBm41xA2dsxVq81LGIjOTsVcmGUIo8ZxK-0bQsduTpNMxWGXFcjA4e_KFiW_9jhNEAAIA-pUBt1oBPxWokrU6LGBlVMZeHSgU2SHBul6e15yFDUyrUkx2A"/>
+</div>
+<div class="p-8">
+<h3 class="text-2xl font-headline font-bold mb-4">Gestion de Projet</h3>
+<p class="text-secondary mb-6">Consulting stratégique et accompagnement à l'innovation pour vos projets d'entreprise.</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-2 text-sm text-secondary">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="check_circle">check_circle</span>
+                                Incubation d'idées
+                            </li>
+<li class="flex items-center gap-2 text-sm text-secondary">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="check_circle">check_circle</span>
+                                Suivi-évaluation
+                            </li>
+</ul>
+<button class="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all">
+                            Démarrer un projet <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Social Proof -->
+<section class="py-20 bg-primary text-white">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div>
+<div class="text-6xl font-headline font-black mb-4">Plus de 121</div>
+<p class="text-xl opacity-90 mb-8 tracking-wide uppercase font-bold">membres actifs nous font confiance</p>
+<div class="flex -space-x-4 mb-10">
+<img alt="User 1" class="w-12 h-12 rounded-full border-4 border-primary" data-alt="Portrait of a young professional woman smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCB8WTY61bNU78TiVNTwuFvzM6St3-CNKximrnRbqXSi2d_6kxLYSt3AE_iQCBWphtIPVP7NhOELIfGcT88QFxPcmKBP-w0Ag5E8El6RzWs5poYHDWvmeG_TCckl0sKUHNmEcwnE9-aAH1mM4YF_4SYSXxtes7Sn4mo7owJeNPzjnvkHZY2PnzKmRmwwz68dgsBJHt373js7OaGmV8UPNlJUl6fd4AJ08zUw7gf8wqDm1L9brkb5vNRyTn2iw0etttkQAWNwpnwKKM"/>
+<img alt="User 2" class="w-12 h-12 rounded-full border-4 border-primary" data-alt="Portrait of a professional man in a suit" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHJBXNHxs71L6YilyFppLBmiIGsAUlEugY0qzYgXuGFy_QL1XxiOVwtKRMntMbJr3I5nhWi2zantYhgFjzXSDqw_6mv1pxQlpJdWAN6SwnwT9KSOJVCH0x5lDtXRJmYZXEl3E6BltX1Kd0PKZ0ui-HCbGMiOVF_-RW9VpPx-RIahT-ErivFLzFtl-o22JWqUgBuXfJMjlCCN3h0wIpVQDhh0qF0PQ2BksDwLdlkwcQTPhleQLxG16xvJzo3iojvK3qyK5oC9Gr87c"/>
+<img alt="User 3" class="w-12 h-12 rounded-full border-4 border-primary" data-alt="Confident businesswoman with glasses" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADisxq2RnjXrymF3EZNpMfnzGOhl1_Gy7270QOzMKboIfyOu1aFPwSxEeQ4piAsmw6kDGKoPPsdetBrfPQ851gF0lBa_AqWO6MG-j2peGSnijjbsDVgaeD_3skvvZ9FPeuqHqO8bg6h1V3UEmfW5nYvf22LbPCjqf8Y35ZMbGEH1Yg8Oip4wQJVqs9Fk4CxF8p_npIHmd09TPvCutfoYLUxodS8PLKSlmqQ_LkOPU-MCZ1cHzXikmq_Hrr1gIJQP-TP3SH4RvnQo4"/>
+<div class="w-12 h-12 rounded-full border-4 border-primary bg-secondary-container flex items-center justify-center text-primary font-bold text-xs">+100</div>
+</div>
+</div>
+<div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20">
+<span class="material-symbols-outlined text-4xl mb-6 opacity-40" data-icon="format_quote" data-weight="fill">format_quote</span>
+<p class="text-lg italic mb-6 leading-relaxed">
+                        "KI AGENCY a transformé ma façon d'aborder ma recherche doctorale. Leur expertise en méthodologie est inégalée et l'accompagnement est d'une rare qualité."
+                    </p>
+<div class="flex items-center gap-4">
+<div class="font-bold">Jean-Marc T.</div>
+<div class="text-sm opacity-60">Chercheur en Économie</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-24 bg-surface-container-low" id="contact">
+<div class="max-w-4xl mx-auto px-8 bg-white rounded-[2rem] shadow-xl p-12 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full"></div>
+<div class="text-center mb-12">
+<h2 class="text-4xl font-headline font-bold text-on-surface mb-2">Contactez-nous</h2>
+<p class="text-secondary">Une question ? Un projet ? Notre équipe vous répond sous 24h.</p>
+</div>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-1">
+<label class="text-xs font-bold uppercase text-secondary">Nom complet</label>
+<input class="w-full bg-surface-container-high border-none border-b-2 border-transparent focus:border-primary focus:ring-0 transition-all p-4 rounded-lg" placeholder="Votre nom" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="text-xs font-bold uppercase text-secondary">Email</label>
+<input class="w-full bg-surface-container-high border-none border-b-2 border-transparent focus:border-primary focus:ring-0 transition-all p-4 rounded-lg" placeholder="votre@email.com" type="email"/>
+</div>
+</div>
+<div class="space-y-1">
+<label class="text-xs font-bold uppercase text-secondary">Service souhaité</label>
+<select class="w-full bg-surface-container-high border-none border-b-2 border-transparent focus:border-primary focus:ring-0 transition-all p-4 rounded-lg">
+<option>Formation Professionnelle</option>
+<option>Assistance Académique</option>
+<option>Gestion de Projet</option>
+<option>Autre</option>
+</select>
+</div>
+<div class="space-y-1">
+<label class="text-xs font-bold uppercase text-secondary">Message</label>
+<textarea class="w-full bg-surface-container-high border-none border-b-2 border-transparent focus:border-primary focus:ring-0 transition-all p-4 rounded-lg" placeholder="Comment pouvons-nous vous aider ?" rows="4"></textarea>
+</div>
+<button class="w-full py-4 bg-primary text-white font-bold rounded-full hover:bg-primary-container shadow-lg shadow-primary/20 transition-all" type="submit">
+                        Envoyer ma demande
+                    </button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-20 bg-slate-50 dark:bg-slate-950 no-border bg-slate-100 dark:bg-slate-900">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 py-16 max-w-7xl mx-auto">
+<div class="md:col-span-1">
+<div class="text-lg font-black text-blue-900 dark:text-blue-100 mb-6">KI AGENCY</div>
+<p class="text-slate-500 text-sm leading-relaxed">
+                    Centre de Développement des Compétences Académiques &amp; Professionnelles.
+                </p>
+</div>
+<div>
+<h4 class="font-sans font-semibold text-slate-900 dark:text-white mb-6">Services</h4>
+<ul class="space-y-3">
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-all hover:underline" href="#">Programs</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-all hover:underline" href="#">Research</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-all hover:underline" href="#">Admissions</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-sans font-semibold text-slate-900 dark:text-white mb-6">Société</h4>
+<ul class="space-y-3">
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-all hover:underline" href="#">Privacy Policy</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-all hover:underline" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-sans font-semibold text-slate-900 dark:text-white mb-6">Contact</h4>
+<p class="text-sm text-slate-500 mb-2">Created by Parfait KANLISSOU</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-blue-800" data-icon="mail">mail</span>
+<span class="material-symbols-outlined text-blue-800" data-icon="phone">phone</span>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 py-8 border-t border-slate-200 dark:border-slate-800">
+<p class="text-slate-500 text-sm text-center">© 2024 KI AGENCY. All rights reserved. Precision in Academic Excellence.</p>
+</div>
+</footer>
+<!-- FAB -->
+<a class="fixed bottom-8 right-8 w-16 h-16 bg-primary text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform z-40 group" href="#contact">
+<span class="material-symbols-outlined text-2xl group-hover:rotate-12 transition-transform" data-icon="chat">chat</span>
+</a>
+</body></html>
