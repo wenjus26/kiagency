@@ -73,7 +73,7 @@ function initAppFeatures() {
             const overlay = document.createElement('div');
             overlay.className = 'mobile-menu-overlay fixed inset-0 bg-black/30 backdrop-blur-sm z-40';
             overlay.innerHTML = `
-                <div class="fixed top-20 left-4 right-4 bg-white rounded-2xl p-6 shadow-2xl flex flex-col gap-3 animate-fade-in border border-blue-50">
+                <div class="fixed top-20 left-4 right-4 bg-white rounded-2xl p-6 shadow-2xl flex flex-col gap-3 animate-fade-in border border-blue-50 max-h-[85vh] overflow-y-auto">
                     <div class="flex items-center gap-3 mb-2 border-b border-gray-100 pb-4">
                         <img src="assets/img/logo.jpeg" alt="Logo" class="h-10 w-auto rounded-lg">
                         <div>
