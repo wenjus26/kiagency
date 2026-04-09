@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html class="light" lang="fr">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Événements - KANO IMPACT AGENCY</title>
+    <meta name="description" content="Retrouvez tous les événements, MasterClass et conférences organisés par KANO IMPACT AGENCY à Abomey Calavi, Bénin."/>
+
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="assets/css/style.css" rel="stylesheet"/>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0040a8",
+                        "primary-container": "#2b59c3",
+                        "secondary": "#516070",
+                        "surface": "#f9f9fb",
+                        "on-surface": "#1a1c1e",
+                        "accent": "#00a86b",
+                    },
+                    fontFamily: {
+                        "headline": ["Public Sans", "sans-serif"],
+                        "body": ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface font-body">
+
+    <!-- TopAppBar -->
+    <header class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-xl shadow-sm border-b border-gray-100">
+        <nav class="flex justify-between items-center w-full px-6 py-3 max-w-7xl mx-auto">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="assets/img/logo.jpeg" alt="KANO IMPACT AGENCY Logo" class="h-10 w-auto rounded-lg shadow-sm">
+                <div class="flex flex-col leading-tight">
+                    <span class="text-sm font-black tracking-tighter text-blue-900 uppercase">KANO IMPACT</span>
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-wide">AGENCY</span>
+                </div>
+            </a>
+            <div class="hidden md:flex items-center space-x-6">
+                <a class="text-slate-600 font-medium hover:text-blue-600 transition-colors" href="index.html">Accueil</a>
+                <a class="text-slate-600 font-medium hover:text-blue-600 transition-colors" href="index.html#services">Services</a>
+                <a class="text-slate-600 font-medium hover:text-blue-600 transition-colors" href="formations.html">Formations</a>
+                <a class="text-blue-700 font-bold border-b-2 border-blue-700 pb-1" href="evenements.html">Événements</a>
+                <a class="text-slate-600 font-medium hover:text-blue-600 transition-colors" href="contact.html">Contact</a>
+                <a class="px-5 py-2 bg-primary text-white rounded-full font-bold hover:opacity-90 transition-all text-sm shadow" href="contact.html">Nous contacter</a>
+            </div>
+            <button id="mobile-menu-btn" class="md:hidden text-on-surface p-2" aria-label="Ouvrir le menu">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </nav>
+    </header>
+
+    <main class="pt-24">
+
+        <!-- Hero Section -->
+        <section class="relative px-6 pt-16 pb-24 overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-white">
+            <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 1px 1px, #0040a8 1px, transparent 0); background-size: 48px 48px;"></div>
+            <div class="max-w-4xl mx-auto text-center relative z-10 animate-fade-in">
+                <span class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-blue-700 font-bold mb-6 bg-blue-50 px-4 py-2 rounded-full border border-blue-100">
+                    <span class="material-symbols-outlined text-base">event</span>
+                    Programme 2026
+                </span>
+                <h1 class="text-5xl lg:text-6xl font-headline font-black text-on-surface leading-tight mb-6">
+                    Nos <span class="text-primary">Événements</span>
+                </h1>
+                <p class="text-xl text-secondary max-w-2xl mx-auto leading-relaxed mb-10">
+                    MasterClass, formations, conférences et rencontres organisés par KANO IMPACT AGENCY. Rejoignez-nous pour renforcer vos compétences et élargir votre réseau.
+                </p>
+                <!-- Filter tabs -->
+                <div class="flex flex-wrap justify-center gap-3">
+                    <button onclick="filterEvents('all')" data-cat="all" class="evt-filter-btn px-5 py-2 bg-primary text-white rounded-full font-semibold text-sm">Tous</button>
+                    <button onclick="filterEvents('masterclass')" data-cat="masterclass" class="evt-filter-btn px-5 py-2 bg-white text-secondary rounded-full font-semibold text-sm border border-gray-200 hover:bg-primary/5 transition-colors">MasterClass</button>
+                    <button onclick="filterEvents('formation')" data-cat="formation" class="evt-filter-btn px-5 py-2 bg-white text-secondary rounded-full font-semibold text-sm border border-gray-200 hover:bg-primary/5 transition-colors">Formations</button>
+                    <button onclick="filterEvents('conference')" data-cat="conference" class="evt-filter-btn px-5 py-2 bg-white text-secondary rounded-full font-semibold text-sm border border-gray-200 hover:bg-primary/5 transition-colors">Conférences</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Upcoming Events -->
+        <section class="py-20 px-6">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex items-center gap-3 mb-12">
+                    <div class="w-3 h-8 bg-primary rounded-full"></div>
+                    <h2 class="text-2xl font-headline font-black text-on-surface">Événements à venir</h2>
+                    <span class="ml-2 px-3 py-1 bg-accent/10 text-accent text-xs font-bold rounded-full uppercase tracking-wide">Programme 2026</span>
+                </div>
+
+                <div id="events-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                    <!-- ══ ÉVÉNEMENT 1 : MasterClass Profil Pro ══ -->
+                    <article data-category="masterclass" class="event-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all duration-400 border border-gray-100">
+                        <div class="flex flex-col md:flex-row">
+                            <!-- Date block -->
+                            <div class="md:w-36 shrink-0 bg-gradient-to-br from-primary to-primary-container flex flex-col items-center justify-center text-white p-6 text-center">
+                                <span class="text-xs font-bold uppercase tracking-widest opacity-80">Samedi</span>
+                                <span class="text-6xl font-black leading-none mt-1">25</span>
+                                <span class="text-lg font-bold uppercase tracking-widest">Avr</span>
+                                <span class="text-sm opacity-70 mt-1">2026</span>
+                            </div>
+                            <!-- Content -->
+                            <div class="p-7 flex-1">
+                                <div class="flex flex-wrap items-center gap-2 mb-3">
+                                    <span class="text-[10px] font-bold uppercase tracking-widest text-primary bg-blue-50 px-3 py-1 rounded-full">MasterClass</span>
+                                    <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400 bg-slate-100 px-3 py-1 rounded-full">3ème vague</span>
+                                    <span class="text-[10px] font-bold uppercase tracking-widest text-accent bg-emerald-50 px-3 py-1 rounded-full flex items-center gap-1">
+                                        <span class="w-1.5 h-1.5 bg-accent rounded-full animate-pulse"></span> Inscriptions ouvertes
+                                    </span>
+                                </div>
+                                <h3 class="text-xl font-headline font-black mb-2 group-hover:text-primary transition-colors leading-snug">
+                                    3ème Vague — MasterClass Construction de Profil Professionnel
+                                </h3>
+                                <p class="text-sm text-secondary mb-5 leading-relaxed">
+                                    Apprenez à construire et optimiser vos profils sur les réseaux sociaux professionnels pour maximiser votre visibilité, votre crédibilité et vos opportunités de carrière.
+                                </p>
+                                <!-- What you learn -->
+                                <div class="flex flex-wrap gap-2 mb-5">
+                                    <span class="flex items-center gap-1 text-xs bg-blue-50 text-primary px-3 py-1 rounded-full font-semibold">
+                                        <span class="material-symbols-outlined text-sm">thumb_up</span> Facebook
+                                    </span>
+                                    <span class="flex items-center gap-1 text-xs bg-blue-50 text-primary px-3 py-1 rounded-full font-semibold">
+                                        <span class="material-symbols-outlined text-sm">work</span> LinkedIn
+                                    </span>
+                                    <span class="flex items-center gap-1 text-xs bg-blue-50 text-primary px-3 py-1 rounded-full font-semibold">
+                                        <span class="material-symbols-outlined text-sm">tag</span> Twitter / X
+                                    </span>
+                                </div>
+                                <div class="flex flex-wrap gap-4 text-xs text-secondary mb-6">
+                                    <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-base">calendar_today</span> Samedi 25 Avril 2026</span>
+                                    <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-base">location_on</span> Abomey Calavi, Bénin</span>
+                                </div>
+                                <a href="mailto:info.kiagency22@gmail.com?subject=Inscription%20MasterClass%2025%20Avr%202026%20-%20Profil%20Professionnel&body=Bonjour%20KANO%20IMPACT%20AGENCY%2C%0A%0AJe%20souhaite%20m%27inscrire%20%C3%A0%20la%20MasterClass%20du%20Samedi%2025%20Avril%202026%20sur%20la%20construction%20de%20profil%20professionnel.%0A%0AMon%20nom%20%3A%20%0AMon%20t%C3%A9l%C3%A9phone%20%3A%20%0A%0AMerci."
+                                    class="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white font-bold rounded-xl hover:opacity-90 transition-opacity text-sm">
+                                    <span class="material-symbols-outlined text-base">mail</span> S'inscrire par email
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ══ ÉVÉNEMENT 2 : MasterClass Carine & Parfait ══ -->
+                    <article data-category="masterclass" class="event-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all duration-400 border border-gray-100">
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-36 shrink-0 bg-gradient-to-br from-purple-600 to-purple-900 flex flex-col items-center justify-center text-white p-6 text-center">
+                                <span class="text-xs font-bold uppercase tracking-widest opacity-80">Samedi</span>
+                                <span class="text-6xl font-black leading-none mt-1">02</span>
+                                <span class="text-lg font-bold uppercase tracking-widest">Mai</span>
+                                <span class="text-sm opacity-70 mt-1">2026</span>
+                            </div>
+                            <div class="p-7 flex-1">
+                                <div class="flex flex-wrap items-center gap-2 mb-3">
+                                    <span class="text-[10px] font-bold uppercase tracking-widest text-purple-700 bg-purple-50 px-3 py-1 rounded-full">MasterClass</span>
+                                    <span class="text-[10px] font-bold uppercase tracking-widest text-accent bg-emerald-50 px-3 py-1 rounded-full flex items-center gap-1">
+                                        <span class="w-1.5 h-1.5 bg-accent rounded-full animate-pulse"></span> Inscriptions ouvertes
+                                    </span>
+                                </div>
+                                <h3 class="text-xl font-headline font-black mb-2 group-hover:text-primary transition-colors leading-snug">
+                                    MasterClass — Mme Carine Reine TCHAKO &amp; Parfait KANLISSOU
+                                </h3>
+                                <p class="text-sm text-secondary mb-5 leading-relaxed">
+                                    Une MasterClass d'exception animée par deux experts reconnus. Un rendez-vous incontournable pour tous ceux qui souhaitent progresser et s'inspirer des meilleurs.
+                                </p>
+                                <!-- Intervenants -->
+                                <div class="flex flex-wrap gap-3 mb-5">
+                                    <div class="flex items-center gap-2 bg-purple-50 px-4 py-2 rounded-full">
+                                        <span class="material-symbols-outlined text-purple-600 text-base" style="font-variation-settings: 'FILL' 1;">person</span>
+                                        <span class="text-xs font-bold text-purple-700">Mme Carine Reine TCHAKO</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 bg-blue-50 px-4 py-2 rounded-full">
+                                        <span class="material-symbols-outlined text-primary text-base" style="font-variation-settings: 'FILL' 1;">person</span>
+                                        <span class="text-xs font-bold text-primary">Parfait KANLISSOU</span>
+                                    </div>
+                                </div>
+                                <div class="flex flex-wrap gap-4 text-xs text-secondary mb-6">
+                                    <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-base">calendar_today</span> Samedi 02 Mai 2026</span>
+                                    <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-base">location_on</span> Abomey Calavi, Bénin</span>
+                                </div>
+                                <a href="mailto:info.kiagency22@gmail.com?subject=Inscription%20MasterClass%2002%20Mai%202026&body=Bonjour%20KANO%20IMPACT%20AGENCY%2C%0A%0AJe%20souhaite%20m%27inscrire%20%C3%A0%20la%20MasterClass%20du%20Samedi%2002%20Mai%202026%20avec%20Mme%20Carine%20Reine%20TCHAKO%20%26%20Parfait%20KANLISSOU.%0A%0AMon%20nom%20%3A%20%0AMon%20t%C3%A9l%C3%A9phone%20%3A%20%0A%0AMerci."
+                                    class="inline-flex items-center gap-2 px-6 py-3 bg-purple-700 text-white font-bold rounded-xl hover:opacity-90 transition-opacity text-sm">
+                                    <span class="material-symbols-outlined text-base">mail</span> S'inscrire par email
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ══ ÉVÉNEMENT 3 : Formation CV Professionnel ══ -->
+                    <article data-category="formation" class="event-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all duration-400 border border-gray-100">
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-36 shrink-0 bg-gradient-to-br from-emerald-600 to-emerald-900 flex flex-col items-center justify-center text-white p-6 text-center">
+                                <span class="text-xs font-bold uppercase tracking-widest opacity-80">Samedi</span>
+                                <span class="text-6xl font-black leading-none mt-1">16</span>
+                                <span class="text-lg font-bold uppercase tracking-widest">Mai</span>
+                                <span class="text-sm opacity-70 mt-1">2026</span>
+                            </div>
+                            <div class="p-7 flex-1">
+                                <div class="flex flex-wrap items-center gap-2 mb-3">
+                                    <span class="text-[10px] font-bold uppercase tracking-widest text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full">Formation</span>
+                                    <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400 bg-slate-100 px-3 py-1 rounded-full">2ème vague</span>
+                                    <span class="text-[10px] font-bold uppercase tracking-widest text-accent bg-emerald-50 px-3 py-1 rounded-full flex items-center gap-1">
+                                        <span class="w-1.5 h-1.5 bg-accent rounded-full animate-pulse"></span> Inscriptions ouvertes
+                                    </span>
+                                </div>
+                                <h3 class="text-xl font-headline font-black mb-2 group-hover:text-primary transition-colors leading-snug">
+                                    2ème Vague — Formation Rédaction de CV Professionnel
+                                </h3>
+                                <p class="text-sm text-secondary mb-5 leading-relaxed">
+                                    Créez un CV percutant adapté aux exigences du marché, des bourses, des stages et des emplois. Techniques de rédaction, mise en forme professionnelle et personnalisation selon le poste visé.
+                                </p>
+                                <div class="flex flex-wrap gap-2 mb-5">
+                                    <span class="flex items-center gap-1 text-xs bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full font-semibold"><span class="material-symbols-outlined text-sm">description</span> CV pour emploi</span>
+                                    <span class="flex items-center gap-1 text-xs bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full font-semibold"><span class="material-symbols-outlined text-sm">school</span> Bourse &amp; Stage</span>
+                                    <span class="flex items-center gap-1 text-xs bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full font-semibold"><span class="material-symbols-outlined text-sm">flight</span> CV pour l'étranger</span>
+                                </div>
+                                <div class="flex flex-wrap gap-4 text-xs text-secondary mb-6">
+                                    <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-base">calendar_today</span> 16 Mai 2026</span>
+                                    <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-base">location_on</span> Abomey Calavi, Bénin</span>
+                                </div>
+                                <a href="mailto:info.kiagency22@gmail.com?subject=Inscription%20Formation%20CV%20Professionnel%2016%20Mai%202026&body=Bonjour%20KANO%20IMPACT%20AGENCY%2C%0A%0AJe%20souhaite%20m%27inscrire%20%C3%A0%20la%202%C3%A8me%20Vague%20de%20formation%20sur%20la%20R%C3%A9daction%20de%20CV%20Professionnel%20du%2016%20Mai%202026.%0A%0AMon%20nom%20%3A%20%0AMon%20t%C3%A9l%C3%A9phone%20%3A%20%0AType%20de%20CV%20souhait%C3%A9%20(emploi%2Fbourse%2Fstage)%20%3A%20%0A%0AMerci."
+                                    class="inline-flex items-center gap-2 px-6 py-3 bg-emerald-700 text-white font-bold rounded-xl hover:opacity-90 transition-opacity text-sm">
+                                    <span class="material-symbols-outlined text-base">mail</span> S'inscrire par email
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ══ ÉVÉNEMENT 4 : Grande Conférence ══ -->
+                    <article data-category="conference" class="event-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all duration-400 border border-red-100 ring-2 ring-red-500/20">
+                        <!-- "Événement phare" badge -->
+                        <div class="bg-gradient-to-r from-red-600 to-orange-500 text-white text-center py-2 text-xs font-bold uppercase tracking-widest flex items-center justify-center gap-2">
+                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                            Événement Phare — Ne manquez pas !
+                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-36 shrink-0 bg-gradient-to-br from-red-600 to-orange-600 flex flex-col items-center justify-center text-white p-6 text-center">
+                                <span class="text-xs font-bold uppercase tracking-widest opacity-80">Samedi</span>
+                                <span class="text-6xl font-black leading-none mt-1">13</span>
+                                <span class="text-lg font-bold uppercase tracking-widest">Juin</span>
+                                <span class="text-sm opacity-70 mt-1">2026</span>
+                            </div>
+                            <div class="p-7 flex-1">
+                                <div class="flex flex-wrap items-center gap-2 mb-3">
+                                    <span class="text-[10px] font-bold uppercase tracking-widest text-red-600 bg-red-50 px-3 py-1 rounded-full">Grande Conférence</span>
+                                    <span class="text-[10px] font-bold uppercase tracking-widest text-accent bg-emerald-50 px-3 py-1 rounded-full flex items-center gap-1">
+                                        <span class="w-1.5 h-1.5 bg-accent rounded-full animate-pulse"></span> Inscriptions ouvertes
+                                    </span>
+                                </div>
+                                <h3 class="text-2xl font-headline font-black mb-2 group-hover:text-red-600 transition-colors leading-snug uppercase tracking-tight">
+                                    Grande Conférence à Abomey-Calavi
+                                </h3>
+                                <p class="text-sm text-secondary mb-5 leading-relaxed">
+                                    KANO IMPACT AGENCY vous convie à sa Grande Conférence annuelle à Abomey-Calavi. Un événement d'envergure réunissant experts, porteurs de projets, institutions et partenaires autour du développement durable et de l'impact.
+                                </p>
+                                <!-- Highlights -->
+                                <div class="flex flex-wrap gap-2 mb-5">
+                                    <span class="flex items-center gap-1 text-xs bg-red-50 text-red-700 px-3 py-1 rounded-full font-semibold"><span class="material-symbols-outlined text-sm">mic</span> Conférenciers experts</span>
+                                    <span class="flex items-center gap-1 text-xs bg-red-50 text-red-700 px-3 py-1 rounded-full font-semibold"><span class="material-symbols-outlined text-sm">groups</span> Networking</span>
+                                    <span class="flex items-center gap-1 text-xs bg-red-50 text-red-700 px-3 py-1 rounded-full font-semibold"><span class="material-symbols-outlined text-sm">emoji_events</span> Prix &amp; Distinctions</span>
+                                </div>
+                                <div class="flex flex-wrap gap-4 text-xs text-secondary mb-6">
+                                    <span class="flex items-center gap-1"><span class="material-symbols-outlined text-red-500 text-base">calendar_today</span> Samedi 13 Juin 2026</span>
+                                    <span class="flex items-center gap-1"><span class="material-symbols-outlined text-red-500 text-base">location_on</span> Abomey-Calavi, Bénin</span>
+                                </div>
+                                <a href="mailto:info.kiagency22@gmail.com?subject=Inscription%20Grande%20Conf%C3%A9rence%2013%20Juin%202026%20-%20Abomey-Calavi&body=Bonjour%20KANO%20IMPACT%20AGENCY%2C%0A%0AJe%20souhaite%20participer%20%C3%A0%20la%20Grande%20Conf%C3%A9rence%20du%20Samedi%2013%20Juin%202026%20%C3%A0%20Abomey-Calavi.%0A%0AMon%20nom%20%3A%20%0AMon%20organisation%20%2F%20institution%20%3A%20%0AMon%20t%C3%A9l%C3%A9phone%20%3A%20%0A%0AMerci."
+                                    class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-red-600 to-orange-500 text-white font-bold rounded-xl hover:opacity-90 transition-opacity text-sm shadow-lg shadow-red-500/20">
+                                    <span class="material-symbols-outlined text-base">mail</span> Je veux y participer
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div><!-- /#events-grid -->
+            </div>
+        </section>
+
+        <!-- Past Events -->
+        <section class="py-20 px-6 bg-slate-50">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex items-center gap-3 mb-12">
+                    <div class="w-3 h-8 bg-slate-400 rounded-full"></div>
+                    <h2 class="text-2xl font-headline font-black text-on-surface">Événements passés</h2>
+                    <span class="ml-2 px-3 py-1 bg-slate-200 text-slate-600 text-xs font-bold rounded-full uppercase tracking-wide">Archivés</span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-2xl p-6 border border-gray-100 opacity-70 hover:opacity-100 transition-opacity">
+                        <div class="flex items-start gap-4">
+                            <div class="w-16 h-16 bg-slate-100 rounded-xl flex flex-col items-center justify-center shrink-0 text-slate-500">
+                                <span class="text-xl font-black leading-none">15</span>
+                                <span class="text-[10px] font-bold uppercase">Fév 2026</span>
+                            </div>
+                            <div>
+                                <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400 bg-slate-100 px-2 py-0.5 rounded-full">MasterClass</span>
+                                <h3 class="font-bold text-on-surface mt-1 mb-1 text-sm">1ère vague — Construction de Profil Professionnel</h3>
+                                <p class="text-xs text-secondary">Abomey Calavi · 25 participants</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl p-6 border border-gray-100 opacity-70 hover:opacity-100 transition-opacity">
+                        <div class="flex items-start gap-4">
+                            <div class="w-16 h-16 bg-slate-100 rounded-xl flex flex-col items-center justify-center shrink-0 text-slate-500">
+                                <span class="text-xl font-black leading-none">22</span>
+                                <span class="text-[10px] font-bold uppercase">Jan 2026</span>
+                            </div>
+                            <div>
+                                <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400 bg-slate-100 px-2 py-0.5 rounded-full">Formation</span>
+                                <h3 class="font-bold text-on-surface mt-1 mb-1 text-sm">1ère vague — Rédaction de CV Professionnel</h3>
+                                <p class="text-xs text-secondary">Abomey Calavi · 18 participants</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl p-6 border border-gray-100 opacity-70 hover:opacity-100 transition-opacity">
+                        <div class="flex items-start gap-4">
+                            <div class="w-16 h-16 bg-slate-100 rounded-xl flex flex-col items-center justify-center shrink-0 text-slate-500">
+                                <span class="text-xl font-black leading-none">08</span>
+                                <span class="text-[10px] font-bold uppercase">Nov 2025</span>
+                            </div>
+                            <div>
+                                <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400 bg-slate-100 px-2 py-0.5 rounded-full">Séminaire</span>
+                                <h3 class="font-bold text-on-surface mt-1 mb-1 text-sm">Séminaire Gestion Stratégique des Projets ODD</h3>
+                                <p class="text-xs text-secondary">Bohicon · 35 participants</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="py-24 px-6">
+            <div class="max-w-5xl mx-auto academic-gradient rounded-3xl p-12 md:p-16 text-center text-white shadow-2xl relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-full opacity-10" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"></div>
+                <span class="material-symbols-outlined text-5xl mb-6 block opacity-60 relative z-10" style="font-variation-settings: 'FILL' 1;">groups</span>
+                <h2 class="text-4xl font-headline font-black mb-6 relative z-10">Vous souhaitez organiser un événement avec nous ?</h2>
+                <p class="text-lg text-blue-100 mb-10 max-w-xl mx-auto relative z-10">KANO IMPACT AGENCY conçoit et anime des ateliers, MasterClass et conférences sur mesure pour votre organisation.</p>
+                <div class="flex flex-col md:flex-row items-center justify-center gap-4 relative z-10">
+                    <a href="mailto:info.kiagency22@gmail.com?subject=Demande%20d%27organisation%20d%27%C3%A9v%C3%A9nement&body=Bonjour%20KANO%20IMPACT%20AGENCY%2C%0A%0AJe%20souhaite%20organiser%20un%20%C3%A9v%C3%A9nement%20en%20partenariat%20avec%20votre%20agence.%0A%0AType%20d%27%C3%A9v%C3%A9nement%20%3A%20%0ADate%20souhait%C3%A9e%20%3A%20%0ANombre%20de%20participants%20%3A%20%0A%0AMerci."
+                        class="bg-white text-primary px-10 py-4 rounded-full font-bold text-lg hover:shadow-lg transition-all inline-flex items-center gap-2">
+                        <span class="material-symbols-outlined">mail</span> Nous soumettre une demande
+                    </a>
+                    <a href="tel:+22901436483 05" class="bg-transparent border border-white/30 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition-all inline-flex items-center gap-2">
+                        <span class="material-symbols-outlined">phone</span> +229 01 43 64 83 05
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full bg-slate-900 text-slate-400 py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="md:col-span-1">
+                    <div class="flex items-center gap-3 mb-5">
+                        <img src="assets/img/logo.jpeg" alt="KANO IMPACT AGENCY" class="h-10 w-auto rounded-lg">
+                        <div>
+                            <p class="text-sm font-black text-white leading-tight">KANO IMPACT</p>
+                            <p class="text-xs text-blue-400 font-bold">AGENCY</p>
+                        </div>
+                    </div>
+                    <p class="text-sm leading-relaxed mb-3">Projets, Orientation et Assistance pour un Développement Durable.</p>
+                    <p class="text-xs italic text-blue-300">Apprendre – Assimiler – Agir – Impacter</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-5">Navigation</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a class="hover:text-primary transition-colors" href="index.html">Accueil</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="index.html#services">Services</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="formations.html">Formations</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="evenements.html">Événements</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-5">Légal</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a class="hover:text-primary transition-colors" href="privacy.html">Politique de confidentialité</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="terms.html">Conditions d'utilisation</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="mentions-legales.html">Mentions Légales</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-5">Contact</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start gap-2">
+                            <span class="material-symbols-outlined text-base text-primary mt-0.5">mail</span>
+                            <a href="mailto:info.kiagency22@gmail.com" class="hover:text-white transition-colors">info.kiagency22@gmail.com</a>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="material-symbols-outlined text-base text-primary mt-0.5">location_on</span>
+                            <span>Îlot C/SB, Cité la Victoire,<br>Abomey Calavi, Bénin</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="material-symbols-outlined text-base text-primary mt-0.5">phone</span>
+                            <div>
+                                <a href="tel:+22901436483 05" class="hover:text-white block">+229 01 43 64 83 05</a>
+                                <a href="tel:+22901672376 66" class="hover:text-white block">+229 01 67 23 76 66</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
+                <p>© 2026 KANO IMPACT AGENCY. Tous droits réservés.</p>
+                <p class="text-center">Réalisé par <a href="https://rejustewenoumi.pythonanywhere.com" class="hover:text-primary transition-colors font-bold text-blue-400">RW</a></p>
+                <p>RCCM : RB/ABC/26 A 137322 | IFU : 0202113524983</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        function filterEvents(category) {
+            const cards = document.querySelectorAll('.event-card');
+            const buttons = document.querySelectorAll('.evt-filter-btn');
+            buttons.forEach(btn => {
+                if (btn.dataset.cat === category) {
+                    btn.classList.add('bg-primary', 'text-white');
+                    btn.classList.remove('bg-white', 'text-secondary', 'border', 'border-gray-200');
+                } else {
+                    btn.classList.remove('bg-primary', 'text-white');
+                    btn.classList.add('bg-white', 'text-secondary', 'border', 'border-gray-200');
+                }
+            });
+            cards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
