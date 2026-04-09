@@ -1,16 +1,16 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html class="light" lang="fr">
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>KI AGENCY - Excellence Académique & Formations Professionnelles</title>
-    <meta name="description" content="KI AGENCY se spécialise dans le renforcement de capacités, la formation continue et l'accompagnement de projets innovants."/>
-    
+    <title>KANO IMPACT AGENCY - Projets, Orientation et Assistance pour un Développement Durable</title>
+    <meta name="description" content="KANO IMPACT AGENCY : Conseil stratégique, Études environnementales, Ingénierie de projets, Technologies numériques, BTP, Genre & Inclusion. Basée à Abomey Calavi, Bénin."/>
+
     <!-- CSS Dependencies -->
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
     <link href="assets/css/style.css" rel="stylesheet"/>
-    
+
     <!-- Tailwind CDN with Config -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script>
@@ -25,6 +25,7 @@
                         "surface": "#f9f9fb",
                         "on-surface": "#1a1c1e",
                         "on-primary": "#ffffff",
+                        "accent": "#00a86b",
                     },
                     fontFamily: {
                         "headline": ["Public Sans", "sans-serif"],
@@ -35,23 +36,28 @@
         }
     </script>
 </head>
-<body class="bg-surface">
+<body class="bg-surface font-body">
+
     <!-- TopAppBar -->
-    <header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm">
-        <nav class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+    <header class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-xl shadow-sm border-b border-gray-100">
+        <nav class="flex justify-between items-center w-full px-6 py-3 max-w-7xl mx-auto">
             <a href="index.html" class="flex items-center gap-3">
-                <img src="assets/img/logo.jpeg" alt="KI AGENCY Logo" class="h-10 w-auto rounded-lg shadow-sm">
-                <span class="text-xl font-bold tracking-tighter text-blue-800 uppercase">KI AGENCY</span>
+                <img src="assets/img/logo.jpeg" alt="KANO IMPACT AGENCY Logo" class="h-10 w-auto rounded-lg shadow-sm">
+                <div class="flex flex-col leading-tight">
+                    <span class="text-sm font-black tracking-tighter text-blue-900 uppercase">KANO IMPACT</span>
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-wide">AGENCY</span>
+                </div>
             </a>
-            <div class="hidden md:flex items-center space-x-8">
+            <div class="hidden md:flex items-center space-x-6">
                 <a class="text-blue-700 font-bold border-b-2 border-blue-700 pb-1" href="index.html">Accueil</a>
                 <a class="text-slate-600 font-medium hover:text-blue-600 transition-colors" href="#about">À Propos</a>
+                <a class="text-slate-600 font-medium hover:text-blue-600 transition-colors" href="#services">Services</a>
                 <a class="text-slate-600 font-medium hover:text-blue-600 transition-colors" href="formations.html">Formations</a>
-                <a class="text-slate-600 font-medium hover:text-blue-600 transition-colors" href="dashboard.html">Tableau de bord</a>
-                <a class="px-6 py-2 bg-primary text-white rounded-full font-bold hover:opacity-90 transition-all" href="#contact">Contact Us</a>
+                <a class="text-slate-600 font-medium hover:text-blue-600 transition-colors" href="contact.html">Contact</a>
+                <a class="px-5 py-2 bg-primary text-white rounded-full font-bold hover:opacity-90 transition-all text-sm shadow" href="#contact">Nous contacter</a>
             </div>
             <!-- Mobile Menu Toggle -->
-            <button class="md:hidden text-on-surface p-2">
+            <button id="mobile-menu-btn" class="md:hidden text-on-surface p-2" aria-label="Ouvrir le menu">
                 <span class="material-symbols-outlined">menu</span>
             </button>
         </nav>
@@ -59,70 +65,114 @@
 
     <main class="pt-20">
         <!-- Hero Section -->
-        <section class="relative min-h-[80vh] flex items-center overflow-hidden bg-surface">
-            <div class="max-w-7xl mx-auto px-8 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div class="z-10 animate-fade-in">
-                    <span class="text-xs uppercase tracking-[0.2em] text-secondary font-bold mb-4 block">Excellence Académique</span>
-                    <h1 class="text-5xl lg:text-7xl font-headline font-black text-on-surface leading-[1.1] mb-6 tracking-tight">
-                        Propulsez votre carrière avec <span class="text-primary">l'excellence</span> académique.
+        <section class="relative min-h-[88vh] flex items-center overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-white">
+            <div class="absolute inset-0 opacity-30" style="background-image: radial-gradient(circle at 1px 1px, #0040a8 1px, transparent 0); background-size: 48px 48px;"></div>
+            <div class="absolute top-20 right-0 w-[700px] h-[700px] bg-blue-500/5 rounded-full blur-3xl"></div>
+            <div class="max-w-7xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
+                <div class="animate-fade-in">
+                    <span class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-blue-700 font-bold mb-5 bg-blue-50 px-4 py-2 rounded-full border border-blue-100">
+                        <span class="w-2 h-2 bg-blue-600 rounded-full animate-pulse"></span>
+                        Agence de Conseil &amp; Solutions
+                    </span>
+                    <h1 class="text-5xl lg:text-6xl font-headline font-black text-on-surface leading-[1.1] mb-6 tracking-tight">
+                        Projets, Orientation &amp; Assistance pour un
+                        <span class="text-primary"> Développement Durable</span>
                     </h1>
-                    <p class="text-xl text-secondary mb-10 max-w-lg leading-relaxed">
-                        Formation - Assistance - Projet - Développement. Le partenaire stratégique de votre réussite professionnelle et académique.
+                    <p class="text-lg text-secondary mb-4 max-w-xl leading-relaxed">
+                        <strong class="text-on-surface">Apprendre – Assimiler – Agir – Impacter</strong>
                     </p>
-                    <div class="flex flex-wrap gap-4">
-                        <a class="px-8 py-4 bg-gradient-to-br from-primary to-primary-container text-white rounded-full font-bold shadow-lg shadow-primary/20 hover:scale-105 transition-transform" href="formations.html">
-                            Découvrir nos formations
+                    <p class="text-base text-secondary mb-10 max-w-xl leading-relaxed">
+                        Conseil stratégique, ingénierie de projets, transformation numérique et solutions intégrées pour un développement intelligent, inclusif et durable.
+                    </p>
+                    <div class="flex flex-wrap gap-4 mb-8">
+                        <a class="px-8 py-4 bg-gradient-to-br from-primary to-primary-container text-white rounded-full font-bold shadow-lg shadow-primary/25 hover:scale-105 transition-transform" href="#services">
+                            Découvrir nos services
                         </a>
-                        <a class="px-8 py-4 bg-gray-100 text-primary rounded-full font-bold hover:bg-gray-200 transition-colors" href="#about">
-                            En savoir plus
+                        <a class="px-8 py-4 bg-white text-primary border border-blue-200 rounded-full font-bold hover:bg-blue-50 transition-colors shadow-sm" href="#contact">
+                            Prendre contact
                         </a>
+                    </div>
+                    <!-- Legal Info Strip -->
+                    <div class="flex flex-wrap gap-x-4 gap-y-2 text-xs text-secondary border-t border-gray-100 pt-4">
+                        <span>RCCM : RB/ABC/26 A 137322</span>
+                        <span class="text-gray-300">|</span>
+                        <span>IFU : 0202113524983</span>
+                        <span class="text-gray-300">|</span>
+                        <span>RIB : BJ062 08011 111281003001 38</span>
                     </div>
                 </div>
                 <div class="relative hidden lg:block">
-                    <div class="absolute -top-20 -right-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
-                    <div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-700">
-                        <img alt="Professional collaboration" class="w-full h-[600px] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWeEzs1hg5SAOjFfULVM4dRe0tHLYgN6I8WFiAHmQl4pWOmsJNne1xcs5ln8WAmwnA0ypGQGlrnF1VJIYs6ofVvpC1yxOu_VkPiooKY-cqwMm1UtVLuG_btib8QI6_oaIGsHEPaTQwkU64pWtNKa2DQ8wOmQfhFYfe2SpC46n70H8dc4aNTrBSsIlrbpMgDwS8GGS0W2QnQ25QDy-0fJKUkWPKii2KiyeOCjurF1iOOygG-Q-Hm0xzjdpiCASuF8NG8RFKsJx7mtM"/>
-                        <div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
+                    <div class="absolute -top-16 -right-16 w-80 h-80 bg-primary/5 rounded-full blur-3xl"></div>
+                    <div class="relative z-10 rounded-3xl overflow-hidden shadow-2xl">
+                        <img alt="KANO IMPACT AGENCY - Développement durable" class="w-full h-[560px] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWeEzs1hg5SAOjFfULVM4dRe0tHLYgN6I8WFiAHmQl4pWOmsJNne1xcs5ln8WAmwnA0ypGQGlrnF1VJIYs6ofVvpC1yxOu_VkPiooKY-cqwMm1UtVLuG_btib8QI6_oaIGsHEPaTQwkU64pWtNKa2DQ8wOmQfhFYfe2SpC46n70H8dc4aNTrBSsIlrbpMgDwS8GGS0W2QnQ25QDy-0fJKUkWPKii2KiyeOCjurF1iOOygG-Q-Hm0xzjdpiCASuF8NG8RFKsJx7mtM"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/50 to-transparent"></div>
                     </div>
                     <!-- Floating Badge -->
-                    <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl z-20 flex items-center gap-4">
+                    <div class="absolute -bottom-6 -left-6 bg-white p-5 rounded-2xl shadow-xl z-20 flex items-center gap-4">
                         <div class="w-12 h-12 bg-blue-100 flex items-center justify-center rounded-full text-blue-700">
                             <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">verified</span>
                         </div>
                         <div>
-                            <p class="text-[10px] text-secondary font-bold uppercase tracking-tighter">Certifié par</p>
-                            <p class="text-lg font-headline font-black text-primary">KI AGENCY</p>
+                            <p class="text-[10px] text-secondary font-bold uppercase tracking-tighter">Approche SMART</p>
+                            <p class="text-sm font-headline font-black text-primary">Impact Mesurable</p>
                         </div>
+                    </div>
+                    <!-- Floating Tag -->
+                    <div class="absolute top-6 -right-6 bg-accent text-white p-4 rounded-2xl shadow-xl z-20">
+                        <p class="text-xs font-black uppercase tracking-wide">ODD</p>
+                        <p class="text-xl font-black">Aligné</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- About Section -->
-        <section class="py-24 bg-gray-50" id="about">
-            <div class="max-w-7xl mx-auto px-8">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
-                    <div class="md:col-span-1">
-                        <h2 class="text-4xl font-headline font-bold text-on-surface mb-6">Bâtir l'avenir par les compétences.</h2>
-                        <p class="text-secondary leading-relaxed">
-                            KI AGENCY se spécialise dans le renforcement de capacités, la formation continue et l'accompagnement de projets innovants pour les professionnels et les institutions.
+        <section class="py-24 bg-white" id="about">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <span class="text-xs uppercase tracking-widest text-blue-600 font-bold mb-4 block">Qui Sommes-Nous</span>
+                        <h2 class="text-4xl font-headline font-black text-on-surface mb-6 leading-tight">
+                            Une Expertise Pluridisciplinaire au Service de la <span class="text-primary">Performance</span>
+                        </h2>
+                        <p class="text-secondary leading-relaxed mb-6">
+                            KANO IMPACT est une Agence de conseil stratégique et de solutions en étude environnementale et numérique, engagée pour un développement intelligent, inclusif et durable.
                         </p>
+                        <p class="text-secondary leading-relaxed mb-8">
+                            Nous intervenons à l'intersection de l'innovation technologique, de l'ingénierie de projets et de la transformation organisationnelle.
+                        </p>
+                        <!-- SMART approach -->
+                        <div class="bg-blue-50 rounded-2xl p-6 border border-blue-100">
+                            <p class="text-xs uppercase tracking-widest text-blue-600 font-bold mb-3">Notre Approche SMART</p>
+                            <div class="flex flex-wrap gap-3">
+                                <span class="px-3 py-1 bg-white text-primary font-bold text-sm rounded-full border border-blue-200">Spécifique</span>
+                                <span class="px-3 py-1 bg-white text-primary font-bold text-sm rounded-full border border-blue-200">Mesurable</span>
+                                <span class="px-3 py-1 bg-white text-primary font-bold text-sm rounded-full border border-blue-200">Axée sur les Résultats</span>
+                                <span class="px-3 py-1 bg-white text-primary font-bold text-sm rounded-full border border-blue-200">Réaliste</span>
+                                <span class="px-3 py-1 bg-white text-primary font-bold text-sm rounded-full border border-blue-200">Temporellement planifiée</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="md:col-span-2 grid grid-cols-1 sm:grid-cols-3 gap-6">
-                        <article class="bg-white p-8 rounded-2xl shadow-sm border-b-4 border-primary hover:shadow-md transition-shadow">
-                            <span class="material-symbols-outlined text-primary text-4xl mb-4">lightbulb</span>
-                            <h3 class="font-headline font-bold text-xl mb-2">Formation</h3>
-                            <p class="text-sm text-secondary">Programmes sur mesure adaptés aux exigences du marché actuel.</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <article class="bg-surface p-7 rounded-2xl shadow-sm border-l-4 border-primary hover:shadow-md transition-shadow">
+                            <span class="material-symbols-outlined text-primary text-3xl mb-4" style="font-variation-settings: 'FILL' 1;">hub</span>
+                            <h3 class="font-headline font-bold text-lg mb-2">Approche Intégrée</h3>
+                            <p class="text-sm text-secondary">Multidisciplinaire et orientée résultats.</p>
                         </article>
-                        <article class="bg-white p-8 rounded-2xl shadow-sm border-b-4 border-primary hover:shadow-md transition-shadow">
-                            <span class="material-symbols-outlined text-primary text-4xl mb-4">military_tech</span>
-                            <h3 class="font-headline font-bold text-xl mb-2">Compétence</h3>
-                            <p class="text-sm text-secondary">Expertise technique et pédagogique de haut niveau.</p>
+                        <article class="bg-surface p-7 rounded-2xl shadow-sm border-l-4 border-primary hover:shadow-md transition-shadow">
+                            <span class="material-symbols-outlined text-primary text-3xl mb-4" style="font-variation-settings: 'FILL' 1;">devices</span>
+                            <h3 class="font-headline font-bold text-lg mb-2">Outils Numériques</h3>
+                            <p class="text-sm text-secondary">Maîtrise des technologies modernes.</p>
                         </article>
-                        <article class="bg-white p-8 rounded-2xl shadow-sm border-b-4 border-primary hover:shadow-md transition-shadow">
-                            <span class="material-symbols-outlined text-primary text-4xl mb-4">star</span>
-                            <h3 class="font-headline font-bold text-xl mb-2">Excellence</h3>
-                            <p class="text-sm text-secondary">Engagement total pour des résultats tangibles et durables.</p>
+                        <article class="bg-surface p-7 rounded-2xl shadow-sm border-l-4 border-accent hover:shadow-md transition-shadow">
+                            <span class="material-symbols-outlined text-accent text-3xl mb-4" style="font-variation-settings: 'FILL' 1;">public</span>
+                            <h3 class="font-headline font-bold text-lg mb-2">Vision Continentale</h3>
+                            <p class="text-sm text-secondary">Expertise locale, impact africain et mondial.</p>
+                        </article>
+                        <article class="bg-surface p-7 rounded-2xl shadow-sm border-l-4 border-accent hover:shadow-md transition-shadow">
+                            <span class="material-symbols-outlined text-accent text-3xl mb-4" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+                            <h3 class="font-headline font-bold text-lg mb-2">Transparence & Rigueur</h3>
+                            <p class="text-sm text-secondary">Normes administratives et redevabilité.</p>
                         </article>
                     </div>
                 </div>
@@ -130,205 +180,419 @@
         </section>
 
         <!-- Services Section -->
-        <section class="py-24 bg-white" id="services">
-            <div class="max-w-7xl mx-auto px-8 text-center mb-16">
-                <h2 class="text-4xl font-headline font-black mb-4">Nos Piliers d'Intervention</h2>
-                <div class="h-1.5 w-24 bg-primary mx-auto rounded-full"></div>
-            </div>
-            <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Card 1 -->
-                <div class="group bg-surface rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 border border-gray-100">
-                    <div class="h-48 overflow-hidden">
-                        <img alt="Formations Professionnelles" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzYDUB5K3QT9hS17_jYjLqbdt8TxIxvnbmGIEkrk99PGDtnX26rgKkrnbsRf5GlcpGrvGme0TNkp_SlyTkVDvMFDh9tTwOtYcPK1cMIxbbTLciY9ZTyHBOUO4fpkYOWAq0xE_m3C4N9FV3npW55USnwTH6XBFayPT4UnTFEsP6JTbfBTf-NnP3eqv6GzFgXeEibwnIcepVP23LA3er59Gxz0KqVun9ivmG8gUt3Lg5RlXQrT2GAZfiUUDYWK41dghvIPAsNeEnP08"/>
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-headline font-bold mb-4">Formations Professionnelles</h3>
-                        <p class="text-secondary mb-6 line-clamp-2">Ateliers pratiques et immersifs pour maîtriser les outils et méthodologies de demain.</p>
-                        <ul class="space-y-3 mb-8">
-                            <li class="flex items-center gap-2 text-sm text-secondary">
-                                <span class="material-symbols-outlined text-primary text-sm">check_circle</span> Leadership et Management
-                            </li>
-                            <li class="flex items-center gap-2 text-sm text-secondary">
-                                <span class="material-symbols-outlined text-primary text-sm">check_circle</span> Marketing Digital
-                            </li>
-                        </ul>
-                        <a href="formations.html" class="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all">
-                            Voir le catalogue <span class="material-symbols-outlined">arrow_forward</span>
-                        </a>
-                    </div>
+        <section class="py-24 bg-slate-50" id="services">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <span class="text-xs uppercase tracking-widest text-blue-600 font-bold mb-4 block">Domaines d'Intervention</span>
+                    <h2 class="text-4xl font-headline font-black text-on-surface mb-4">Nos Domaines d'Intervention</h2>
+                    <div class="h-1.5 w-24 bg-primary mx-auto rounded-full"></div>
+                    <p class="mt-6 text-secondary max-w-2xl mx-auto">Cinq pôles d'expertise complémentaires pour répondre à vos besoins de développement.</p>
                 </div>
-                <!-- Card 2 -->
-                <div class="group bg-surface rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 border border-gray-100">
-                    <div class="h-48 overflow-hidden">
-                        <img alt="Assistance Académique" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmfPm8CUge9t4CaVKzmG7yaUI8WjQSiyMe2e_s5Net6FV4oixFimQtqaqFZv3Aak6IcwRIMOSTHb5_yL7kcopRyWGF_6B8yo7xxLyfVMSdEj8qecmPj48mRzw-VwW8U5Wn0FXd_POdkvj-mNxkD-pDWwfiUzWvB_P6Vty_NQDX4MZBJuzeI7KdNTx2ZyPiMhlW0ziAgDT_PFClH_q-hEIwuaUSDPBMML8smVNeMYpmXCUWGeIMVXjD7b7dlM0ffmLU6fFhc6tdR70"/>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Service 1 -->
+                    <div class="group bg-white rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:-translate-y-1">
+                        <div class="h-3 bg-gradient-to-r from-primary to-primary-container"></div>
+                        <div class="p-8">
+                            <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all">
+                                <span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">schema</span>
+                            </div>
+                            <span class="text-xs font-bold uppercase tracking-widest text-primary bg-blue-50 px-3 py-1 rounded-full">Domaine 01</span>
+                            <h3 class="text-xl font-headline font-bold mt-4 mb-3">Études, Ingénierie &amp; Gestion de Projets</h3>
+                            <p class="text-secondary text-sm mb-5 leading-relaxed">Conception, structuration et pilotage de projets à fort impact social et économique.</p>
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-start gap-2 text-sm text-secondary">
+                                    <span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span>
+                                    Diagnostic stratégique organisationnel
+                                </li>
+                                <li class="flex items-start gap-2 text-sm text-secondary">
+                                    <span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span>
+                                    Formations : QGIS, ArcGIS, KoboCollect, Google Earth
+                                </li>
+                                <li class="flex items-start gap-2 text-sm text-secondary">
+                                    <span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span>
+                                    Études de faisabilité &amp; planification stratégique
+                                </li>
+                                <li class="flex items-start gap-2 text-sm text-secondary">
+                                    <span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span>
+                                    Montage de dossiers pour bailleurs de fonds
+                                </li>
+                                <li class="flex items-start gap-2 text-sm text-secondary">
+                                    <span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span>
+                                    Suivi-évaluation &amp; mesure d'impact
+                                </li>
+                            </ul>
+                            <p class="text-xs text-blue-700 font-bold bg-blue-50 px-3 py-2 rounded-lg">🎯 Projets solides, finançables, alignés aux ODD</p>
+                        </div>
                     </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-headline font-bold mb-4">Assistance Académique</h3>
-                        <p class="text-secondary mb-6 line-clamp-2">Soutien personnalisé pour étudiants et chercheurs dans leurs travaux scientifiques.</p>
-                        <ul class="space-y-3 mb-8">
-                            <li class="flex items-center gap-2 text-sm text-secondary">
-                                <span class="material-symbols-outlined text-primary text-sm">check_circle</span> Méthodologie de recherche
-                            </li>
-                            <li class="flex items-center gap-2 text-sm text-secondary">
-                                <span class="material-symbols-outlined text-primary text-sm">check_circle</span> Rédaction scientifique
-                            </li>
-                        </ul>
-                        <a href="#contact" class="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all">
-                            Demander de l'aide <span class="material-symbols-outlined">arrow_forward</span>
-                        </a>
+
+                    <!-- Service 2 -->
+                    <div class="group bg-white rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:-translate-y-1">
+                        <div class="h-3 bg-gradient-to-r from-primary to-primary-container"></div>
+                        <div class="p-8">
+                            <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all">
+                                <span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">computer</span>
+                            </div>
+                            <span class="text-xs font-bold uppercase tracking-widest text-primary bg-blue-50 px-3 py-1 rounded-full">Domaine 02</span>
+                            <h3 class="text-xl font-headline font-bold mt-4 mb-3">Technologies &amp; Transformation Digitale (TIC)</h3>
+                            <p class="text-secondary text-sm mb-5 leading-relaxed">Accompagnement des organisations dans leur transition numérique pour améliorer performance et visibilité.</p>
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-start gap-2 text-sm text-secondary">
+                                    <span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span>
+                                    Création de sites web et plateformes digitales
+                                </li>
+                                <li class="flex items-start gap-2 text-sm text-secondary">
+                                    <span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span>
+                                    Digitalisation des processus administratifs
+                                </li>
+                                <li class="flex items-start gap-2 text-sm text-secondary">
+                                    <span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span>
+                                    Bases de données &amp; outils de gestion
+                                </li>
+                                <li class="flex items-start gap-2 text-sm text-secondary">
+                                    <span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span>
+                                    Communication digitale &amp; marketing numérique
+                                </li>
+                                <li class="flex items-start gap-2 text-sm text-secondary">
+                                    <span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span>
+                                    Services informatiques &amp; multimédia
+                                </li>
+                            </ul>
+                            <p class="text-xs text-blue-700 font-bold bg-blue-50 px-3 py-2 rounded-lg">🎯 Gain d'efficacité et visibilité institutionnelle</p>
+                        </div>
                     </div>
-                </div>
-                <!-- Card 3 -->
-                <div class="group bg-surface rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 border border-gray-100">
-                    <div class="h-48 overflow-hidden">
-                        <img alt="Gestion de Projet" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKr0rudpMwJmE94fNtuys_0J0Nlp4qT1EE089w2ndZpRDZIxW-a_GFIq-jZuF1fUvegK68dDo4s9McvmsIqK7DtB2dKTh60NT68V3gtN9ctZ179reRtgfsRIszg43Pq7R-zl_hwT1uyzUv4otKd22zhoBm41xA2dsxVq81LGIjOTsVcmGUIo8ZxK-0bQsduTpNMxWGXFcjA4e_KFiW_9jhNEAAIA-pUBt1oBPxWokrU6LGBlVMZeHSgU2SHBul6e15yFDUyrUkx2A"/>
+
+                    <!-- Service 3 -->
+                    <div class="group bg-white rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:-translate-y-1">
+                        <div class="h-3 bg-gradient-to-r from-accent to-emerald-600"></div>
+                        <div class="p-8">
+                            <div class="w-14 h-14 bg-emerald-50 rounded-xl flex items-center justify-center text-accent mb-6 group-hover:bg-accent group-hover:text-white transition-all">
+                                <span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">flight_takeoff</span>
+                            </div>
+                            <span class="text-xs font-bold uppercase tracking-widest text-accent bg-emerald-50 px-3 py-1 rounded-full">Domaine 03</span>
+                            <h3 class="text-xl font-headline font-bold mt-4 mb-3">Accompagnement &amp; Orientation — Projets de Voyage</h3>
+                            <p class="text-secondary text-sm mb-5 leading-relaxed">Structuration de vos projets de voyage vers l'Europe : du dossier jusqu'à la fin des procédures.</p>
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-start gap-2 text-sm text-secondary">
+                                    <span class="material-symbols-outlined text-accent text-base mt-0.5">check_circle</span>
+                                    Rédaction de CV : bourse, emploi, stage
+                                </li>
+                                <li class="flex items-start gap-2 text-sm text-secondary">
+                                    <span class="material-symbols-outlined text-accent text-base mt-0.5">check_circle</span>
+                                    Lettres de motivation personnalisées
+                                </li>
+                                <li class="flex items-start gap-2 text-sm text-secondary">
+                                    <span class="material-symbols-outlined text-accent text-base mt-0.5">check_circle</span>
+                                    Choix de procédure (France, Canada, Belgique)
+                                </li>
+                                <li class="flex items-start gap-2 text-sm text-secondary">
+                                    <span class="material-symbols-outlined text-accent text-base mt-0.5">check_circle</span>
+                                    Choix de formations et des Universités
+                                </li>
+                            </ul>
+                            <p class="text-xs text-emerald-700 font-bold bg-emerald-50 px-3 py-2 rounded-lg">🎯 Assurer une carrière professionnelle réussie</p>
+                        </div>
                     </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-headline font-bold mb-4">Gestion de Projet</h3>
-                        <p class="text-secondary mb-6 line-clamp-2">Consulting stratégique et accompagnement à l'innovation pour vos projets d'entreprise.</p>
-                        <ul class="space-y-3 mb-8">
-                            <li class="flex items-center gap-2 text-sm text-secondary">
-                                <span class="material-symbols-outlined text-primary text-sm">check_circle</span> Incubation d'idées
-                            </li>
-                            <li class="flex items-center gap-2 text-sm text-secondary">
-                                <span class="material-symbols-outlined text-primary text-sm">check_circle</span> Suivi-évaluation
-                            </li>
-                        </ul>
-                        <a href="#contact" class="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all">
-                            Démarrer un projet <span class="material-symbols-outlined">arrow_forward</span>
-                        </a>
+
+                    <!-- Service 4 -->
+                    <div class="group bg-white rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:-translate-y-1">
+                        <div class="h-3 bg-gradient-to-r from-primary to-primary-container"></div>
+                        <div class="p-8">
+                            <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all">
+                                <span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">construction</span>
+                            </div>
+                            <span class="text-xs font-bold uppercase tracking-widest text-primary bg-blue-50 px-3 py-1 rounded-full">Domaine 04</span>
+                            <h3 class="text-xl font-headline font-bold mt-4 mb-3">BTP &amp; Aménagement Communautaire</h3>
+                            <p class="text-secondary text-sm mb-5 leading-relaxed">Contribution au développement d'infrastructures adaptées aux besoins des communautés.</p>
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-start gap-2 text-sm text-secondary">
+                                    <span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span>
+                                    Conception technique et supervision
+                                </li>
+                                <li class="flex items-start gap-2 text-sm text-secondary">
+                                    <span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span>
+                                    Aménagement d'infrastructures communautaires
+                                </li>
+                                <li class="flex items-start gap-2 text-sm text-secondary">
+                                    <span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span>
+                                    Appui technique aux collectivités
+                                </li>
+                                <li class="flex items-start gap-2 text-sm text-secondary">
+                                    <span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span>
+                                    Résilience climatique &amp; durabilité
+                                </li>
+                            </ul>
+                            <p class="text-xs text-blue-700 font-bold bg-blue-50 px-3 py-2 rounded-lg">🎯 Infrastructures fonctionnelles, durables, fort impact social</p>
+                        </div>
                     </div>
+
+                    <!-- Service 5 -->
+                    <div class="group bg-white rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:-translate-y-1 md:col-span-2 lg:col-span-1">
+                        <div class="h-3 bg-gradient-to-r from-purple-600 to-purple-400"></div>
+                        <div class="p-8">
+                            <div class="w-14 h-14 bg-purple-50 rounded-xl flex items-center justify-center text-purple-700 mb-6 group-hover:bg-purple-700 group-hover:text-white transition-all">
+                                <span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">diversity_3</span>
+                            </div>
+                            <span class="text-xs font-bold uppercase tracking-widest text-purple-700 bg-purple-50 px-3 py-1 rounded-full">Domaine 05</span>
+                            <h3 class="text-xl font-headline font-bold mt-4 mb-3">Genre, Inclusion &amp; Sécurité Sociale</h3>
+                            <p class="text-secondary text-sm mb-5 leading-relaxed">Intégration des principes d'équité et d'inclusion dans toutes nos interventions.</p>
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-start gap-2 text-sm text-secondary">
+                                    <span class="material-symbols-outlined text-purple-600 text-base mt-0.5">check_circle</span>
+                                    Élaboration de politiques inclusives
+                                </li>
+                                <li class="flex items-start gap-2 text-sm text-secondary">
+                                    <span class="material-symbols-outlined text-purple-600 text-base mt-0.5">check_circle</span>
+                                    Intégration du genre dans les projets
+                                </li>
+                                <li class="flex items-start gap-2 text-sm text-secondary">
+                                    <span class="material-symbols-outlined text-purple-600 text-base mt-0.5">check_circle</span>
+                                    Renforcement des capacités &amp; coaching institutionnel
+                                </li>
+                                <li class="flex items-start gap-2 text-sm text-secondary">
+                                    <span class="material-symbols-outlined text-purple-600 text-base mt-0.5">check_circle</span>
+                                    Appui aux organisations de la société civile
+                                </li>
+                            </ul>
+                            <p class="text-xs text-purple-700 font-bold bg-purple-50 px-3 py-2 rounded-lg">🎯 Gouvernance équitable &amp; accès aux opportunités</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
 
-        <!-- Social Proof -->
-        <section class="py-20 academic-gradient text-white">
-            <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-                <div>
-                    <div class="text-6xl font-headline font-black mb-4">Plus de 121</div>
-                    <p class="text-xl opacity-90 mb-8 tracking-wide uppercase font-bold">membres actifs nous font confiance</p>
-                    <div class="flex -space-x-4 mb-10">
-                        <img alt="User 1" class="w-12 h-12 rounded-full border-4 border-primary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCB8WTY61bNU78TiVNTwuFvzM6St3-CNKximrnRbqXSi2d_6kxLYSt3AE_iQCBWphtIPVP7NhOELIfGcT88QFxPcmKBP-w0Ag5E8El6RzWs5poYHDWvmeG_TCckl0sKUHNmEcwnE9-aAH1mM4YF_4SYSXxtes7Sn4mo7owJeNPzjnvkHZY2PnzKmRmwwz68dgsBJHt373js7OaGmV8UPNlJUl6fd4AJ08zUw7gf8wqDm1L9brkb5vNRyTn2iw0etttkQAWNwpnwKKM"/>
-                        <img alt="User 2" class="w-12 h-12 rounded-full border-4 border-primary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHJBXNHxs71L6YilyFppLBmiIGsAUlEugY0qzYgXuGFy_QL1XxiOVwtKRMntMbJr3I5nhWi2zantYhgFjzXSDqw_6mv1pxQlpJdWAN6SwnwT9KSOJVCH0x5lDtXRJmYZXEl3E6BltX1Kd0PKZ0ui-HCbGMiOVF_-RW9VpPx-RIahT-ErivFLzFtl-o22JWqUgBuXfJMjlCCN3h0wIpVQDhh0qF0PQ2BksDwLdlkwcQTPhleQLxG16xvJzo3iojvK3qyK5oC9Gr87c"/>
-                        <img alt="User 3" class="w-12 h-12 rounded-full border-4 border-primary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADisxq2RnjXrymF3EZNpMfnzGOhl1_Gy7270QOzMKboIfyOu1aFPwSxEeQ4piAsmw6kDGKoPPsdetBrfPQ851gF0lBa_AqWO6MG-j2peGSnijjbsDVgaeD_3skvvZ9FPeuqHqO8bg6h1V3UEmfW5nYvf22LbPCjqf8Y35ZMbGEH1Yg8Oip4wQJVqs9Fk4CxF8p_npIHmd09TPvCutfoYLUxodS8PLKSlmqQ_LkOPU-MCZ1cHzXikmq_Hrr1gIJQP-TP3SH4RvnQo4"/>
-                        <div class="w-12 h-12 rounded-full border-4 border-primary/20 bg-blue-100 flex items-center justify-center text-primary font-bold text-xs uppercase">+100</div>
+        <!-- Value Add / Targets Section -->
+        <section class="py-24 academic-gradient text-white relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"></div>
+            <div class="max-w-7xl mx-auto px-6 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+                    <div>
+                        <span class="text-xs uppercase tracking-widest text-blue-200 font-bold mb-4 block">Notre Valeur Ajoutée</span>
+                        <h2 class="text-4xl font-headline font-black mb-10 leading-tight">Pourquoi choisir <br>KANO IMPACT AGENCY ?</h2>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4 bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/10">
+                                <span class="material-symbols-outlined text-yellow-300" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="font-medium">Approche intégrée et multidisciplinaire</span>
+                            </div>
+                            <div class="flex items-center gap-4 bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/10">
+                                <span class="material-symbols-outlined text-yellow-300" style="font-variation-settings: 'FILL' 1;">devices</span>
+                                <span class="font-medium">Maîtrise des outils numériques modernes</span>
+                            </div>
+                            <div class="flex items-center gap-4 bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/10">
+                                <span class="material-symbols-outlined text-yellow-300" style="font-variation-settings: 'FILL' 1;">track_changes</span>
+                                <span class="font-medium">Méthodologie orientée résultats</span>
+                            </div>
+                            <div class="flex items-center gap-4 bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/10">
+                                <span class="material-symbols-outlined text-yellow-300" style="font-variation-settings: 'FILL' 1;">public</span>
+                                <span class="font-medium">Expertise locale avec vision continentale</span>
+                            </div>
+                            <div class="flex items-center gap-4 bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/10">
+                                <span class="material-symbols-outlined text-yellow-300" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+                                <span class="font-medium">Transparence, rigueur et redevabilité</span>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="bg-white/10 backdrop-blur-md p-10 rounded-3xl border border-white/20">
-                    <span class="material-symbols-outlined text-4xl mb-6 opacity-40">format_quote</span>
-                    <p class="text-xl italic mb-6 leading-relaxed">
-                        "KI AGENCY a transformé ma façon d'aborder ma recherche doctorale. Leur expertise en méthodologie est inégalée et l'accompagnement est d'une rare qualité."
-                    </p>
-                    <div class="flex items-center gap-4">
-                        <div class="font-bold">Jean-Marc T.</div>
-                        <div class="text-sm opacity-60">Chercheur en Économie</div>
+                    <div>
+                        <span class="text-xs uppercase tracking-widest text-blue-200 font-bold mb-4 block">Nos Cibles</span>
+                        <h3 class="text-2xl font-headline font-bold mb-8">Nous accompagnons :</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-white/10 backdrop-blur-sm p-4 rounded-xl text-center border border-white/10 hover:bg-white/20 transition-all">
+                                <span class="material-symbols-outlined text-3xl mb-2" style="font-variation-settings: 'FILL' 1;">school</span>
+                                <p class="text-sm font-semibold">Étudiants &amp; Professionnels</p>
+                            </div>
+                            <div class="bg-white/10 backdrop-blur-sm p-4 rounded-xl text-center border border-white/10 hover:bg-white/20 transition-all">
+                                <span class="material-symbols-outlined text-3xl mb-2" style="font-variation-settings: 'FILL' 1;">business</span>
+                                <p class="text-sm font-semibold">Entreprises &amp; PME</p>
+                            </div>
+                            <div class="bg-white/10 backdrop-blur-sm p-4 rounded-xl text-center border border-white/10 hover:bg-white/20 transition-all">
+                                <span class="material-symbols-outlined text-3xl mb-2" style="font-variation-settings: 'FILL' 1;">volunteer_activism</span>
+                                <p class="text-sm font-semibold">ONG &amp; Société Civile</p>
+                            </div>
+                            <div class="bg-white/10 backdrop-blur-sm p-4 rounded-xl text-center border border-white/10 hover:bg-white/20 transition-all">
+                                <span class="material-symbols-outlined text-3xl mb-2" style="font-variation-settings: 'FILL' 1;">account_balance</span>
+                                <p class="text-sm font-semibold">Institutions Publiques</p>
+                            </div>
+                            <div class="bg-white/10 backdrop-blur-sm p-4 rounded-xl text-center border border-white/10 hover:bg-white/20 transition-all">
+                                <span class="material-symbols-outlined text-3xl mb-2" style="font-variation-settings: 'FILL' 1;">groups</span>
+                                <p class="text-sm font-semibold">Associations &amp; Coopératives</p>
+                            </div>
+                            <div class="bg-white/10 backdrop-blur-sm p-4 rounded-xl text-center border border-white/10 hover:bg-white/20 transition-all">
+                                <span class="material-symbols-outlined text-3xl mb-2" style="font-variation-settings: 'FILL' 1;">person</span>
+                                <p class="text-sm font-semibold">Particuliers porteurs de projets</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section class="py-24 bg-gray-50" id="contact">
-            <div class="max-w-4xl mx-auto px-8">
-                <div class="bg-white rounded-[2rem] shadow-xl p-8 md:p-12 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full"></div>
-                    <div class="text-center mb-12">
-                        <h2 class="text-4xl font-headline font-bold text-on-surface mb-2">Contactez-nous</h2>
-                        <p class="text-secondary">Une question ? Un projet ? Notre équipe vous répond sous 24h.</p>
+        <section class="py-24 bg-white" id="contact">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                    <!-- Info côté gauche -->
+                    <div>
+                        <span class="text-xs uppercase tracking-widest text-blue-600 font-bold mb-4 block">Contactez-Nous</span>
+                        <h2 class="text-4xl font-headline font-black text-on-surface mb-6 leading-tight">Parlons de votre <span class="text-primary">projet</span>.</h2>
+                        <p class="text-secondary leading-relaxed mb-10">
+                            Une question ? Un projet ? Notre équipe vous répond rapidement. Nous construisons des solutions adaptées, mesurables et durables.
+                        </p>
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-5">
+                                <div class="w-12 h-12 bg-blue-50 text-primary rounded-xl flex items-center justify-center shrink-0">
+                                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">phone</span>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-bold text-secondary uppercase tracking-widest mb-1">Téléphones</p>
+                                    <p class="font-bold text-on-surface">+229 01 43 64 83 05</p>
+                                    <p class="font-bold text-on-surface">+229 01 67 23 76 66</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-5">
+                                <div class="w-12 h-12 bg-blue-50 text-primary rounded-xl flex items-center justify-center shrink-0">
+                                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">location_on</span>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-bold text-secondary uppercase tracking-widest mb-1">Siège Social</p>
+                                    <p class="font-bold text-on-surface">Îlot C/SB, Cité la Victoire</p>
+                                    <p class="text-secondary">Abomey Calavi, République du Bénin</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-5">
+                                <div class="w-12 h-12 bg-blue-50 text-primary rounded-xl flex items-center justify-center shrink-0">
+                                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">badge</span>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-bold text-secondary uppercase tracking-widest mb-1">Informations Légales</p>
+                                    <p class="text-sm text-on-surface">RCCM : RB/ABC/26 A 137322</p>
+                                    <p class="text-sm text-on-surface">IFU : 0202113524983</p>
+                                    <p class="text-sm text-on-surface">RIB : BJ062 08011 111281003001 38</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    
-                    <!-- Formspree Integration -->
-                    <form action="https://formspree.io/f/mqakeevz" method="POST" class="space-y-6">
-                        <input type="hidden" name="_next" value="https://tonsite.com/success.html">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div class="space-y-1">
-                                <label class="text-xs font-bold uppercase text-secondary">Nom complet</label>
-                                <input name="name" required class="w-full bg-gray-50 border-none border-b-2 border-transparent focus:border-primary focus:ring-0 transition-all p-4 rounded-lg" placeholder="Votre nom" type="text"/>
+
+                    <!-- Contact Form -->
+                    <div class="bg-surface rounded-3xl shadow-xl p-8 md:p-10 border border-blue-50">
+                        <h3 class="text-xl font-headline font-bold text-on-surface mb-6">Envoyez-nous un message</h3>
+                        <form action="https://formspree.io/f/mqakeevz" method="POST" class="space-y-5">
+                            <input type="hidden" name="_next" value="success.html">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                                <div class="space-y-1">
+                                    <label class="text-xs font-bold uppercase text-secondary">Nom complet</label>
+                                    <input name="name" required class="w-full bg-white border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all p-3 rounded-xl" placeholder="Votre nom" type="text"/>
+                                </div>
+                                <div class="space-y-1">
+                                    <label class="text-xs font-bold uppercase text-secondary">Email</label>
+                                    <input name="email" required class="w-full bg-white border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all p-3 rounded-xl" placeholder="votre@email.com" type="email"/>
+                                </div>
                             </div>
                             <div class="space-y-1">
-                                <label class="text-xs font-bold uppercase text-secondary">Email</label>
-                                <input name="email" required class="w-full bg-gray-50 border-none border-b-2 border-transparent focus:border-primary focus:ring-0 transition-all p-4 rounded-lg" placeholder="votre@email.com" type="email"/>
+                                <label class="text-xs font-bold uppercase text-secondary">Téléphone</label>
+                                <input name="phone" class="w-full bg-white border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all p-3 rounded-xl" placeholder="+229 ..." type="tel"/>
                             </div>
-                        </div>
-                        <div class="space-y-1">
-                            <label class="text-xs font-bold uppercase text-secondary">Sujet / Service</label>
-                            <select name="service" required class="w-full bg-gray-50 border-none border-b-2 border-transparent focus:border-primary focus:ring-0 transition-all p-4 rounded-lg">
-                                <option value="Formation">Formation Professionnelle</option>
-                                <option value="Assistance">Assistance Académique</option>
-                                <option value="Projet">Gestion de Projet</option>
-                                <option value="Autre">Autre</option>
-                            </select>
-                        </div>
-                        <div class="space-y-1">
-                            <label class="text-xs font-bold uppercase text-secondary">Message</label>
-                            <textarea name="message" required class="w-full bg-gray-50 border-none border-b-2 border-transparent focus:border-primary focus:ring-0 transition-all p-4 rounded-lg" placeholder="Comment pouvons-nous vous aider ?" rows="4"></textarea>
-                        </div>
-                        
-                        <!-- Honeypot to prevent spam -->
-                        <input type="text" name="_gotcha" style="display:none" />
-                        
-                        <button class="w-full py-4 bg-primary text-white font-bold rounded-full hover:bg-primary-container shadow-lg shadow-primary/20 transition-all flex items-center justify-center gap-2" type="submit">
-                            Envoyer ma demande <span class="material-symbols-outlined">send</span>
-                        </button>
-                    </form>
+                            <div class="space-y-1">
+                                <label class="text-xs font-bold uppercase text-secondary">Service souhaité</label>
+                                <select name="service" required class="w-full bg-white border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all p-3 rounded-xl">
+                                    <option value="">-- Choisir un service --</option>
+                                    <option value="Études et Gestion de Projets">Études, Ingénierie &amp; Gestion de Projets</option>
+                                    <option value="Technologies TIC">Technologies &amp; Transformation Digitale</option>
+                                    <option value="Orientation Voyage">Accompagnement &amp; Orientation — Voyage</option>
+                                    <option value="BTP Amenagement">BTP &amp; Aménagement Communautaire</option>
+                                    <option value="Genre Inclusion">Genre, Inclusion &amp; Sécurité Sociale</option>
+                                    <option value="Autre">Autre</option>
+                                </select>
+                            </div>
+                            <div class="space-y-1">
+                                <label class="text-xs font-bold uppercase text-secondary">Message</label>
+                                <textarea name="message" required class="w-full bg-white border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all p-3 rounded-xl" placeholder="Décrivez votre projet ou votre demande..." rows="4"></textarea>
+                            </div>
+                            <!-- Honeypot anti-spam -->
+                            <input type="text" name="_gotcha" style="display:none"/>
+                            <button class="w-full py-4 bg-gradient-to-r from-primary to-primary-container text-white font-bold rounded-xl hover:opacity-90 shadow-lg shadow-primary/20 transition-all flex items-center justify-center gap-2" type="submit">
+                                Envoyer ma demande <span class="material-symbols-outlined">send</span>
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="w-full bg-slate-900 text-slate-400 py-16 dark">
-        <div class="max-w-7xl mx-auto px-8">
+    <footer class="w-full bg-slate-900 text-slate-400 py-16">
+        <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
                 <div class="md:col-span-1">
-                    <div class="flex items-center gap-3 mb-6">
-                        <img src="assets/img/logo.jpeg" alt="KI AGENCY" class="h-8 w-auto rounded">
-                        <span class="text-lg font-black text-white">KI AGENCY</span>
+                    <div class="flex items-center gap-3 mb-5">
+                        <img src="assets/img/logo.jpeg" alt="KANO IMPACT AGENCY" class="h-10 w-auto rounded-lg">
+                        <div>
+                            <p class="text-sm font-black text-white leading-tight">KANO IMPACT</p>
+                            <p class="text-xs text-blue-400 font-bold">AGENCY</p>
+                        </div>
                     </div>
-                    <p class="text-sm leading-relaxed">
-                        Centre de Développement des Compétences Académiques & Professionnelles. Precision in Academic Excellence.
+                    <p class="text-sm leading-relaxed mb-4">
+                        Projets, Orientation et Assistance pour un Développement Durable.
                     </p>
+                    <p class="text-xs italic text-blue-300">Apprendre – Assimiler – Agir – Impacter</p>
                 </div>
                 <div>
-                    <h4 class="font-bold text-white mb-6">Services</h4>
+                    <h4 class="font-bold text-white mb-5">Services</h4>
                     <ul class="space-y-3 text-sm">
-                        <li><a class="hover:text-primary transition-colors" href="formations.html">Formations</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="formations.html">Assistance Académique</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="formations.html">Gestion de Projet</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#services">Études &amp; Gestion de Projets</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#services">Technologies &amp; TIC</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#services">Orientation Voyage</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#services">BTP &amp; Aménagement</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#services">Genre &amp; Inclusion</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-bold text-white mb-6">Société</h4>
+                    <h4 class="font-bold text-white mb-5">Société</h4>
                     <ul class="space-y-3 text-sm">
                         <li><a class="hover:text-primary transition-colors" href="#about">À Propos</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="terms.html">Conditions d'utilisation</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="privacy.html">Politique de confidentialité</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="formations.html">Formations</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="contact.html">Contact</a></li>
                         <li><a class="hover:text-primary transition-colors" href="mentions-legales.html">Mentions Légales</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="privacy.html">Politique de confidentialité</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-bold text-white mb-6">Contact</h4>
-                    <p class="text-sm mb-4">Parfait KANLISSOU<br/>Direction Générale</p>
-                    <div class="flex gap-4">
-                        <a href="mailto:contact@kiagency.com" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-white hover:bg-primary transition-all">
+                    <h4 class="font-bold text-white mb-5">Contact</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start gap-2">
+                            <span class="material-symbols-outlined text-base text-primary mt-0.5">location_on</span>
+                            <span>Îlot C/SB, Cité la Victoire,<br>Abomey Calavi, Bénin</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="material-symbols-outlined text-base text-primary mt-0.5">phone</span>
+                            <div>
+                                <a href="tel:+22901436483 05" class="hover:text-white transition-colors block">+229 01 43 64 83 05</a>
+                                <a href="tel:+22901672376 66" class="hover:text-white transition-colors block">+229 01 67 23 76 66</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="flex gap-3 mt-6">
+                        <a href="contact.html" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-white hover:bg-primary transition-all">
                             <span class="material-symbols-outlined text-sm">mail</span>
                         </a>
-                        <a href="tel:+22900000000" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-white hover:bg-primary transition-all">
+                        <a href="tel:+22901436483 05" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-white hover:bg-primary transition-all">
                             <span class="material-symbols-outlined text-sm">phone</span>
                         </a>
                     </div>
                 </div>
             </div>
-            <div class="pt-8 border-t border-slate-800 text-center text-xs">
-                <p>© 2026 KI AGENCY. Tous droits r�serv�s. R�alis� par <a href="https://rejustewenoumi.pythonanywhere.com" class="hover:text-primary transition-colors">RW</a>
+            <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
+                <p>© 2026 KANO IMPACT AGENCY. Tous droits réservés.</p>
+                <p>RCCM : RB/ABC/26 A 137322 | IFU : 0202113524983</p>
+                <p>Réalisé par <a href="https://rejustewenoumi.pythonanywhere.com" class="hover:text-primary transition-colors font-bold text-blue-400">RW</a></p>
             </div>
         </div>
     </footer>
 
     <!-- FAB -->
     <a class="fixed bottom-8 right-8 w-16 h-16 bg-primary text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform z-40 group" href="#contact">
-        <span class="material-symbols-outlined text-2xl group-hover:rotate-12 transition-transform">chat</span>
+        <span class="material-symbols-outlined text-2xl group-hover:rotate-12 transition-transform" style="font-variation-settings: 'FILL' 1;">chat</span>
     </a>
 
     <!-- Scripts -->

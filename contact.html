@@ -1,15 +1,15 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html class="light" lang="fr">
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Contactez-nous - KI AGENCY</title>
-    
-    <!-- CSS Dependencies -->
+    <title>Contactez-nous - KANO IMPACT AGENCY</title>
+    <meta name="description" content="Contactez KANO IMPACT AGENCY à Abomey Calavi, Bénin. Tél : +229 01 43 64 83 05. Projets, Orientation, TIC, BTP, Genre & Inclusion."/>
+
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
     <link href="assets/css/style.css" rel="stylesheet"/>
-    
+
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script>
         tailwind.config = {
@@ -20,97 +20,179 @@
                         "primary": "#0040a8",
                         "primary-container": "#2b59c3",
                         "secondary": "#516070",
+                        "surface": "#f9f9fb",
+                        "on-surface": "#1a1c1e",
+                        "accent": "#00a86b",
+                    },
+                    fontFamily: {
+                        "headline": ["Public Sans", "sans-serif"],
+                        "body": ["Inter", "sans-serif"]
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="bg-surface">
+<body class="bg-surface font-body">
+
     <!-- TopAppBar -->
-    <header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl shadow-sm">
-        <nav class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+    <header class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-xl shadow-sm border-b border-gray-100">
+        <nav class="flex justify-between items-center w-full px-6 py-3 max-w-7xl mx-auto">
             <a href="index.html" class="flex items-center gap-3">
-                <img src="assets/img/logo.jpeg" alt="KI AGENCY Logo" class="h-10 w-auto rounded-lg shadow-sm">
-                <span class="text-xl font-bold tracking-tighter text-blue-800 uppercase">KI AGENCY</span>
+                <img src="assets/img/logo.jpeg" alt="KANO IMPACT AGENCY Logo" class="h-10 w-auto rounded-lg shadow-sm">
+                <div class="flex flex-col leading-tight">
+                    <span class="text-sm font-black tracking-tighter text-blue-900 uppercase">KANO IMPACT</span>
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-wide">AGENCY</span>
+                </div>
             </a>
-            <div class="hidden md:flex items-center space-x-8">
+            <div class="hidden md:flex items-center space-x-6">
                 <a class="text-slate-600 font-medium hover:text-blue-600 transition-colors" href="index.html">Accueil</a>
+                <a class="text-slate-600 font-medium hover:text-blue-600 transition-colors" href="index.html#about">À Propos</a>
+                <a class="text-slate-600 font-medium hover:text-blue-600 transition-colors" href="index.html#services">Services</a>
                 <a class="text-slate-600 font-medium hover:text-blue-600 transition-colors" href="formations.html">Formations</a>
                 <a class="text-blue-700 font-bold border-b-2 border-blue-700 pb-1" href="contact.html">Contact</a>
             </div>
-            <button class="md:hidden text-on-surface p-2">
+            <button id="mobile-menu-btn" class="md:hidden text-on-surface p-2" aria-label="Ouvrir le menu">
                 <span class="material-symbols-outlined">menu</span>
             </button>
         </nav>
     </header>
 
-    <main class="pt-32 pb-24 px-8">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
+    <main class="pt-28 pb-24 px-6">
+        <!-- Page Header -->
+        <div class="max-w-3xl mx-auto text-center mb-16">
+            <span class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-blue-700 font-bold mb-5 bg-blue-50 px-4 py-2 rounded-full border border-blue-100">
+                <span class="material-symbols-outlined text-base">mail</span>
+                Contactez-Nous
+            </span>
+            <h1 class="text-5xl font-headline font-black text-on-surface mb-4 leading-tight">
+                Parlons de votre <span class="text-primary">projet</span>.
+            </h1>
+            <p class="text-xl text-secondary leading-relaxed">
+                Que vous soyez porteur de projet, étudiant, entreprise ou institution, notre équipe est disponible pour vous accompagner.
+            </p>
+        </div>
+
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+
+            <!-- Left: Info -->
             <div>
-                <h1 class="text-5xl font-black text-on-surface mb-8 tracking-tight">Parlons de votre <span class="text-primary">avenir</span>.</h1>
-                <p class="text-xl text-secondary mb-12 leading-relaxed">
-                    Que vous soyez un étudiant en quête d'excellence ou un professionnel souhaitant monter en compétences, notre équipe est là pour vous guider.
-                </p>
-                
-                <div class="space-y-8">
-                    <div class="flex items-center gap-6">
-                        <div class="w-14 h-14 bg-blue-50 text-primary rounded-full flex items-center justify-center shrink-0">
-                            <span class="material-symbols-outlined">mail</span>
+                <!-- Contact Cards -->
+                <div class="space-y-5 mb-10">
+                    <div class="flex items-start gap-5 bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                        <div class="w-14 h-14 bg-blue-50 text-primary rounded-xl flex items-center justify-center shrink-0">
+                            <span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">phone</span>
                         </div>
                         <div>
-                            <p class="text-xs font-bold text-secondary uppercase tracking-widest">Email</p>
-                            <p class="text-lg font-bold">contact@kiagency.com</p>
+                            <p class="text-xs font-bold text-secondary uppercase tracking-widest mb-2">Téléphones</p>
+                            <a href="tel:+22901436483 05" class="text-lg font-bold text-on-surface hover:text-primary transition-colors block">+229 01 43 64 83 05</a>
+                            <a href="tel:+22901672376 66" class="text-lg font-bold text-on-surface hover:text-primary transition-colors block">+229 01 67 23 76 66</a>
                         </div>
                     </div>
-                    <div class="flex items-center gap-6">
-                        <div class="w-14 h-14 bg-blue-50 text-primary rounded-full flex items-center justify-center shrink-0">
-                            <span class="material-symbols-outlined">phone</span>
+
+                    <div class="flex items-start gap-5 bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                        <div class="w-14 h-14 bg-blue-50 text-primary rounded-xl flex items-center justify-center shrink-0">
+                            <span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">location_on</span>
                         </div>
                         <div>
-                            <p class="text-xs font-bold text-secondary uppercase tracking-widest">Téléphone</p>
-                            <p class="text-lg font-bold">+229 00 00 00 00</p>
+                            <p class="text-xs font-bold text-secondary uppercase tracking-widest mb-2">Siège Social</p>
+                            <p class="text-lg font-bold text-on-surface">Îlot C/SB, Cité la Victoire</p>
+                            <p class="text-secondary">Abomey Calavi, République du Bénin</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-5 bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                        <div class="w-14 h-14 bg-blue-50 text-primary rounded-xl flex items-center justify-center shrink-0">
+                            <span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">schedule</span>
+                        </div>
+                        <div>
+                            <p class="text-xs font-bold text-secondary uppercase tracking-widest mb-2">Heures d'ouverture</p>
+                            <p class="text-lg font-bold text-on-surface">Lun – Ven : 8h00 – 18h00</p>
+                            <p class="text-secondary">Sam : 9h00 – 13h00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Legal Info -->
+                <div class="bg-blue-50 rounded-2xl p-6 border border-blue-100">
+                    <p class="text-xs font-bold text-blue-700 uppercase tracking-widest mb-4">Informations Légales</p>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary text-base">badge</span>
+                            <span><strong>RCCM :</strong> RB/ABC/26 A 137322</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary text-base">receipt_long</span>
+                            <span><strong>IFU :</strong> 0202113524983</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary text-base">account_balance</span>
+                            <span><strong>RIB :</strong> BJ062 08011 111281003001 38</span>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <!-- Right: Form -->
             <div class="bg-white rounded-3xl shadow-xl p-8 md:p-12 border border-blue-50">
-                <form action="https://formspree.io/f/mqakeevz" method="POST" class="space-y-6">
-                    <input type="hidden" name="_next" value="https://tonsite.com/success.html">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <h2 class="text-2xl font-headline font-bold text-on-surface mb-8">Envoyez-nous un message</h2>
+                <form action="https://formspree.io/f/mqakeevz" method="POST" class="space-y-5">
+                    <input type="hidden" name="_next" value="success.html">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                         <div class="space-y-1">
                             <label class="text-xs font-bold uppercase text-secondary">Nom complet</label>
-                            <input name="name" required class="w-full bg-gray-50 border-none border-b-2 border-transparent focus:border-primary focus:ring-0 transition-all p-4 rounded-lg" placeholder="Votre nom" type="text"/>
+                            <input name="name" required class="w-full bg-gray-50 border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all p-3 rounded-xl" placeholder="Votre nom" type="text"/>
                         </div>
                         <div class="space-y-1">
                             <label class="text-xs font-bold uppercase text-secondary">Email</label>
-                            <input name="email" required class="w-full bg-gray-50 border-none border-b-2 border-transparent focus:border-primary focus:ring-0 transition-all p-4 rounded-lg" placeholder="votre@email.com" type="email"/>
+                            <input name="email" required class="w-full bg-gray-50 border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all p-3 rounded-xl" placeholder="votre@email.com" type="email"/>
                         </div>
                     </div>
                     <div class="space-y-1">
-                        <label class="text-xs font-bold uppercase text-secondary">Service</label>
-                        <select name="service" class="w-full bg-gray-50 border-none border-b-2 border-transparent focus:border-primary focus:ring-0 transition-all p-4 rounded-lg">
-                            <option>Formation</option>
-                            <option>Assistance Académique</option>
-                            <option>Gestion de Projet</option>
+                        <label class="text-xs font-bold uppercase text-secondary">Téléphone</label>
+                        <input name="phone" class="w-full bg-gray-50 border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all p-3 rounded-xl" placeholder="+229 ..." type="tel"/>
+                    </div>
+                    <div class="space-y-1">
+                        <label class="text-xs font-bold uppercase text-secondary">Service concerné</label>
+                        <select name="service" required class="w-full bg-gray-50 border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all p-3 rounded-xl">
+                            <option value="">-- Sélectionner un service --</option>
+                            <option value="Études et Gestion de Projets">Études, Ingénierie &amp; Gestion de Projets</option>
+                            <option value="Technologies TIC">Technologies &amp; Transformation Digitale</option>
+                            <option value="Orientation Voyage">Accompagnement &amp; Orientation — Voyage</option>
+                            <option value="BTP Amenagement">BTP &amp; Aménagement Communautaire</option>
+                            <option value="Genre Inclusion">Genre, Inclusion &amp; Sécurité Sociale</option>
+                            <option value="Formation">Inscription à une Formation</option>
+                            <option value="Autre">Autre demande</option>
                         </select>
                     </div>
                     <div class="space-y-1">
                         <label class="text-xs font-bold uppercase text-secondary">Message</label>
-                        <textarea name="message" required class="w-full bg-gray-50 border-none border-b-2 border-transparent focus:border-primary focus:ring-0 transition-all p-4 rounded-lg" placeholder="Votre message..." rows="4"></textarea>
+                        <textarea name="message" required class="w-full bg-gray-50 border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all p-3 rounded-xl" placeholder="Décrivez votre besoin ou votre projet..." rows="5"></textarea>
                     </div>
-                    <button class="w-full py-4 bg-primary text-white font-bold rounded-full hover:bg-primary-container transition-all flex items-center justify-center gap-2" type="submit">
-                        Envoyer <span class="material-symbols-outlined">send</span>
+                    <input type="text" name="_gotcha" style="display:none"/>
+                    <button class="w-full py-4 bg-gradient-to-r from-primary to-primary-container text-white font-bold rounded-xl hover:opacity-90 shadow-lg shadow-primary/20 transition-all flex items-center justify-center gap-2" type="submit">
+                        Envoyer ma demande <span class="material-symbols-outlined">send</span>
                     </button>
                 </form>
             </div>
+
         </div>
     </main>
 
-    <footer class="w-full bg-slate-900 text-slate-400 py-16 dark">
-        <div class="max-w-7xl mx-auto px-8 text-center text-xs">
-            <p>© 2026 KI AGENCY. Tous droits r�serv�s. R�alis� par <a href="https://rejustewenoumi.pythonanywhere.com" class="hover:text-primary transition-colors">RW</a>
+    <!-- Footer -->
+    <footer class="w-full bg-slate-900 text-slate-400 py-12">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 text-xs">
+                <div class="flex items-center gap-3">
+                    <img src="assets/img/logo.jpeg" alt="KANO IMPACT AGENCY" class="h-8 w-auto rounded">
+                    <div>
+                        <p class="text-white font-bold text-sm">KANO IMPACT AGENCY</p>
+                        <p class="text-blue-400">Abomey Calavi, Bénin</p>
+                    </div>
+                </div>
+                <p>RCCM : RB/ABC/26 A 137322 | IFU : 0202113524983</p>
+                <p>© 2026 KANO IMPACT AGENCY. Tous droits réservés. Réalisé par <a href="https://rejustewenoumi.pythonanywhere.com" class="hover:text-primary transition-colors font-bold text-blue-400">RW</a></p>
+            </div>
         </div>
     </footer>
 

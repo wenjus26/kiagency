@@ -1,79 +1,121 @@
 /**
- * KI AGENCY - Main JavaScript
- * Handling mobile menu and form animations
+ * KANO IMPACT AGENCY - Main JavaScript
+ * Menu mobile, navigation fluide, animations
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Mobile Menu Toggle
-    const mobileMenuBtn = document.querySelector('button.md\\:hidden');
-    const navMenu = document.querySelector('nav .hidden.md\\:flex');
-    
-    // Create a mobile menu if it doesn't exist
+
+    // ── Mobile Menu Toggle ────────────────────────────────────────────────────
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+
     if (mobileMenuBtn) {
         mobileMenuBtn.addEventListener('click', () => {
-            const menuContent = navMenu.cloneNode(true);
-            menuContent.classList.toggle('hidden');
-            menuContent.classList.add('fixed', 'top-20', 'left-0', 'w-full', 'bg-white', 'p-8', 'flex-col', 'space-x-0', 'space-y-4', 'shadow-xl', 'z-50', 'flex', 'md:hidden');
-            
-            // Toggle existing mobile menu if it exists
             const existingMenu = document.querySelector('.mobile-menu-overlay');
             if (existingMenu) {
                 existingMenu.remove();
-            } else {
-                const overlay = document.createElement('div');
-                overlay.className = 'mobile-menu-overlay fixed inset-0 bg-black/20 backdrop-blur-sm z-40 transition-opacity';
-                overlay.innerHTML = `
-                    <div class="fixed top-20 left-4 right-4 bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-2xl flex flex-col gap-4 animate-in slide-in-from-top-4 duration-300">
-                        <div class="flex items-center gap-3 mb-2 border-b border-primary/10 pb-4">
-                            <img src="assets/img/logo.jpeg" alt="Logo" class="h-8 w-auto rounded">
-                            <span class="text-lg font-bold text-primary">KI AGENCY</span>
-                        </div>
-                        <a class="text-lg font-bold text-primary border-b border-primary/10 pb-2" href="index.html">Accueil</a>
-                        <a class="text-lg font-medium text-slate-600 dark:text-slate-400 border-b border-primary/10 pb-2" href="index.html#about">À Propos</a>
-                        <a class="text-lg font-medium text-slate-600 dark:text-slate-400 border-b border-primary/10 pb-2" href="formations.html">Formations</a>
-                        <a class="text-lg font-medium text-slate-600 dark:text-slate-400 border-b border-primary/10 pb-2" href="dashboard.html">Tableau de bord</a>
-                        <a class="px-6 py-3 bg-primary text-white rounded-full font-bold text-center mt-2" href="index.html#contact">Contact Us</a>
-                    </div>
-                `;
-                document.body.appendChild(overlay);
-                
-                overlay.addEventListener('click', (e) => {
-                    if (e.target === overlay) {
-                        overlay.remove();
-                    }
-                });
+                return;
             }
+
+            const overlay = document.createElement('div');
+            overlay.className = 'mobile-menu-overlay fixed inset-0 bg-black/30 backdrop-blur-sm z-40';
+            overlay.innerHTML = `
+                <div class="fixed top-20 left-4 right-4 bg-white rounded-2xl p-6 shadow-2xl flex flex-col gap-3 animate-fade-in border border-blue-50">
+                    <div class="flex items-center gap-3 mb-2 border-b border-gray-100 pb-4">
+                        <img src="assets/img/logo.jpeg" alt="Logo" class="h-10 w-auto rounded-lg">
+                        <div>
+                            <p class="text-sm font-black text-blue-900 leading-tight uppercase">KANO IMPACT</p>
+                            <p class="text-xs font-bold text-blue-600 uppercase">AGENCY</p>
+                        </div>
+                    </div>
+                    <a class="flex items-center gap-3 text-base font-bold text-primary border-b border-gray-50 pb-3" href="index.html">
+                        <span class="material-symbols-outlined text-base">home</span> Accueil
+                    </a>
+                    <a class="flex items-center gap-3 text-base font-medium text-slate-700 border-b border-gray-50 pb-3" href="index.html#about">
+                        <span class="material-symbols-outlined text-base">info</span> À Propos
+                    </a>
+                    <a class="flex items-center gap-3 text-base font-medium text-slate-700 border-b border-gray-50 pb-3" href="index.html#services">
+                        <span class="material-symbols-outlined text-base">hub</span> Services
+                    </a>
+                    <a class="flex items-center gap-3 text-base font-medium text-slate-700 border-b border-gray-50 pb-3" href="formations.html">
+                        <span class="material-symbols-outlined text-base">school</span> Formations
+                    </a>
+                    <a class="flex items-center gap-3 text-base font-medium text-slate-700 border-b border-gray-50 pb-3" href="contact.html">
+                        <span class="material-symbols-outlined text-base">mail</span> Contact
+                    </a>
+                    <a class="flex items-center justify-center gap-2 px-6 py-3 bg-primary text-white rounded-full font-bold text-center mt-2 hover:opacity-90 transition-opacity" href="index.html#contact">
+                        <span class="material-symbols-outlined text-base">chat</span> Nous contacter
+                    </a>
+                    <p class="text-center text-xs text-slate-400 mt-2">Tél : +229 01 43 64 83 05</p>
+                </div>
+            `;
+            document.body.appendChild(overlay);
+
+            // Fermer en cliquant sur le fond
+            overlay.addEventListener('click', (e) => {
+                if (e.target === overlay) overlay.remove();
+            });
         });
     }
 
-    // Smooth Scrolling for anchor links
+    // ── Smooth Scrolling ──────────────────────────────────────────────────────
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            e.preventDefault();
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
-            
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
+                e.preventDefault();
                 window.scrollTo({
                     top: targetElement.offsetTop - 80,
                     behavior: 'smooth'
                 });
-                
-                // Close mobile menu if open
                 const existingMenu = document.querySelector('.mobile-menu-overlay');
                 if (existingMenu) existingMenu.remove();
             }
         });
     });
 
-    // Form submission styling
+    // ── Header scroll effect ──────────────────────────────────────────────────
+    const header = document.querySelector('header');
+    if (header) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
+        });
+    }
+
+    // ── Intersection Observer: animate cards on scroll ────────────────────────
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('opacity-100', 'translate-y-0');
+                entry.target.classList.remove('opacity-0', 'translate-y-8');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('article, .formation-card').forEach(el => {
+        el.classList.add('opacity-0', 'translate-y-8', 'transition-all', 'duration-500');
+        observer.observe(el);
+    });
+
+    // ── Form submission feedback ──────────────────────────────────────────────
     const contactForm = document.querySelector('form');
     if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            // We use Formspree, so we don't preventDefault if it's the real submission
-            // but we can add UI feedback.
-            console.log('Sending message...');
+        contactForm.addEventListener('submit', () => {
+            const btn = contactForm.querySelector('button[type="submit"]');
+            if (btn) {
+                btn.innerHTML = '<span class="material-symbols-outlined animate-spin">sync</span> Envoi en cours...';
+                btn.disabled = true;
+            }
         });
     }
 });

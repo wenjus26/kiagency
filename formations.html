@@ -1,22 +1,16 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html class="light" lang="fr">
-
 <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Nos Formations - KI AGENCY</title>
-    <meta name="description"
-        content="Découvrez nos programmes de formation professionnelle et académique d'excellence." />
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Nos Formations - KANO IMPACT AGENCY</title>
+    <meta name="description" content="Programmes de formation professionnelle de KANO IMPACT AGENCY : QGIS, ArcGIS, KoboCollect, gestion de projets, marketing digital, leadership et plus."/>
 
     <!-- CSS Dependencies -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@700;800;900&family=Inter:wght@400;500;600&display=swap"
-        rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-        rel="stylesheet" />
-    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="assets/css/style.css" rel="stylesheet"/>
 
-    <!-- Tailwind CDN with Config -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script>
         tailwind.config = {
@@ -30,6 +24,7 @@
                         "surface": "#f9f9fb",
                         "on-surface": "#1a1c1e",
                         "on-primary": "#ffffff",
+                        "accent": "#00a86b",
                     },
                     fontFamily: {
                         "headline": ["Public Sans", "sans-serif"],
@@ -40,27 +35,27 @@
         }
     </script>
 </head>
+<body class="bg-surface font-body">
 
-<body class="bg-surface">
     <!-- TopAppBar -->
-    <header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl shadow-sm">
-        <nav class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+    <header class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-xl shadow-sm border-b border-gray-100">
+        <nav class="flex justify-between items-center w-full px-6 py-3 max-w-7xl mx-auto">
             <a href="index.html" class="flex items-center gap-3">
-                <img src="assets/img/logo.jpeg" alt="KI AGENCY Logo" class="h-10 w-auto rounded-lg shadow-sm">
-                <span class="text-xl font-bold tracking-tighter text-blue-800 uppercase">KI AGENCY</span>
+                <img src="assets/img/logo.jpeg" alt="KANO IMPACT AGENCY Logo" class="h-10 w-auto rounded-lg shadow-sm">
+                <div class="flex flex-col leading-tight">
+                    <span class="text-sm font-black tracking-tighter text-blue-900 uppercase">KANO IMPACT</span>
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-wide">AGENCY</span>
+                </div>
             </a>
-            <div class="hidden md:flex items-center space-x-8">
-                <a class="text-slate-600 font-medium hover:text-blue-600 transition-colors"
-                    href="index.html">Accueil</a>
-                <a class="text-slate-600 font-medium hover:text-blue-600 transition-colors" href="index.html#about">À
-                    Propos</a>
+            <div class="hidden md:flex items-center space-x-6">
+                <a class="text-slate-600 font-medium hover:text-blue-600 transition-colors" href="index.html">Accueil</a>
+                <a class="text-slate-600 font-medium hover:text-blue-600 transition-colors" href="index.html#about">À Propos</a>
+                <a class="text-slate-600 font-medium hover:text-blue-600 transition-colors" href="index.html#services">Services</a>
                 <a class="text-blue-700 font-bold border-b-2 border-blue-700 pb-1" href="formations.html">Formations</a>
-                <a class="text-slate-600 font-medium hover:text-blue-600 transition-colors"
-                    href="dashboard.html">Tableau de bord</a>
-                <a class="px-6 py-2 bg-primary text-white rounded-full font-bold hover:opacity-90 transition-all"
-                    href="index.html#contact">Contact Us</a>
+                <a class="text-slate-600 font-medium hover:text-blue-600 transition-colors" href="contact.html">Contact</a>
+                <a class="px-5 py-2 bg-primary text-white rounded-full font-bold hover:opacity-90 transition-all text-sm shadow" href="index.html#contact">Nous contacter</a>
             </div>
-            <button class="md:hidden text-on-surface p-2">
+            <button id="mobile-menu-btn" class="md:hidden text-on-surface p-2" aria-label="Ouvrir le menu">
                 <span class="material-symbols-outlined">menu</span>
             </button>
         </nav>
@@ -68,42 +63,40 @@
 
     <main class="pt-24">
         <!-- Hero Section -->
-        <section class="relative px-8 pt-20 pb-24 overflow-hidden">
-            <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
-                <div class="md:w-1/2 z-10 animate-fade-in">
-                    <span
-                        class="inline-block uppercase tracking-widest text-xs text-secondary mb-4 font-bold">EXCELLENCE
-                        ACADÉMIQUE</span>
-                    <h1 class="text-6xl font-black tracking-tight text-on-surface leading-tight mb-6">
-                        Nos Formations <br /><span class="text-primary">Professionnelles</span>
+        <section class="relative px-6 pt-16 pb-24 overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-white">
+            <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 1px 1px, #0040a8 1px, transparent 0); background-size: 48px 48px;"></div>
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16 relative z-10">
+                <div class="md:w-1/2 animate-fade-in">
+                    <span class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-blue-700 font-bold mb-5 bg-blue-50 px-4 py-2 rounded-full border border-blue-100">
+                        <span class="material-symbols-outlined text-base">school</span>
+                        Renforcement de Capacités
+                    </span>
+                    <h1 class="text-5xl lg:text-6xl font-headline font-black text-on-surface leading-tight mb-6">
+                        Nos Formations <br><span class="text-primary">Professionnelles</span>
                     </h1>
                     <p class="text-lg text-secondary max-w-lg mb-10 leading-relaxed">
-                        Propulsez votre carrière grâce à nos programmes certifiants conçus par des experts du secteur.
-                        Une pédagogie d'élite pour une expertise concrète.
+                        Des programmes certifiants conçus par des experts du terrain pour développer des compétences concrètes, techniques et stratégiques adaptées aux enjeux de développement.
                     </p>
-                    <div class="flex gap-4">
-                        <a href="#courses"
-                            class="academic-gradient text-white px-8 py-4 rounded-full font-bold shadow-academic transition-transform hover:scale-105 inline-block text-center">
-                            Explorer les cours
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#courses" class="academic-gradient text-white px-8 py-4 rounded-full font-bold shadow-lg shadow-primary/25 hover:scale-105 transition-transform inline-block">
+                            Explorer les formations
                         </a>
-                        <button
-                            class="bg-gray-100 text-on-surface px-8 py-4 rounded-full font-bold hover:bg-gray-200 transition-colors">
-                            Brochure PDF
-                        </button>
+                        <a href="index.html#contact" class="bg-white text-primary border border-blue-200 px-8 py-4 rounded-full font-bold hover:bg-blue-50 transition-colors shadow-sm">
+                            S'inscrire à une formation
+                        </a>
                     </div>
                 </div>
                 <div class="md:w-1/2 relative">
                     <div class="absolute -top-12 -left-12 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
-                    <img alt="Formations Professionnelles"
-                        class="relative z-10 w-full h-[500px] object-cover rounded-2xl shadow-2xl"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfGz4WVWRTD2H7sPKQFDXmRoLCR8q5qvOgXGxntbkovVCMT1MkP4elG39mCYv1FZlqqjD1dIjdQ2CDnWt0862uiKjJpoC4_2VzPUyW63lvvytzy-iqR7q8GwmgU2qkGZBUnw1EJrz9ZB_DSGt5fv31v_6hNEYN-wKwu-j0EGGj5V0hTUiE-wi01Uq9EUTXN3Yp9gv_bBQ5ceiTtl-82PzqLVZ4gYXdrdW64JPYrN-cnPSCxPGLeIpQrOexVSnN3e4NK5TzrtG0seI" />
-                    <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-academic z-20">
+                    <img alt="Formations KANO IMPACT AGENCY" class="relative z-10 w-full h-[480px] object-cover rounded-2xl shadow-2xl"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfGz4WVWRTD2H7sPKQFDXmRoLCR8q5qvOgXGxntbkovVCMT1MkP4elG39mCYv1FZlqqjD1dIjdQ2CDnWt0862uiKjJpoC4_2VzPUyW63lvvytzy-iqR7q8GwmgU2qkGZBUnw1EJrz9ZB_DSGt5fv31v_6hNEYN-wKwu-j0EGGj5V0hTUiE-wi01Uq9EUTXN3Yp9gv_bBQ5ceiTtl-82PzqLVZ4gYXdrdW64JPYrN-cnPSCxPGLeIpQrOexVSnN3e4NK5TzrtG0seI"/>
+                    <div class="absolute -bottom-6 -right-6 bg-white p-5 rounded-2xl shadow-xl z-20">
                         <div class="flex items-center gap-4">
                             <div class="p-3 bg-blue-50 rounded-full text-blue-700">
-                                <span class="material-symbols-outlined">workspace_premium</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
                             </div>
                             <div>
-                                <p class="text-sm font-bold">Certification KI</p>
+                                <p class="text-sm font-bold">Certification KANO</p>
                                 <p class="text-[10px] text-secondary">Reconnue par l'industrie</p>
                             </div>
                         </div>
@@ -112,175 +105,249 @@
             </div>
         </section>
 
-        <!-- Filter/Category Section -->
-        <section class="bg-gray-50 py-12 px-8" id="courses">
+        <!-- Formation Categories -->
+        <section class="bg-white py-12 px-6 border-b border-gray-100" id="courses">
             <div class="max-w-7xl mx-auto">
-                <div class="flex flex-col md:flex-row md:items-center justify-between gap-8">
-                    <div class="flex items-center gap-4 overflow-x-auto pb-4 md:pb-0 no-scrollbar">
-                        <button
-                            class="whitespace-nowrap bg-primary text-white px-6 py-2 rounded-full font-semibold">Toutes</button>
-                        <button
-                            class="whitespace-nowrap bg-white text-secondary px-6 py-2 rounded-full font-semibold hover:bg-primary/5 transition-colors border border-gray-200">Management</button>
-                        <button
-                            class="whitespace-nowrap bg-white text-secondary px-6 py-2 rounded-full font-semibold hover:bg-primary/5 transition-colors border border-gray-200">Digital
-                            Marketing</button>
-                        <button
-                            class="whitespace-nowrap bg-white text-secondary px-6 py-2 rounded-full font-semibold hover:bg-primary/5 transition-colors border border-gray-200">Soft
-                            Skills</button>
-                    </div>
-                    <div class="relative">
-                        <span
-                            class="absolute left-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-secondary">search</span>
-                        <input
-                            class="pl-12 pr-6 py-3 bg-white rounded-full border-none ring-1 ring-gray-200 focus:ring-2 focus:ring-primary w-full md:w-80 transition-all"
-                            placeholder="Rechercher un programme..." type="text" />
-                    </div>
+                <div class="flex flex-wrap items-center gap-3">
+                    <button onclick="filterFormations('all')" data-cat="all" class="filter-btn whitespace-nowrap bg-primary text-white px-5 py-2 rounded-full font-semibold text-sm">Toutes</button>
+                    <button onclick="filterFormations('sig')" data-cat="sig" class="filter-btn whitespace-nowrap bg-white text-secondary px-5 py-2 rounded-full font-semibold text-sm hover:bg-primary/5 transition-colors border border-gray-200">SIG &amp; Cartographie</button>
+                    <button onclick="filterFormations('projets')" data-cat="projets" class="filter-btn whitespace-nowrap bg-white text-secondary px-5 py-2 rounded-full font-semibold text-sm hover:bg-primary/5 transition-colors border border-gray-200">Gestion de Projets</button>
+                    <button onclick="filterFormations('tic')" data-cat="tic" class="filter-btn whitespace-nowrap bg-white text-secondary px-5 py-2 rounded-full font-semibold text-sm hover:bg-primary/5 transition-colors border border-gray-200">TIC &amp; Digital</button>
+                    <button onclick="filterFormations('voyage')" data-cat="voyage" class="filter-btn whitespace-nowrap bg-white text-secondary px-5 py-2 rounded-full font-semibold text-sm hover:bg-primary/5 transition-colors border border-gray-200">Orientation Voyage</button>
+                    <button onclick="filterFormations('soft')" data-cat="soft" class="filter-btn whitespace-nowrap bg-white text-secondary px-5 py-2 rounded-full font-semibold text-sm hover:bg-primary/5 transition-colors border border-gray-200">Soft Skills</button>
                 </div>
             </div>
         </section>
 
-        <!-- Course Cards Bento Grid -->
-        <section class="py-24 px-8 max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Card 1 -->
-                <div
-                    class="group bg-white rounded-2xl overflow-hidden shadow-academic hover:-translate-y-2 transition-all duration-300 border border-gray-100">
-                    <div class="relative h-56 overflow-hidden">
-                        <img alt="Leadership"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsH715ElRt2bVXVSraF6Chpdm4O9B4vJKyt4uOfVz6w-I58KUzX52WmRBovdkoMW82LV77Pk1M2YxnzCG4FrE_eOyloMROmpUyjAvTiGzhkJX33sd4pvcypbEafa9pT7Ed3lNY0U0JtnBK6TZ54FZkeveNWHY5q1PZDUJ1gc7hjDX1EksITLM_gQ5Eo6tldBBWidOtSBEbqXlGpekpFuEsLp53xFF8T1dpZUGm5HCXpAoMwnj6smNRDZgW1w7_0o6z1M-_HHEkLiE" />
-                        <div
-                            class="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase text-primary">
-                            Management</div>
+        <!-- Course Cards -->
+        <section class="py-16 px-6">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="formations-grid">
+
+                <!-- QGIS -->
+                <div data-category="sig" class="formation-card group bg-white rounded-2xl overflow-hidden shadow-sm hover:-translate-y-2 transition-all duration-300 border border-gray-100 hover:shadow-xl">
+                    <div class="relative h-52 overflow-hidden bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-8xl opacity-30" style="font-variation-settings: 'FILL' 1;">map</span>
+                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase text-primary">SIG</div>
+                        <div class="absolute bottom-4 right-4 bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-white">QGIS</div>
                     </div>
-                    <div class="p-8">
-                        <div
-                            class="flex items-center gap-4 text-[10px] text-secondary mb-3 uppercase font-bold tracking-tighter">
-                            <span class="flex items-center gap-1"><span
-                                    class="material-symbols-outlined text-sm">schedule</span> 40 Heures</span>
-                            <span class="flex items-center gap-1"><span
-                                    class="material-symbols-outlined text-sm">trending_up</span> Expert</span>
+                    <div class="p-7">
+                        <div class="flex items-center gap-4 text-[10px] text-secondary mb-3 uppercase font-bold tracking-tighter">
+                            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 40h</span>
+                            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">trending_up</span> Tous niveaux</span>
                         </div>
-                        <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Leadership et
-                            Management</h3>
-                        <p class="text-sm text-secondary mb-6 line-clamp-3">Développez une posture de leader inspirant
-                            et maîtrisez les outils de pilotage stratégique pour transformer vos équipes.</p>
-                        <button
-                            class="w-full flex items-center justify-between text-on-surface font-bold border-t border-gray-100 pt-4 hover:text-primary transition-colors">
-                            En savoir plus
-                            <span class="material-symbols-outlined">arrow_forward</span>
-                        </button>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Formation QGIS</h3>
+                        <p class="text-sm text-secondary mb-5 line-clamp-3">Maîtrisez le Système d'Information Géographique libre QGIS pour la cartographie, l'analyse spatiale et la gestion de données géographiques.</p>
+                        <a href="index.html#contact" class="w-full flex items-center justify-between text-on-surface font-bold border-t border-gray-100 pt-4 hover:text-primary transition-colors text-sm">
+                            S'inscrire <span class="material-symbols-outlined">arrow_forward</span>
+                        </a>
                     </div>
                 </div>
-                <!-- Card 2 -->
-                <div
-                    class="group bg-white rounded-2xl overflow-hidden shadow-academic hover:-translate-y-2 transition-all duration-300 border border-gray-100">
-                    <div class="relative h-56 overflow-hidden">
-                        <img alt="Marketing"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWPTP2cC1pW8wA3jGQDMbOMhUEFmaApE_wAxwa-WR_dAEnhFgXy2N_8yd4jFOMRjcyiGxYobwkbzi5U_jW2qCaGoCULeqGh9tMvF-Vf4bE_eUMOjJdDWEdA7n_86uQNwNP_7VNnDz0po_8habHRoL2z0nR9qWHE-Jf5I8P-LqBwslP3u5paNAV0MAU2U0MVyKlbcW8aEI86X_z8XjxwlBI6GdayjXi20BE3ESeC758CHvua9jrpgud34_ObZtHGrYGKVZeRo6jONY" />
-                        <div
-                            class="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase text-primary">
-                            Digital Marketing</div>
+
+                <!-- ArcGIS -->
+                <div data-category="sig" class="formation-card group bg-white rounded-2xl overflow-hidden shadow-sm hover:-translate-y-2 transition-all duration-300 border border-gray-100 hover:shadow-xl">
+                    <div class="relative h-52 overflow-hidden bg-gradient-to-br from-indigo-600 to-indigo-900 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-8xl opacity-30" style="font-variation-settings: 'FILL' 1;">terrain</span>
+                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase text-primary">SIG</div>
+                        <div class="absolute bottom-4 right-4 bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-white">ArcGIS</div>
                     </div>
-                    <div class="p-8">
-                        <div
-                            class="flex items-center gap-4 text-[10px] text-secondary mb-3 uppercase font-bold tracking-tighter">
-                            <span class="flex items-center gap-1"><span
-                                    class="material-symbols-outlined text-sm">schedule</span> 32 Heures</span>
-                            <span class="flex items-center gap-1"><span
-                                    class="material-symbols-outlined text-sm">bar_chart</span> Intermédiaire</span>
+                    <div class="p-7">
+                        <div class="flex items-center gap-4 text-[10px] text-secondary mb-3 uppercase font-bold tracking-tighter">
+                            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 40h</span>
+                            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">trending_up</span> Intermédiaire</span>
                         </div>
-                        <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Marketing Digital
-                            Stratégique</h3>
-                        <p class="text-sm text-secondary mb-6 line-clamp-3">Maîtrisez l'acquisition, la data et les
-                            leviers de croissance digitaux pour dominer votre marché dans l'ère numérique.</p>
-                        <button
-                            class="w-full flex items-center justify-between text-on-surface font-bold border-t border-gray-100 pt-4 hover:text-primary transition-colors">
-                            En savoir plus
-                            <span class="material-symbols-outlined">arrow_forward</span>
-                        </button>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Formation ArcGIS</h3>
+                        <p class="text-sm text-secondary mb-5 line-clamp-3">Exploitez la puissance d'ArcGIS pro pour des analyses spatiales avancées, la visualisation 3D et la publication de cartes interactives.</p>
+                        <a href="index.html#contact" class="w-full flex items-center justify-between text-on-surface font-bold border-t border-gray-100 pt-4 hover:text-primary transition-colors text-sm">
+                            S'inscrire <span class="material-symbols-outlined">arrow_forward</span>
+                        </a>
                     </div>
                 </div>
-                <!-- Card 3 -->
-                <div
-                    class="group bg-white rounded-2xl overflow-hidden shadow-academic hover:-translate-y-2 transition-all duration-300 border border-gray-100">
-                    <div class="relative h-56 overflow-hidden">
-                        <img alt="Soft Skills"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9942A5DY67KTy0D1-UqjJTTgrHDAgCdfwtjkhqVhLEzeBNFO1wA33pY9lgY4Rte3TUlmD_3cSKkoWH1qqkllohp9UpDmj2HjG7K5ptOrgYLldlR7q2CY4fLtcNFvb9vVSnWHOfp1DS0CUr0_gdyng0mm4P-B3W63OlgczZx_USCk8qxU-W6S1Re37CXxRBoFvzb60Y5yFfXuSD-xHlbP-hFYIpxS_h3ZOXbsVbtTXd2mvJeAB7Y8yk_O2bhEp6tGRamt79zJxJIY" />
-                        <div
-                            class="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase text-primary">
-                            Soft Skills</div>
+
+                <!-- KoboCollect -->
+                <div data-category="sig" class="formation-card group bg-white rounded-2xl overflow-hidden shadow-sm hover:-translate-y-2 transition-all duration-300 border border-gray-100 hover:shadow-xl">
+                    <div class="relative h-52 overflow-hidden bg-gradient-to-br from-cyan-600 to-cyan-900 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-8xl opacity-30" style="font-variation-settings: 'FILL' 1;">phone_android</span>
+                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase text-cyan-700">Collecte de données</div>
+                        <div class="absolute bottom-4 right-4 bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-white">KoboCollect</div>
                     </div>
-                    <div class="p-8">
-                        <div
-                            class="flex items-center gap-4 text-[10px] text-secondary mb-3 uppercase font-bold tracking-tighter">
-                            <span class="flex items-center gap-1"><span
-                                    class="material-symbols-outlined text-sm">schedule</span> 16 Heures</span>
-                            <span class="flex items-center gap-1"><span
-                                    class="material-symbols-outlined text-sm">school</span> Tous niveaux</span>
+                    <div class="p-7">
+                        <div class="flex items-center gap-4 text-[10px] text-secondary mb-3 uppercase font-bold tracking-tighter">
+                            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 24h</span>
+                            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">school</span> Débutant</span>
                         </div>
-                        <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Intelligence
-                            Emotionnelle</h3>
-                        <p class="text-sm text-secondary mb-6 line-clamp-3">Optimisez vos relations interpersonnelles et
-                            votre communication pour devenir un collaborateur indispensable.</p>
-                        <button
-                            class="w-full flex items-center justify-between text-on-surface font-bold border-t border-gray-100 pt-4 hover:text-primary transition-colors">
-                            En savoir plus
-                            <span class="material-symbols-outlined">arrow_forward</span>
-                        </button>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Formation KoboCollect</h3>
+                        <p class="text-sm text-secondary mb-5 line-clamp-3">Collectez des données de terrain efficacement avec KoboCollect : création de formulaires, synchronisation et analyse des données collectées.</p>
+                        <a href="index.html#contact" class="w-full flex items-center justify-between text-on-surface font-bold border-t border-gray-100 pt-4 hover:text-primary transition-colors text-sm">
+                            S'inscrire <span class="material-symbols-outlined">arrow_forward</span>
+                        </a>
                     </div>
                 </div>
+
+                <!-- Google Earth -->
+                <div data-category="sig" class="formation-card group bg-white rounded-2xl overflow-hidden shadow-sm hover:-translate-y-2 transition-all duration-300 border border-gray-100 hover:shadow-xl">
+                    <div class="relative h-52 overflow-hidden bg-gradient-to-br from-green-600 to-green-900 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-8xl opacity-30" style="font-variation-settings: 'FILL' 1;">satellite_alt</span>
+                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase text-green-700">Télédétection</div>
+                        <div class="absolute bottom-4 right-4 bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-white">Google Earth</div>
+                    </div>
+                    <div class="p-7">
+                        <div class="flex items-center gap-4 text-[10px] text-secondary mb-3 uppercase font-bold tracking-tighter">
+                            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 16h</span>
+                            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">school</span> Tous niveaux</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Formation Google Earth Engine</h3>
+                        <p class="text-sm text-secondary mb-5 line-clamp-3">Analysez des données satellitaires et réalisez des études environnementales grâce à la plateforme Google Earth Engine.</p>
+                        <a href="index.html#contact" class="w-full flex items-center justify-between text-on-surface font-bold border-t border-gray-100 pt-4 hover:text-primary transition-colors text-sm">
+                            S'inscrire <span class="material-symbols-outlined">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Gestion de Projet -->
+                <div data-category="projets" class="formation-card group bg-white rounded-2xl overflow-hidden shadow-sm hover:-translate-y-2 transition-all duration-300 border border-gray-100 hover:shadow-xl">
+                    <div class="relative h-52 overflow-hidden bg-gradient-to-br from-blue-500 to-blue-800 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-8xl opacity-30" style="font-variation-settings: 'FILL' 1;">task_alt</span>
+                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase text-primary">Gestion de Projets</div>
+                    </div>
+                    <div class="p-7">
+                        <div class="flex items-center gap-4 text-[10px] text-secondary mb-3 uppercase font-bold tracking-tighter">
+                            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 48h</span>
+                            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">trending_up</span> Expert</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Élaboration &amp; Gestion de Projets</h3>
+                        <p class="text-sm text-secondary mb-5 line-clamp-3">Maîtrisez le cycle complet d'un projet : conception, planification stratégique, montage de dossiers, suivi-évaluation et capitalisation.</p>
+                        <a href="index.html#contact" class="w-full flex items-center justify-between text-on-surface font-bold border-t border-gray-100 pt-4 hover:text-primary transition-colors text-sm">
+                            S'inscrire <span class="material-symbols-outlined">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- TIC / Web -->
+                <div data-category="tic" class="formation-card group bg-white rounded-2xl overflow-hidden shadow-sm hover:-translate-y-2 transition-all duration-300 border border-gray-100 hover:shadow-xl">
+                    <div class="relative h-52 overflow-hidden bg-gradient-to-br from-violet-600 to-violet-900 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-8xl opacity-30" style="font-variation-settings: 'FILL' 1;">code</span>
+                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase text-violet-700">TIC</div>
+                    </div>
+                    <div class="p-7">
+                        <div class="flex items-center gap-4 text-[10px] text-secondary mb-3 uppercase font-bold tracking-tighter">
+                            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 60h</span>
+                            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">bar_chart</span> Intermédiaire</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Création Web &amp; Transformation Digitale</h3>
+                        <p class="text-sm text-secondary mb-5 line-clamp-3">Créez des sites web professionnels et maîtrisez les outils de digitalisation des processus pour booster votre visibilité et votre efficacité.</p>
+                        <a href="index.html#contact" class="w-full flex items-center justify-between text-on-surface font-bold border-t border-gray-100 pt-4 hover:text-primary transition-colors text-sm">
+                            S'inscrire <span class="material-symbols-outlined">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Marketing Digital -->
+                <div data-category="tic" class="formation-card group bg-white rounded-2xl overflow-hidden shadow-sm hover:-translate-y-2 transition-all duration-300 border border-gray-100 hover:shadow-xl">
+                    <div class="relative h-52 overflow-hidden bg-gradient-to-br from-orange-500 to-orange-800 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-8xl opacity-30" style="font-variation-settings: 'FILL' 1;">trending_up</span>
+                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase text-orange-700">Marketing</div>
+                    </div>
+                    <div class="p-7">
+                        <div class="flex items-center gap-4 text-[10px] text-secondary mb-3 uppercase font-bold tracking-tighter">
+                            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 32h</span>
+                            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">bar_chart</span> Intermédiaire</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Marketing Digital &amp; Communication</h3>
+                        <p class="text-sm text-secondary mb-5 line-clamp-3">Développez votre stratégie de communication numérique, gérez vos réseaux sociaux et maîtrisez les leviers du marketing en ligne.</p>
+                        <a href="index.html#contact" class="w-full flex items-center justify-between text-on-surface font-bold border-t border-gray-100 pt-4 hover:text-primary transition-colors text-sm">
+                            S'inscrire <span class="material-symbols-outlined">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Orientation Voyage -->
+                <div data-category="voyage" class="formation-card group bg-white rounded-2xl overflow-hidden shadow-sm hover:-translate-y-2 transition-all duration-300 border border-gray-100 hover:shadow-xl">
+                    <div class="relative h-52 overflow-hidden bg-gradient-to-br from-emerald-500 to-emerald-800 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-8xl opacity-30" style="font-variation-settings: 'FILL' 1;">flight</span>
+                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase text-emerald-700">Orientation</div>
+                    </div>
+                    <div class="p-7">
+                        <div class="flex items-center gap-4 text-[10px] text-secondary mb-3 uppercase font-bold tracking-tighter">
+                            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> Accompagnement</span>
+                            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">school</span> Tous profils</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Orientation pour Projets de Voyage</h3>
+                        <p class="text-sm text-secondary mb-5 line-clamp-3">CV, lettre de motivation, choix de procédure (France, Canada, Belgique), universités et formations. Accompagnement personnalisé de A à Z.</p>
+                        <a href="index.html#contact" class="w-full flex items-center justify-between text-on-surface font-bold border-t border-gray-100 pt-4 hover:text-primary transition-colors text-sm">
+                            S'inscrire <span class="material-symbols-outlined">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Soft Skills / Leadership -->
+                <div data-category="soft" class="formation-card group bg-white rounded-2xl overflow-hidden shadow-sm hover:-translate-y-2 transition-all duration-300 border border-gray-100 hover:shadow-xl">
+                    <div class="relative h-52 overflow-hidden bg-gradient-to-br from-pink-500 to-rose-800 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-8xl opacity-30" style="font-variation-settings: 'FILL' 1;">psychology</span>
+                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase text-rose-700">Soft Skills</div>
+                    </div>
+                    <div class="p-7">
+                        <div class="flex items-center gap-4 text-[10px] text-secondary mb-3 uppercase font-bold tracking-tighter">
+                            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 24h</span>
+                            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">school</span> Tous niveaux</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Leadership &amp; Intelligence Émotionnelle</h3>
+                        <p class="text-sm text-secondary mb-5 line-clamp-3">Développez vos compétences relationnelles, votre leadership institutionnel et votre communication pour impacter durablement votre organisation.</p>
+                        <a href="index.html#contact" class="w-full flex items-center justify-between text-on-surface font-bold border-t border-gray-100 pt-4 hover:text-primary transition-colors text-sm">
+                            S'inscrire <span class="material-symbols-outlined">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </section>
 
         <!-- Final CTA Section -->
-        <section class="py-24 px-8">
-            <div
-                class="max-w-5xl mx-auto academic-gradient rounded-3xl p-16 text-center text-white shadow-2xl relative overflow-hidden">
-                <div class="absolute top-0 left-0 w-full h-full opacity-10"
-                    style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;">
-                </div>
-                <h2 class="text-4xl md:text-5xl font-black mb-6 relative z-10">Prêt à transformer votre avenir ?</h2>
-                <p class="text-lg text-blue-100 mb-10 max-w-xl mx-auto relative z-10">Nos conseillers pédagogiques sont
-                    à votre écoute pour définir votre parcours personnalisé.</p>
+        <section class="py-24 px-6">
+            <div class="max-w-5xl mx-auto academic-gradient rounded-3xl p-12 md:p-16 text-center text-white shadow-2xl relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-full opacity-10" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"></div>
+                <h2 class="text-4xl md:text-5xl font-headline font-black mb-6 relative z-10">Prêt à monter en compétences ?</h2>
+                <p class="text-lg text-blue-100 mb-10 max-w-xl mx-auto relative z-10">
+                    Nos formateurs experts sont à votre disposition pour construire votre parcours personnalisé.
+                </p>
                 <div class="flex flex-col md:flex-row items-center justify-center gap-4 relative z-10">
-                    <a href="index.html#contact"
-                        class="bg-white text-primary px-10 py-4 rounded-full font-bold text-lg hover:shadow-lg transition-all inline-block">
+                    <a href="index.html#contact" class="bg-white text-primary px-10 py-4 rounded-full font-bold text-lg hover:shadow-lg transition-all inline-block">
                         S'inscrire à une formation
                     </a>
-                    <button
-                        class="bg-transparent border border-white/30 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition-all">
+                    <a href="contact.html" class="bg-transparent border border-white/30 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition-all inline-block">
                         Parler à un expert
-                    </button>
+                    </a>
                 </div>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="w-full bg-slate-900 text-slate-400 py-16 dark">
-        <div class="max-w-7xl mx-auto px-8">
+    <footer class="w-full bg-slate-900 text-slate-400 py-16">
+        <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
                 <div class="md:col-span-1">
-                    <div class="flex items-center gap-3 mb-6">
-                        <img src="assets/img/logo.jpeg" alt="KI AGENCY" class="h-8 w-auto rounded">
-                        <span class="text-lg font-black text-white">KI AGENCY</span>
+                    <div class="flex items-center gap-3 mb-5">
+                        <img src="assets/img/logo.jpeg" alt="KANO IMPACT AGENCY" class="h-10 w-auto rounded-lg">
+                        <div>
+                            <p class="text-sm font-black text-white leading-tight">KANO IMPACT</p>
+                            <p class="text-xs text-blue-400 font-bold">AGENCY</p>
+                        </div>
                     </div>
-                    <p class="text-sm leading-relaxed">Centre de Développement des Compétences Académiques &
-                        Professionnelles.</p>
+                    <p class="text-sm leading-relaxed mb-3">Projets, Orientation et Assistance pour un Développement Durable.</p>
+                    <p class="text-xs italic text-blue-300">Apprendre – Assimiler – Agir – Impacter</p>
                 </div>
                 <div>
-                    <h4 class="font-bold text-white mb-6">Services</h4>
+                    <h4 class="font-bold text-white mb-5">Formations</h4>
                     <ul class="space-y-3 text-sm">
-                        <li><a class="hover:text-primary" href="formations.html">Formations</a></li>
-                        <li><a class="hover:text-primary" href="index.html#services">Research</a></li>
-                        <li><a class="hover:text-primary" href="index.html#contact">Admissions</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">QGIS &amp; ArcGIS</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">KoboCollect</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Gestion de Projets</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Marketing Digital</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Orientation Voyage</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-bold text-white mb-6">Légal</h4>
+                    <h4 class="font-bold text-white mb-5">Légal</h4>
                     <ul class="space-y-3 text-sm">
                         <li><a class="hover:text-primary transition-colors" href="privacy.html">Politique de confidentialité</a></li>
                         <li><a class="hover:text-primary transition-colors" href="terms.html">Conditions d'utilisation</a></li>
@@ -288,25 +355,51 @@
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-bold text-white mb-6">Suivez-nous</h4>
-                    <div class="flex gap-4">
-                        <a href="#"
-                            class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-white hover:bg-primary"><span
-                                class="material-symbols-outlined text-base">share</span></a>
-                        <a href="#"
-                            class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-white hover:bg-primary"><span
-                                class="material-symbols-outlined text-base">language</span></a>
-                    </div>
+                    <h4 class="font-bold text-white mb-5">Contact</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start gap-2">
+                            <span class="material-symbols-outlined text-base text-primary mt-0.5">location_on</span>
+                            <span>Abomey Calavi, Bénin</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="material-symbols-outlined text-base text-primary mt-0.5">phone</span>
+                            <a href="tel:+22901436483 05" class="hover:text-white transition-colors">+229 01 43 64 83 05</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="pt-8 border-t border-slate-800 text-center text-xs">
-                <p>© 2026 KI AGENCY. Tous droits r�serv�s. R�alis� par <a href="https://rejustewenoumi.pythonanywhere.com" class="hover:text-primary transition-colors">RW</a>
+            <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
+                <p>© 2026 KANO IMPACT AGENCY. Tous droits réservés.</p>
+                <p>RCCM : RB/ABC/26 A 137322 | IFU : 0202113524983</p>
+                <p>Réalisé par <a href="https://rejustewenoumi.pythonanywhere.com" class="hover:text-primary transition-colors font-bold text-blue-400">RW</a></p>
             </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="assets/js/main.js"></script>
-</body>
+    <script>
+        function filterFormations(category) {
+            const cards = document.querySelectorAll('.formation-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+            
+            buttons.forEach(btn => {
+                if (btn.dataset.cat === category) {
+                    btn.classList.add('bg-primary', 'text-white');
+                    btn.classList.remove('bg-white', 'text-secondary', 'border', 'border-gray-200');
+                } else {
+                    btn.classList.remove('bg-primary', 'text-white');
+                    btn.classList.add('bg-white', 'text-secondary', 'border', 'border-gray-200');
+                }
+            });
 
+            cards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
 </html>
